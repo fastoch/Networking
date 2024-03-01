@@ -17,5 +17,5 @@ We can then connect each of these ports directly into the switch.
 ## Protocols
 
 802 = LAN technologies  
-  802.3 = Ethernet
+>802.3 = Ethernet
 
