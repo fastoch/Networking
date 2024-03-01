@@ -56,12 +56,29 @@ Also, any application that wants to use the network would to wait until this tra
 Fortunately, when the data reaches the **Transport** layer, it is broken into manageable chunks.  
 Now, if there's a problem, only one chunk of data needs to be re-sent, not the entire file.  
 Also, apps can take turns at sending chunks of data, rather than one app hogging the hosts ressources. This is called **multiplexing**.  
+If we're using TCP, each block of data is called a "**segment**". If it's UDP, each block is called a "**datagram**".  
+
+We have many blocks of data going probably going to different hosts for different applications.
+
+**So how can we track what goes where?**  
+The answer is: through **port numbers**.  
+Each flow of data has a port number associated with the source and destination host.  
+These values are added as part of a **header** to each block of data.
 
 In order to successfully transfer our data, we need to add more information, we call this **"metadata"**.  
 Metadata is **"data that provides information about other data"**.
 Adding the source and destination address is an example of this.  
 Any information we add to the front of our data is called a **header**.  
 Any information we add to the back of our data is called a **trailer**.  
+
+The **Network** layer adds IP addresses to **packets** of data, source and destination addresses.  
+This is required to properly **route** the data and deliver it to the remote hosts.  
+
+Now, we need to think about getting the data from one device to another. This is where the **Data Link** layer comes in.  
+This layer does not try to get data to the end device, that's the responsibility of layer 3 & 4.  
+The Data Link layer creates a logical link between devices on the same network segment.  
+We need to have a **logical link** as devices probably aren't directly connected.  
+They're usually connected with a shared medium like a **switch** or over Wi-Fi.
 
 Eventually, the data reaches the **Physical** layer, where it is transmitted over cable or wireless to the remote host.  
 The remote host receives the data at the physical layer. The process is then **reversed**. The data flows back up through the layers.  
