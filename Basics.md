@@ -43,7 +43,7 @@ The data starts at the **Application** layer. This is where network APIs and app
 For example, this includes FTP and web browsing.  
 
 The data needs to be in a format that can be easily undesrtood. That's what the **Presentation** layer is for.  
-Anything related to data formats lives here, such as image and video files.  
+Anything related to data formats lives here. This layer is responsible for data conversion and formatting.  
 
 The **Session** layer tracks application processes. This includes remote procedure calls and service requests.  
 Think of this layer as building a session between a local application and a remote one.  
@@ -60,7 +60,15 @@ Also, apps can take turns at sending chunks of data, rather than one app hogging
 In order to successfully transfer our data, we need to add more information, we call this **"metadata"**.  
 Metadata is **"data that provides information about other data"**.
 Adding the source and destination address is an example of this.  
-Any information we add to the front of our data is called the **header**.  
-Any information we add to the back of our data is called the **trailer**.  
+Any information we add to the front of our data is called a **header**.  
+Any information we add to the back of our data is called a **trailer**.  
+
+Eventually, the data reaches the **Physical** layer, where it is transmitted over cable or wireless to the remote host.  
+The remote host receives the data at the physical layer. The process is then **reversed**. The data flows back up through the layers.  
+Each layer does its job, removing headers and trailers, and converting the data until it is in a form that the application can understand.  
+
+Each layer will only communicate with the layer above and the layer below.  
+Each layer has its own purpose and doesn't get involved with other layers, other than to pass and receive data.
+
 
 
