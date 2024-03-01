@@ -57,5 +57,9 @@ Fortunately, when the data reaches the **Transport** layer, it is broken into ma
 Now, if there's a problem, only one chunk of data needs to be re-sent, not the entire file.  
 Also, apps can take turns at sending chunks of data, rather than one app hogging the hosts ressources. This is called **multiplexing**.  
 
+We need to add more information (**metadata**) in order to successfully transfer our data.  
+Adding the source and destination address is an example of this.  
+Any information we add to the front of our data is called the **header**.  
+Any information we add to the back of our data is called the **trailer**.  
 
 
