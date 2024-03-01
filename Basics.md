@@ -19,3 +19,25 @@ We can then connect each of these ports directly into the switch.
 802 = LAN technologies  
 >802.3 = Ethernet
 
+---
+
+## The OSI model
+
+- Application
+- Presentation
+- Session
+- Transport
+- Network
+- Data Link
+- Physical
+
+>[!tip]
+>Please Do Not Throw Sausage Pizza Away
+
+Imagine we have an application on one host that needs to send data to an application on another host.  
+Let's now see how this data moves through the OSI model.  
+The data starts at the **application layer**. This is where network APIs and apps that access the network live.  
+For example, this includes FTP and web browsing.  
+
+The data
+
