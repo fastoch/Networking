@@ -36,8 +36,12 @@ We can then connect each of these ports directly into the switch.
 
 Imagine we have an application on one host that needs to send data to an application on another host.  
 Let's now see how this data moves through the OSI model.  
-The data starts at the **application layer**. This is where network APIs and apps that access the network live.  
+
+The data starts at the **Application layer**. This is where network APIs and apps that access the network live.  
 For example, this includes FTP and web browsing.  
 
-The data
+The data needs to be in a format that can be easily undesrtood. That's what the **Presentation layer** is for.  
+Anything related to data formats lives here, such as image and video files.  
+
+The **Session layer** 
 
