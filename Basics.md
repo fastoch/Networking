@@ -58,10 +58,10 @@ Now, if there's a problem, only one chunk of data needs to be re-sent, not the e
 Also, apps can take turns at sending chunks of data, rather than one app hogging the hosts ressources. This is called **multiplexing**.  
 If we're using TCP, each block of data is called a "**segment**". If it's UDP, each block is called a "**datagram**".  
 
-We have many blocks of data going probably going to different hosts for different applications.
-
+We have many blocks of data probably going to different hosts for different applications.
 **So how can we track what goes where?**  
 The answer is: through **port numbers**.  
+
 Each flow of data has a port number associated with the source and destination host.  
 These values are added as part of a **header** to each block of data.
 
