@@ -7,8 +7,18 @@ By default, the command prompt ends with a greater than sign **>**, which means 
 
 ## move from user exec mode to privileged exec mode
 `enable`  
-you should be prompted for entering pwd, unless this is a brand new switch/router  
-cmd prompt now ends with a pawn signe **#**
+you should be prompted for entering a pwd, unless this is a brand new switch/router  
+cmd prompt now ends with a pawn sign **#**
+
+## display current time and date
+show clock
+
+## display software version
+show version  
+
+if there's too much information to fit on the screen, you'll see the --More-- line at the bottom.  
+you can use **space** to move through this information page by page, or you can use **enter** to move through it line by line  
+just press **Q** to quit without seeing everything
 
 ## from privilege exec mode, you can enter global config mode
 `configure terminal`  
