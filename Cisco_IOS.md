@@ -22,8 +22,10 @@ just press **Q** to quit without seeing everything
 
 ## if we don't know the exact cmd we want to run
 `show ?`  
-as soon as we press enter, the CLI gives us all the available options 
+as soon as we press enter, the CLI gives us all the available options  
 
+>[!tip]
+>we can also use the **tab** key for **autocompletion**
 
 ## once in privileged exec mode, you can enter global config mode
 `configure terminal`  
