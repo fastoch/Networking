@@ -1,0 +1,58 @@
+>[!Note]
+>Cisco IOS = Internetworking Operating System
+
+## move from user exec mode to privileged exec mode (#)
+`enable`
+
+## from privilege exec mode, you can enter global config mode
+`configure terminal`  
+`conf t`
+
+## enter interface config mode for the specified fast ethernet interface
+`interface fastethernet/number`  
+`int gi0/1`
+
+## return to previous mode
+`exit`
+
+---
+
+## reboot the Cisco switch or router
+`reload`
+
+## show running config
+`show running-config`  
+`sh run`
+
+## show lines of the running config that begin with i
+`sh run | include ^i`
+
+## show lines of the running config that end with a 0
+`sh run | include 0$`
+
+## show lines with any single character between two ones
+`sh run | include 1.1`
+
+## show lines with 1.1
+`sh run | include 1\.1`
+
+## show lines that include eigrp or ospf or network
+`sh run | include eigrp|ospf|network`  
+>[!tip]
+>Note that 'include' can be replaced with 'inc'
+
+## show running config with line numbers
+`sh run linenum`
+
+## show line 173 
+`sh run | inc 173`
+>[!warning]
+>This also shows lines that include 173
+
+## show only line 173  
+`sh run | inc __173`
+>[!note]
+>We use 2 undescores to represent spaces before the line number
+
+
+
