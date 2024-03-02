@@ -1,6 +1,8 @@
 >[!Note]
 >Cisco IOS = Internetworking Operating System
 
+# Basic commands
+
 ## move from user exec mode to privileged exec mode (#)
 `enable`
 
@@ -15,14 +17,16 @@
 ## return to previous mode
 `exit`
 
----
-
 ## reboot the Cisco switch or router
 `reload`
 
 ## show running config
 `show running-config`  
 `sh run`
+
+---
+
+# Regular Expressions
 
 ## show lines of the running config that begin with i
 `sh run | include ^i`
