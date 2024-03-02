@@ -11,16 +11,21 @@ you should be prompted for entering a pwd, unless this is a brand new switch/rou
 cmd prompt now ends with a pawn sign **#**
 
 ## display current time and date
-show clock
+`show clock`  
 
 ## display software version
-show version  
+`show version`  
 
-if there's too much information to fit on the screen, you'll see the --More-- line at the bottom.  
+if there's too much information to fit on the screen, you'll see the **--More--** line at the bottom.  
 you can use **space** to move through this information page by page, or you can use **enter** to move through it line by line  
-just press **Q** to quit without seeing everything
+just press **Q** to quit without seeing everything  
 
-## from privilege exec mode, you can enter global config mode
+## if we don't know the exact cmd we want to run
+`show ?`  
+as soon as we press enter, the CLI gives us all the available options 
+
+
+## once in privileged exec mode, you can enter global config mode
 `configure terminal`  
 `conf t`
 
