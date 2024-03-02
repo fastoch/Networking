@@ -48,6 +48,9 @@ as soon as we press enter, the CLI gives us all the available options
 ## change the hostname
 `hostname <new_name>`
 
+## show available interfaces (while in config mode)
+`do show ip interface brief`
+
 ## enter interface config mode for the specified fast ethernet interface
 `interface fastethernet/number`  
 `int gi0/1`
