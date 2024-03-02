@@ -39,7 +39,7 @@ as soon as we press enter, the CLI gives us all the available options
 
 ## once in privileged exec mode, you can enter config mode
 `configure terminal`  
-`conf t`
+`conf t`  
 
 >[!tip]
 >if you put a **do** keyword before your command while in config mode, you can run global exec commands
