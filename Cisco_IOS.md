@@ -42,8 +42,11 @@ as soon as we press enter, the CLI gives us all the available options
 `conf t`  
 
 >[!tip]
->if you put a **do** keyword before your command while in config mode, you can run global exec commands
+>if you put a **do** keyword before your cmd while in config mode, you can run global exec commands
 >>That's a lot faster than jumping in & out of config mode
+
+## change the hostname
+`hostname <new_name>`
 
 ## enter interface config mode for the specified fast ethernet interface
 `interface fastethernet/number`  
