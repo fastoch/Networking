@@ -52,8 +52,9 @@ as soon as we press enter, the CLI gives us all the available options
 `interface fastethernet/number`  
 `int gi0/1`
 
-## return to previous mode
-`exit`
+## exit config mode
+`exit`  
+Keyboard shortcut = Ctrl + Z
 
 ## reboot the Cisco switch or router
 `reload`
