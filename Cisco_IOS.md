@@ -43,7 +43,7 @@ as soon as we press enter, the CLI gives us all the available options
 
 >[!tip]
 >if you put a **do** keyword before your command while in config mode, you can run global exec commands
->that's a lot faster than jumping in & out of config mode
+that's a lot faster than jumping in & out of config mode
 
 ## enter interface config mode for the specified fast ethernet interface
 `interface fastethernet/number`  
