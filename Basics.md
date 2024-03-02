@@ -117,11 +117,19 @@ Earlier, we were talking about how data needs to be broken into manageable block
 - The upper layers (application, presentation, session) deal with raw data.
 - The Transport layer breaks the data into smaller blocks of data and adds a first header that contains source and destination ports.  
 - The Network layer adds a second header which contains source and destination IP addresses. Each block of data is now a **packet** .
-- The Data Link layer adds another header that includes source and dest MAC addresses. A trailer may also be added with error correction info.
+- The Data Link layer adds another header that includes source and dest MAC addresses.
+- A trailer may also be added with error correction information.
 - Once the header and trailer are added, this block of data is now called a **frame**.
 - As data moves across the network, it will pass through one or more routers.
 - As each of these routers are a separate device, the destination layer 2 addresses (MAC) will change with each hop.
 - But the destination layer 3 address (IP) will remain the same.
+- And finally the **physical** layer which manages physical network components (radio frequencies, pulsing light, electrical signals)
+- The physical layer is responsible for encoding data into physical signals. 
+
+The **Data Link** layer is special, as it contains **2 sublayers** = LLC and MAC.  
+The **Logical Link Control** sublayer is responsible for translating between the network layer and the data link layer.  
+The **Media Access Control** sublayer is responsible for adding headers and trailers to packets, creating **frames**.  
+The MAC is also responsible for error correction.
 
 
 
