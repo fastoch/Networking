@@ -3,7 +3,9 @@
 
 # Basic commands
 
-## move from user exec mode to privileged exec mode (#)
+By default, the command prompt ends with a greater than sign (>), which means you're in **user exec mode**.
+
+## move from user exec mode to privileged exec mode (cmd prompt ends with #)
 `enable`
 
 ## from privilege exec mode, you can enter global config mode
