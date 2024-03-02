@@ -3,10 +3,12 @@
 
 # Basic commands
 
-By default, the command prompt ends with a greater than sign (>), which means you're in **user exec mode**.
+By default, the command prompt ends with a greater than sign **>**, which means you're in **user exec mode**.
 
-## move from user exec mode to privileged exec mode (cmd prompt ends with #)
-`enable`
+## move from user exec mode to privileged exec mode
+`enable`  
+you should be prompted for entering pwd, unless this is a brand new switch/router  
+cmd prompt now ends with a pawn signe **#**
 
 ## from privilege exec mode, you can enter global config mode
 `configure terminal`  
