@@ -1,7 +1,7 @@
 >[!Note]
 >Cisco IOS = Internetworking Operating System
 
-# Basic commands
+# Basics
 
 By default, the command prompt ends with a greater than sign **>**, which means you're in **user exec mode**.
 
@@ -25,11 +25,24 @@ just press **Q** to quit without seeing everything
 as soon as we press enter, the CLI gives us all the available options  
 
 >[!tip]
->we can also use the **tab** key for **autocompletion**
+>we can also use the **tab** key for leveraging **autocompletion** capabilities
 
-## once in privileged exec mode, you can enter global config mode
+>[!note]
+>we can also **shorten** commands
+
+>[!warning]
+>sometimes we shorten commands too far and we get the "ambiguous command" message
+
+---
+
+# Config mode
+
+## once in privileged exec mode, you can enter config mode
 `configure terminal`  
 `conf t`
+
+>[!tip]
+>if you put a **do** keyword before your command while in config mode, 
 
 ## enter interface config mode for the specified fast ethernet interface
 `interface fastethernet/number`  
