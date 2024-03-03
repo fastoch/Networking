@@ -173,6 +173,7 @@ The router is now ready to be accessed over the network.
 - select SSH as the connection type
 - enter the IP address
 - click Open
+
 Since we're using an admin account with privilege level 15, we won't even need the enable command.
 
 ---
