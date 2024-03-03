@@ -93,6 +93,13 @@ The next thing we should configure is **authentication**.
 
 ## First thing is to secure the enable command
 `conf t`  
+`enable secret pass123`
+
+## then, create an admin account and set its password
+`username admin privilege 15 secret pass456`  
+On a Cisco router, **privilege 15** means **full access**. 
+
+## to allow remote logins, we need to configure a virtual terminal line
 ``
 
 ---
