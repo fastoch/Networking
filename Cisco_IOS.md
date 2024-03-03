@@ -49,9 +49,9 @@ as soon as we press enter, the CLI gives us all the available options
 ## reboot the Cisco switch or router
 `reload`
 
-## show running config
-`show running-config`  
-`sh run`
+## show running config (currently active config on the switch|router)
+`do show running-config`  
+`do sh run`
 
 ---
 
@@ -151,16 +151,29 @@ Check the SSH version and turn it up to version 2 if needed:
 Then, let's configure the login banner (with # as the delimiter):  
 `banner login #`  
 The delimiter character can be any character.  
-Enter the content of your banner:  
+Enter the text message of your banner:  
 ```
 Authorise logins only! 
 Intruders, stay out!!!
 #
 ```
-Everything between the two delimiters is the banner.
+Everything between the two delimiters is the banner.  
 
+The login banner is only shown when the router asks you for login details.  
+There's another kind of banner: the message of the day, or motd for short.  
+`banner motd #`
+```
+Your access has been logged
+Have a nice day
+#
+```
 
-@24min
+The router is now ready to be accessed over the network.  
+- Launch Putty (or any other terminal emulator)
+- select SSH as the connection type
+- enter the IP address
+- click Open
+Since we're using an admin account with privilege level 15, we won't even need the enable command.
 
 ---
 
