@@ -27,10 +27,10 @@ just press **Q** to quit without seeing everything
 as soon as we press enter, the CLI gives us all the available options  
 
 >[!tip]
->we can also use the **tab** key for leveraging **autocompletion** capabilities
+>we can use the **tab** key for leveraging **autocompletion** capabilities
 
 >[!tip]
->we can use the **arrow keys** to browse the list of recent commands (history)
+>we can also use the **arrow keys** to browse the list of recent commands (history)
 
 >[!note]
 >we can also **shorten** commands
