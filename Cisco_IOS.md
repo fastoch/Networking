@@ -144,8 +144,15 @@ SSH will use this key to encrypt & decrypt the traffic.
 The default length for the key is 512 bits. It is recommended to use 2048 bits nowadays.  
 NIST deems RSA 2048 sufficient until 2030, balancing security strength and computational efficiency.  
 
-By default the SSH version might be 1.99. If so, turn it up to SSH version 2:  
-`ip ssh version 2`
+Check the SSH version and turn it up to version 2 if needed:  
+`show ip ssh`  
+`ip ssh version 2`  
+
+Then, let's configure the login banner (with # as the delimiter):  
+`banner login #`  
+`Authorise logins only!
+Intruders, stay out!!!`
+@23min
 
 ---
 
