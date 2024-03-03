@@ -51,7 +51,11 @@ as soon as we press enter, the CLI gives us all the available options
 
 ## show running config (currently active config on the switch|router)
 `do show running-config`  
-`do sh run`
+`do sh run`  
+
+>[!warning]
+>The runnning config is stored in volatile memory. If the router reboots, we lose all the changes we've made.
+>We need to save the running-config to non-volatile storage. 
 
 ---
 
