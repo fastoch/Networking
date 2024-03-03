@@ -1,6 +1,8 @@
 >[!Note]
 >Cisco IOS = Internetworking Operating System
 
+source = https://www.youtube.com/watch?v=xOqwxluUCc8&list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8&index=12
+
 # Basics
 
 By default, the command prompt ends with a greater than sign **>**, which means you're in **user exec mode**.
@@ -27,6 +29,9 @@ as soon as we press enter, the CLI gives us all the available options
 >[!tip]
 >we can also use the **tab** key for leveraging **autocompletion** capabilities
 
+>[!tip]
+>we can use the **arrow keys** to browse the list of recent commands (history)
+
 >[!note]
 >we can also **shorten** commands
 
@@ -48,11 +53,14 @@ as soon as we press enter, the CLI gives us all the available options
 ## change the hostname
 `hostname <new_name>`
 
-## show available interfaces (while in config mode)
+## show available interfaces and their current status (while in config mode)
 `do show ip interface brief`  
+`do show interface description`
 
 >[!note]
 >When a port is disabled, the interface status is 'administratively down'.
+
+# Interface Configuration
 
 ## enter interface config mode (config-if) for the specified interface  
 `interface gigabit 0/1`  
@@ -69,6 +77,25 @@ as soon as we press enter, the CLI gives us all the available options
 
 ## enable an interface while in config-if mode
 `no shutdown`
+
+## create a virtual interface while in config mode (loopback example)
+`interface loopback 0`  
+This interface will be enabled by default. 0 is just an example, we can use any number.  
+We then need to assign an IP address to this interface. When done, we can check with `show ip int brief`.
+
+---
+
+# Remote administration
+
+Our goal is to be able to connect to this router/switch over the network.  
+We don't want to use the console cable every time, but only when configuring the device for the first time.  
+The next thing we should configure is **authentication**.
+
+## First thing is to secure the enable command
+`conf t`  
+``
+
+---
 
 ## exit config mode
 `exit`  
