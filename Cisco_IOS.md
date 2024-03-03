@@ -62,7 +62,7 @@ as soon as we press enter, the CLI gives us all the available options
 `conf t`  
 
 >[!tip]
->if you put a **do** keyword before your cmd while in config mode, you can run global exec commands
+>if you put a **do** keyword before your cmd while in config mode, you can run user exec commands
 >>That's a lot faster than jumping in & out of config mode
 
 ## change the hostname
@@ -129,7 +129,23 @@ In most cases, we prefer to use SSH rather than telnet, because SSH is encrypted
 `transport input ssh`  
 
 Finally, we tell the router to look for local user accounts (like the admin account we've created earlier)  
-`login local`
+`login local`  
+
+## Now we need to configure SSH
+
+Firstly, SSH needs a domain name:  
+`ip domain-name fakedomain.net`  
+
+Next, specify the RSA key:  
+`crypto key generate RSA`  
+
+You can see the full router name when creating the key, which is <hostname.domain-name>  
+SSH will use this key to encrypt & decrypt the traffic.  
+The default length for the key is 512 bits. It is recommended to use 2048 bits nowadays.  
+NIST deems RSA 2048 sufficient until 2030, balancing security strength and computational efficiency.  
+
+By default the SSH version might be 1.99. If so, turn it up to SSH version 2:  
+`ip ssh version 2`
 
 ---
 
