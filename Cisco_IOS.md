@@ -49,11 +49,26 @@ as soon as we press enter, the CLI gives us all the available options
 `hostname <new_name>`
 
 ## show available interfaces (while in config mode)
-`do show ip interface brief`
+`do show ip interface brief`  
 
-## enter interface config mode for the specified fast ethernet interface
-`interface fastethernet/number`  
+>[!note]
+>When a port is disabled, the interface status is 'administratively down'.
+
+## enter interface config mode (config-if) for the specified interface  
+`interface gigabit 0/1`  
 `int gi0/1`
+
+## add a description to an interface (while in config-if)
+`description Corporate Network`
+
+## assign an IP address and a subnet mask (config-if)
+`ip address 192.168.0.1 255.255.255.0`  
+
+## disable an interface while in config-if mode
+`shutdown`
+
+## enable an interface while in config-if mode
+`no shutdown`
 
 ## exit config mode
 `exit`  
