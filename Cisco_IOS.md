@@ -3,6 +3,7 @@
 
 source = https://www.youtube.com/watch?v=xOqwxluUCc8&list=PLDQaRcbiSnqF5U8ffMgZzS7fq1rHUI3Q8&index=12
 
+
 # Basics
 
 By default, the command prompt ends with a greater than sign **>**, which means you're in **user exec mode**.
