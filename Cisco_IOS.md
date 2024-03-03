@@ -150,8 +150,11 @@ Check the SSH version and turn it up to version 2 if needed:
 
 Then, let's configure the login banner (with # as the delimiter):  
 `banner login #`  
-`Authorise logins only!  
-Intruders, stay out!!!`  
+```
+Authorise logins only! 
+Intruders, stay out!!!
+```  
+
 @23min
 
 ---
