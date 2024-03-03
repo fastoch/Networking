@@ -150,13 +150,17 @@ Check the SSH version and turn it up to version 2 if needed:
 
 Then, let's configure the login banner (with # as the delimiter):  
 `banner login #`  
-Enter your banner text:  
+The delimiter character can be any character.  
+Enter the content of your banner:  
 ```
 Authorise logins only! 
 Intruders, stay out!!!
-```  
+#
+```
+Everything between the two delimiters is the banner.
 
-@23min
+
+@24min
 
 ---
 
