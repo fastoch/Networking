@@ -100,20 +100,21 @@ The next thing we should configure is **authentication**.
 On a Cisco router, **privilege 15** means **full access**. 
 
 ## to allow remote logins, we need to configure a virtual terminal line
-``
 
----
+A virtual terminal line is like a virtual console port.  
+Configuring a virtual terminal line is very much like configuring an interface.  
+`line vty 0 4`  
 
-## exit config mode
-`exit`  
-Keyboard shortcut = Ctrl + Z
+Routers have 5 vty lines, which is why we specify the range 0-4, so we can configure them all at once.  
+Switches have 16 vty lines, so that would be 0 through to 15.  
 
-## reboot the Cisco switch or router
-`reload`
+Now, we tell the router which protocols we want our users to log in with.  
+The common ones are SSH and telnet. Both of these protocols use TCP to send terminal information across the network.  
+In most cases, we prefer to use SSH rather than telnet, because SSH is encrypted and secure.  
+`transport input ssh`  
 
-## show running config
-`show running-config`  
-`sh run`
+Finally, we tell the router to look for local user accounts (like the admin account we've created earlier)  
+`login local`
 
 ---
 
