@@ -38,6 +38,19 @@ as soon as we press enter, the CLI gives us all the available options
 >[!warning]
 >sometimes we shorten commands too far and we get the "ambiguous command" message
 
+## go up a level (from config-if to config for example)
+`exit`  
+
+>[!tip]
+>Keyboard shortcut to go back to user exec mode = Ctrl + Z
+
+## reboot the Cisco switch or router
+`reload`
+
+## show running config
+`show running-config`  
+`sh run`
+
 ---
 
 # Config mode
