@@ -181,5 +181,12 @@ Remember that 2 IP addresses are always reserved and cannot be allocated to any 
 - RIRs assign blocks of IP space to ISPs (Internet Service Providers) and large customers.
 - ISPs give adresses to smaller customers.  
 
+In 1996, to prevent the shortage of IP adresses, the **RFC 1918** was released.  
+This RFC says that some **IP spaces are now reserved for private use**.
+- 10.0.0.0 /8
+- 172.16.0.0 /12
+- 192.168.0.0 /16
+All other IPs are **public**.
+RFC = Request For Comments = standards that describe how certain Internet technologies work.
 
 
