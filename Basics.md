@@ -172,5 +172,14 @@ Remember that 2 IP addresses are always reserved and cannot be allocated to any 
 - the network address (.0)
 - the broadcast address (.255)
 
+---
+
+## IP adresses 
+
+- IP addresses are managed by an organization called "The Internet Assigned Numbers Authority" (IANA).  
+- IANA assigns large blocks of addresses to sub-organizations called "Regional Internet registries" (RIRs).
+- RIRs assign blocks of IP space to ISPs (Internet Service Providers) and large customers.
+- ISPs give adresses to smaller customers.  
+
 
 
