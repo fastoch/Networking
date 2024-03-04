@@ -55,7 +55,17 @@ as soon as we press enter, the CLI gives us all the available options
 
 >[!warning]
 >The runnning config is stored in volatile memory. If the router reboots, we lose all the changes we've made.
->We need to save the running-config to non-volatile storage. 
+>We need to save the running-config to non-volatile storage. To do that, we must copy the running config to the startup config.
+
+## copy the running config to the startup config
+`copy running-config startup-config`  
+`copy run start` is the short version  
+
+## Another way to save the running config
+`write memory`  
+`wr mem`
+>[!warning]
+>some devices don't use the `wr mem` command anymore, use `copy run start` instead.
 
 ---
 
