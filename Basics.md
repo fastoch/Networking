@@ -203,13 +203,21 @@ This is cost-efficient, good for security and it simplifies network administrati
 
 Each VLAN has an ID. This ID is a number ranging from 0 to 4095.  
 IDs 0 and 4095 are both reserved. So our usable range goes from 1 to 4094.  
-Each port on a switch is assigned to a different VLAN by using this ID.
+Each port on a switch is assigned to a different VLAN by using this ID.  
 
+When we add VLANs to a switch, we change the broadcast domain.  
+If a broadcast frame arrives on a switch port, it will be sent out all other ports in the VLAN.  
+But it will not be sent to ports in other VLANs.  
 
+The same is true with flooding. If a frame needs to be flooded, it will only be flooded on ports within that VLAN.  
+With less flooding, we reduce our security risk.
+
+>[!note]
+>Flooding = the switch sends the data frame on all ports when it doesn't know the port number on which to forward.
 
 ---
 
 ## Routing
 
-
+...
 
