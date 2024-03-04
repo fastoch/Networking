@@ -156,12 +156,21 @@ Variable Length Subnet Mask
 initial network = 172.16.0.0 /16
 we break it up into 256 networks with a /24 mask
 
-let's say we have 3 offices = 172.16.1.0 /24, 172.16.2.0 /24, 172.16.3.0 /24
-offices are interconnected (WAN links) via their router, these 3 routers also form a small network
-we could put each pair of routers into a subnet: 172.16.200.0 /30, 172.16.200.4 /30 and 172.16.200.8 /30.
+let's say we have 3 offices:
+- 172.16.1.0 /24
+- 172.16.2.0 /24
+- 172.16.3.0 /24
+
+Those offices are interconnected (WAN links) via their router, these 3 routers also form a small network
+we could put each pair of routers into a subnet: 
+- 172.16.200.0 /30
+- 172.16.200.4 /30
+- 172.16.200.8 /30
 
 A /30 network uses 30 bits for the network and 2 bits for the hosts, which leaves us exactly 2 IP addresses.
-Remember that 2 IP addresses are reserved on any network: the network address (.0) and the broadcast address (.255).
+Remember that 2 IP addresses are reserved on any network:
+- the network address (.0)
+- the broadcast address (.255)
 
 
 
