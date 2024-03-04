@@ -92,28 +92,28 @@ Each layer has its own purpose and doesn't get involved with other layers, other
 
 ---
 
-## Let's take a closer look at what each layer does
+### Let's take a closer look at what each layer does
 
-### Application
+#### Application
 Developers spend a lot of time in the upper layers (application, presentation and session).  
 This starts with the **application** layer. This is not strictly the application itself, but rather how the app accesses the network.  
 Some examples of this include web browsing, accessing emails and transferring files. It also includes management sessions like SSH and RDP.  
 
-### Presentation
+#### Presentation
 The app may contain a lot of data. This data does not always make sense to the rest of the network.  
 The **presentation** layer helps by converting the data if needed. This conversion also includes services like encryption and compression.  
 File formats also live here, including images and video files.  
 
-### Session
+#### Session
 An app needs to talk to several endpoints. So it's important to track where these conversations are occurring.  
 Each of these conversations is called a **session**.
 
-### Transport
+#### Transport
 The transport layer is used to transport traffic between processes on to endpoints.  
 You've probably heard of TCP and UDP, these are the most common protocols used at this layer.  
 Earlier, we were talking about how data needs to be broken into manageable blocks (segments or datagrams).  
 
-### Recap
+#### Recap
 - The upper layers (application, presentation, session) deal with raw data.
 - The Transport layer breaks the data into smaller blocks of data and adds a first header that contains source and destination ports.  
 - The Network layer adds a second header which contains source and destination IP addresses. Each block of data is now a **packet** .
@@ -193,5 +193,10 @@ RFC = Request For Comments = standards that describe how certain Internet techno
 ---
 
 ## Switching
+
+---
+
+## Routing
+
 
 
