@@ -168,7 +168,7 @@ we could put each pair of routers into a subnet:
 - 172.16.200.8 /30
 
 A /30 network uses 30 bits for the network and 2 bits for the hosts, which leaves us exactly 2 IP addresses.
-Remember that 2 IP addresses are reserved on any network:
+Remember that 2 IP addresses are always reserved and cannot be allocated to any device:
 - the network address (.0)
 - the broadcast address (.255)
 
