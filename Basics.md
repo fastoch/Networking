@@ -194,6 +194,19 @@ RFC = Request For Comments = standards that describe how certain Internet techno
 
 ## Switching
 
+...
+
+### VLANs
+
+VLANs allow us to split our network into many subnets on one single switch.  
+This is cost-efficient, good for security and it simplifies network administration.
+
+Each VLAN has an ID. This ID is a number ranging from 0 to 4095.  
+IDs 0 and 4095 are both reserved. So our usable range goes from 1 to 4094.  
+Each port on a switch is assigned to a different VLAN by using this ID.
+
+
+
 ---
 
 ## Routing
