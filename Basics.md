@@ -190,4 +190,8 @@ This RFC says that some **IP spaces are now reserved for private use**.
 All other IPs are **public**.  
 RFC = Request For Comments = standards that describe how certain Internet technologies work.
 
+---
+
+## Switching
+
 
