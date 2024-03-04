@@ -113,7 +113,7 @@ The transport layer is used to transport traffic between processes on to endpoin
 You've probably heard of TCP and UDP, these are the most common protocols used at this layer.  
 Earlier, we were talking about how data needs to be broken into manageable blocks (segments or datagrams).  
 
-## Recap
+### Recap
 - The upper layers (application, presentation, session) deal with raw data.
 - The Transport layer breaks the data into smaller blocks of data and adds a first header that contains source and destination ports.  
 - The Network layer adds a second header which contains source and destination IP addresses. Each block of data is now a **packet** .
@@ -130,6 +130,25 @@ The **Data Link** layer is special, as it contains **2 sublayers** = LLC and MAC
 The **Logical Link Control** sublayer is responsible for translating between the network layer and the data link layer.  
 The **Media Access Control** sublayer is responsible for adding headers and trailers to packets, creating **frames**.  
 The MAC is also responsible for error correction.
+
+---
+
+## CIDR
+
+**Classless Inter-Domain Routing**. This method was invented in **1993**, it is pronunced "CIDER".  
+
+CIDR introduced a new concept: the **subnet mask**. The subnet mask, just like the IP address, is made up of 4 octets.  
+In the subnet mask, the bits set to 1 tell us which part of the IP address is for the network.  
+Therefore, the bits set to 0 tell us which part of the IP address is for the hosts.
+All the 1 bits go on the left, and all the 0 bits go on the right.  
+
+The real power of CIDR is the ability to break a large network into small ones. We call this **subnetting**.  
+
+### CIDR notation
+
+a subnet mask of /24 = 255.255.255.0 = 11111111.11111111.11111111.00000000  
+a subnet mask of /28 = 255.255.255.240 = 11111111.11111111.11111111.11110000
+
 
 
 
