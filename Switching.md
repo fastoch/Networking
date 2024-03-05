@@ -36,7 +36,29 @@ Also, Cisco use technologies like **VTP** which handles these ranges differently
 >[!note]
 >VTP = VLAN Trunk Protocol | https://www.cisco.com/c/fr_ca/support/docs/lan-switching/vtp/10558-21.html
 
-### How do 
+### How do we get devices on different VLANs to talk to each other?
+
+In most cases, we need to allow some traffic between devices in differents VLANs.  
+VLANs provide a layer 2 boundary: **frames** from one vlan will not pass through to another vlan.  
+But we can use technologies in other layers to help. This is where **layer 3** comes in.  
+
+Layer 3 is all about **IP addressing** and moving **packets** from one network to another.  
+And this what **routers** are made for.  
+
+Each vlan should be associated with only one subnet.  
+The router has an interface connected to each vlan, and each interface is connected with an IP address from that subnet.  
+Devices in each network will configure their **default gateway** to be the IP address of the router.  
+
+When a device needs to send a frame outside of its vlan, it sends a frame to the router using the MAC address of the router as the destination.  
+The router, as it is connected to both networks, will know where to send the frame. It will rewrite the destination address field with the
+MAC address of the destination device, and then it will forward the frame on.  
+
+### How do devices, switches and routers know which IPs match up to which MAC addresses?
+
+They use a protocol called **ARP**, which stands for **Address Resolution Protocol**.  
+Devices broadcast an ARP message asking who owns a particulat IP address.  
+If the owner is in the local network, it will respond withits MAC address.  
+We'll this in more detail in a later lesson.
 
 
 
