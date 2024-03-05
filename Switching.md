@@ -69,6 +69,52 @@ enable
 conf t
 vlan 10
 name workstations
+exit
+vlan 20
+name servers
+exit
+show vlan brief
+```
+
+Now, we must add interfaces to our VLANs (2 for each):
+```
+interface gi 2/1
+switchport access vlan 10
+no shut
+
+interface gi 2/2
+switchport access vlan 10
+no shut
+
+interface gi 1/1
+switchport access vlan 20
+no shut
+
+interface gi 1/2
+switchport access vlan 20
+no shut
+
+show vlan brief
+```
+
+if we move over to workstation 1, we can test our vlan config by sending pings to workstation 2 and server 1:
+```
+ping 192.168.10.2
+ping 192.168.20.1
+```
+We can see server 1 is not responding, which is normal since servers and workstations are in 2 separate VLANs.  
+
+To make our servers and workstations able to communicate, we must configure our switch and our router accordingly.  
+
+The router is connected to 2 interfaces on the switch. We need to put one in vlan10 and the other on vlan20.
+```
+conf t
+interface gi 0/1
+switchport access vlan 10
+no shut
+interface gi 0/2
+switchport access vlan 20
+no shut
 ```
 
 
