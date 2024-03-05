@@ -21,7 +21,9 @@ And with less flooding, we reduce our security risk.
 >[!note]
 >Flooding = the switch sends the data frame on all ports when it doesn't know the port number on which to forward.
 
+---
 **Best practice** = one subnet per VLAN  
+---
 
 When it comes to VLANs, **Cisco** do a couple of things a little differently to the standard.  
 The VLAN is from 1 to 4094, but on many of their switches, Cisco reserves VLANs 1002 to 1005 for compatibility with their
