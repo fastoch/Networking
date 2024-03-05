@@ -1,6 +1,4 @@
-# Switching
-
-## VLANs
+# VLANs
 
 VLANs are a switching technology which operates at layer 2.
 
@@ -42,7 +40,7 @@ Also, Cisco use technologies like **VTP** which handles these ranges differently
 
 ---
 
-### How do we get devices on different VLANs to talk to each other?
+## How do we get devices on different VLANs to talk to each other?
 
 In most cases, we need to allow some traffic between devices in differents VLANs.  
 VLANs provide a layer 2 boundary: **frames** from one vlan will not pass through to another vlan.  
@@ -61,7 +59,7 @@ MAC address of the destination device, and then it will forward the frame on.
 
 ---
 
-### How do devices, switches and routers know which IPs match up to which MAC addresses?
+## How do devices, switches and routers know which IPs match up to which MAC addresses?
 
 They use a protocol called **ARP**, which stands for **Address Resolution Protocol**.  
 Devices broadcast an ARP message asking who owns a particulat IP address.  
@@ -70,7 +68,7 @@ We'll this in more detail in a later lesson.
 
 ---
 
-### Lab:
+## Lab:
 ![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)  
 There's a mistake on this picture, servers are actually in the network 192.168.20.0.
 
