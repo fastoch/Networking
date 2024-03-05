@@ -149,7 +149,7 @@ You can see that our router (the workstation gateway) is indeed in this path.
 
 ---
 >[!tip]
->The -n option stops the resolving of IP addresses. It speeds up traceroute by not looking for hostnames.
+>The -n option stops the resolving of IP addresses (DNS). It speeds up traceroute by not looking for hostnames.
 ---
 
   
