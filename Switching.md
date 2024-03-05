@@ -61,7 +61,8 @@ If the owner is in the local network, it will respond withits MAC address.
 We'll this in more detail in a later lesson.  
 
 **Example**:
-![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)
+![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)  
+There's a mistake on this picture, servers are actually in the network 192.168.20.0.
 
 First step is to jump onto our switch and create our vlans.  
 ```
