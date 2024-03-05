@@ -58,7 +58,9 @@ MAC address of the destination device, and then it will forward the frame on.
 They use a protocol called **ARP**, which stands for **Address Resolution Protocol**.  
 Devices broadcast an ARP message asking who owns a particulat IP address.  
 If the owner is in the local network, it will respond withits MAC address.  
-We'll this in more detail in a later lesson.
+We'll this in more detail in a later lesson.  
 
+**Example**:
+![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)
 
 
