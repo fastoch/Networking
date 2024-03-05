@@ -40,6 +40,8 @@ Also, Cisco use technologies like **VTP** which handles these ranges differently
 >[!note]
 >VTP = VLAN Trunk Protocol | https://www.cisco.com/c/fr_ca/support/docs/lan-switching/vtp/10558-21.html
 
+---
+
 ### How do we get devices on different VLANs to talk to each other?
 
 In most cases, we need to allow some traffic between devices in differents VLANs.  
