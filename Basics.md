@@ -226,6 +226,7 @@ The VLAN is from 1 to 4094, but on many of their switches, Cisco reserves VLANs 
 older equipment. Also, Cisco breaks the VLAN space into 2 ranges:
 - normal range: 1-1005
 - extended range: 1006-4094
+
 Their original switches only supported the normal range.
 
 
