@@ -155,5 +155,10 @@ You can see that our router (the workstation gateway) is indeed in this path.
   
 If we wanted to, we could add some rules to the router to allow some traffic but not others (see Routing.md for this).
 
+---
+
+## VLAN Trunk Links
+
+
 
 
