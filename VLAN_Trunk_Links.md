@@ -11,8 +11,9 @@ Which means we have to buy more switches.
 
 Normally, we would connect one switch to another to extend our number of ports.  
 But we have cut our network into VLANs now. So how do we connect the two switches together?  
-- Should we run a link between our switches for each VLAN?
-- 
+
+Should we run a link between our switches for each VLAN?
+We could, but what happens if we have many VLANs? We would be out of ports pretty quickly. 
 
 
 ---
