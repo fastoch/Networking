@@ -84,6 +84,13 @@ The link from the phone to the switch is like a mini-trunk link, except it carri
 
 Voice networking is a subject entirely of its own (see Voice_networking.md).
 
+---
+
+## LAB
+
+![image](https://github.com/fastoch/Networking/assets/89261095/5a7a92da-6d8d-47cc-bc31-499a1d335e08)
+
+
 
 
 
