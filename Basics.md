@@ -232,7 +232,8 @@ Inside some of their switches, the normal range is handled a bit differently to 
 Also, Cisco use technologies like **VTP** which handles these ranges differently.
 
 >[!info]
->VTP = VLAN Trunk Protocol, https://www.cisco.com/c/fr_ca/support/docs/lan-switching/vtp/10558-21.html
+>VTP = VLAN Trunk Protocol
+>https://www.cisco.com/c/fr_ca/support/docs/lan-switching/vtp/10558-21.html
 
 #### How do 
 
