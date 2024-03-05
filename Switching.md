@@ -59,6 +59,8 @@ When a device needs to send a frame outside of its vlan, it sends a frame to the
 The router, as it is connected to both networks, will know where to send the frame. It will rewrite the destination address field with the
 MAC address of the destination device, and then it will forward the frame on.  
 
+---
+
 ### How do devices, switches and routers know which IPs match up to which MAC addresses?
 
 They use a protocol called **ARP**, which stands for **Address Resolution Protocol**.  
@@ -66,7 +68,9 @@ Devices broadcast an ARP message asking who owns a particulat IP address.
 If the owner is in the local network, it will respond withits MAC address.  
 We'll this in more detail in a later lesson.  
 
-**Example**:
+---
+
+### Lab:
 ![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)  
 There's a mistake on this picture, servers are actually in the network 192.168.20.0.
 
