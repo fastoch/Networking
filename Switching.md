@@ -64,4 +64,13 @@ We'll this in more detail in a later lesson.
 ![image](https://github.com/fastoch/Networking/assets/89261095/8dbd2a53-083f-478a-9cba-a38918d71d51)
 
 First step is to jump onto our switch and create our vlans.  
+```
+enable
+conf t
+vlan 10
+name workstations
+```
+
+
+
 
