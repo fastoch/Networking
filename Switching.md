@@ -139,7 +139,7 @@ ping 192.168.20.2
 All these pings should get a response, meaning our workstation is able to talk to both the router and the servers.
 
 **But how do we know that this traffic is actually going through the router?**  
-We use **traceroute**, which is a tool that finds every layer 3 device along the path between source and destination.  
+- We use **traceroute**, which is a tool that finds every layer 3 device along the path between source and destination.  
 
 
 
