@@ -55,7 +55,7 @@ Each vlan should be associated with only one subnet.
 The router has an interface connected to each vlan, and each interface is connected with an IP address from that subnet.  
 Devices in each network will configure their **default gateway** to be the IP address of the router.  
 
-When a device needs to send a frame outside of its vlan, it sends a frame to the router using the MAC address of the router as the destination.  
+When a device needs to send a frame outside of its vlan, it sends a frame to the router using the MAC address of the router as the destination. 
 The router, as it is connected to both networks, will know where to send the frame. It will rewrite the destination address field with the
 MAC address of the destination device, and then it will forward the frame on.  
 
