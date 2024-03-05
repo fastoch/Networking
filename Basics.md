@@ -231,7 +231,7 @@ Their original switches only supported the normal range.
 Inside some of their switches, the normal range is handled a bit differently to the extended range.  
 Also, Cisco use technologies like **VTP** which handles these ranges differently.
 
->[!info]
+>[!note]
 >VTP = VLAN Trunk Protocol
 >https://www.cisco.com/c/fr_ca/support/docs/lan-switching/vtp/10558-21.html
 
