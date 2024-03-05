@@ -144,5 +144,8 @@ All these pings should get a response, meaning our workstation is able to talk t
 traceroute -n 192.168.20.1
 traceroute -n 192.168.20.2
 ```
+![image](https://github.com/fastoch/Networking/assets/89261095/82779bfa-085b-478b-a51b-139e3d6c6961)  
+You can see that our router (the workstation gateway) is indeed in this path.
+
 
 
