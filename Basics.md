@@ -188,7 +188,9 @@ This RFC says that some **IP spaces are now reserved for private use**.
 - 192.168.0.0 /16
 
 All other IPs are **public**.  
-RFC = Request For Comments = standards that describe how certain Internet technologies work.
+
+>[!note]
+>RFC = Request For Comments = standards that describe how certain Internet technologies work.
 
 ---
 
