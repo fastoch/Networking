@@ -106,7 +106,7 @@ We can see server 1 is not responding, which is normal since servers and worksta
 
 To make our servers and workstations able to communicate, we must configure our switch and our router accordingly.  
 
-The router is connected to 2 interfaces on the switch. We need to put one in vlan10 and the other on vlan20.
+The router is connected to 2 interfaces on the switch. We need to put one into vlan 10 and the other into vlan 20.
 ```
 conf t
 interface gi 0/1
@@ -116,6 +116,8 @@ interface gi 0/2
 switchport access vlan 20
 no shut
 ```
+
+For this example, we'll consider that the router is already configured.
 
 
 
