@@ -106,7 +106,8 @@ We can see server 1 is not responding, which is normal since servers and worksta
 
 To make our servers and workstations able to communicate, we must configure our switch and our router accordingly.  
 
-The router is connected to 2 interfaces on the switch. We need to put one into vlan 10 and the other into vlan 20.
+The router is connected to 2 interfaces on the switch. We need to put one into vlan 10 and the other into vlan 20.  
+Onto our switch:
 ```
 conf t
 interface gi 0/1
@@ -117,8 +118,17 @@ switchport access vlan 20
 no shut
 ```
 
-For this example, we'll consider that the router is already configured.
+For this example, we'll consider that the router is already configured.  
+Let's go back to the workstation to send a ping to the router and then to our servers:
+```
+ping 192.168.10.254
+ping 192.168.20.1
+ping 192.168.20.2
+```
+All these pings should get a response, meaning our workstation is able to talk to both the router and the servers.
 
+**But how do we know that this traffic is actually going through the router?**  
+We use **traceroute**, which is a tool that finds every layer 3 device along the path between source and destination.  
 
 
 
