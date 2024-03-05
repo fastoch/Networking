@@ -145,7 +145,12 @@ traceroute -n 192.168.20.1
 traceroute -n 192.168.20.2
 ```
 ![image](https://github.com/fastoch/Networking/assets/89261095/82779bfa-085b-478b-a51b-139e3d6c6961)  
-You can see that our router (the workstation gateway) is indeed in this path.
+You can see that our router (the workstation gateway) is indeed in this path.  
+
+>[!tip]
+>The -n option stops the resolving of the IP addresses. It speeds up traceroute by not looking for hostnames.
+
+If we wanted to, we could add some rules to the router to allow some traffic but not others (see Routing.md for this).
 
 
 
