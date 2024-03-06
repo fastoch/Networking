@@ -236,6 +236,17 @@ lldp receive
 ```
 lldp commands are basically the same as cdp.
 
+---
+
+## Trunk links on routers
+
+In a previous lab, we connected a router to each VLAN to enable workstations and servers to communicate.  
+There were 2 VLANs, so we used 2 links. But what if we have 10 VLANs? Do we need 10 ports on our router?  
+This is the same concern we faced with our switches earlier. We solved this by using a trunk link.  
+The good news is that router can also use trunk links.  
+This might sound surprising as trunking is a switching technology, but you'll find that the line between  
+routers and switches is sometimes blurry.
+
 
 
 
