@@ -183,11 +183,30 @@ Just leave VLAN 1 for this control traffic.
 There's another special VLAN that we need to consider. This is called the **native VLAN**.  
 The native VLAN was created to support devices that don't support VLANs.
 
-Think of a hub or a cheap switch, for example.  
-If you connect one of these devices to a trunk link, they won't be able to tag any of the traffic they send.
-So this traffice will be a part of the native VLAN
+Think of a hub or a cheap switch, for example. If you connect one of these devices to a trunk link, they won't be able  
+to tag any of the traffic they send. So, which VLAN is this traffic a part of? The answer is: **the native VLAN**.  
 
+By default, the native VLAN is VLAN 1. But we can change this to another VLAN if we want to.  
 
+What happens if traffic passes from a switch to a hub?  
+Any frames that are part of the native VLAN will be sent out **untagged**.  
+This keeps compatibility with these non-VLAN-enabled devices.  
+
+---
+
+## LAB (part 2)
+
+`show vlan brief` to see the vlans on the switch.  
+
+Under interface config mode (config-if), we can use the following cmd to change trunking parameters:
+`switchport trunk native vlan 2`  
+The native vlan became vlan 2 instead of vlan 1.
+
+It's not mandatory, but it is a good idea to have both switches use the same native VLAN.  
+**But how do the two switches know that there is a mismatch?**  
+How does one switch know how the other is configured?  
+It does this by using a protocol called "CDP" or "**Cisco Discovery Protocol**".  
+This is one of those types of traffic that flows betweens the switches themselves and always use VLAN 1.  
 
 
 
