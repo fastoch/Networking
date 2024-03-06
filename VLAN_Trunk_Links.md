@@ -194,7 +194,7 @@ This keeps compatibility with these non-VLAN-enabled devices.
 
 ---
 
-## LAB (part 2)
+## LAB (part 2) - CDP & LLDP
 
 `show vlan brief` to see the vlans on the switch.  
 
@@ -206,7 +206,35 @@ It's not mandatory, but it is a good idea to have both switches use the same nat
 **But how do the two switches know that there is a mismatch?**  
 How does one switch know how the other is configured?  
 It does this by using a protocol called "CDP" or "**Cisco Discovery Protocol**".  
-This is one of those types of traffic that flows betweens the switches themselves and always use VLAN 1.  
+
+CDP is one of those types of traffic that flows between the switches themselves and will always use VLAN 1.  
+If two devices that are connected together support it, they can learn about each other.  
+On most Cisco switches, it is enabled by default, which we can confirm with `show cdp neighbors detail`.  
+
+We can disable CDP globally (for security reasons) with `no cdp run`.  
+We could also disable it on some individual ports while leaving it active on others.  
+CPD can help when troubleshooting the network, or if your network documentation is not up to date.  
+Also, if you're connecting Cisco phones, CDP helps you setting your voice network.  
+
+**But what happens when you connect a device made by another manufacturer?**
+Some other vendors like VMware do support CDP, but a lot of vendors don't.  
+Fortunately, there's an alternative called LLDP or **Link Layer Discovery Protocol**.  
+
+LLDP is vendor-neutral, so it's supported by a lot of vendors, including Cisco.  
+It does the same basic job as CDP, and we can enable or disable it globally (config) or per interface (config-if):
+```
+lldp run
+no lldp run
+```
+
+If we're particularly security-conscious, we can configure interfaces to only send or receive lldp traffic:
+```
+no lldp transmit
+no lldp receive
+lldp transmit
+lldp receive
+```
+lldp commands are basically the same as cdp.
 
 
 
