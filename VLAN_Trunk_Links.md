@@ -238,16 +238,69 @@ lldp commands are basically the same as cdp.
 
 ---
 
-## Trunk links on routers
+## Trunk links on routers & subinterfaces
 
 In a previous lab, we connected a router to each VLAN to enable workstations and servers to communicate.  
 There were 2 VLANs, so we used 2 links. But what if we have 10 VLANs? Do we need 10 ports on our router?  
 This is the same concern we faced with our switches earlier. We solved this by using a trunk link.  
-The good news is that router can also use trunk links.  
-This might sound surprising as trunking is a switching technology, but you'll find that the line between  
-routers and switches is sometimes blurry.
 
+The good news is that **routers can also use trunk links**. This might sound surprising as trunking is a switching technology,  
+but you'll find that the line between routers and switches is sometimes blurry. Routers will support some switching  
+functions (like trunking), and switches will support some routing functions. But they still behave a little bit differently.  
 
+Routers primarily deal with routing, which means their interfaces need **IP adresses**.  
+This is what the workstations and servers will use as their default gateway.  
+But how can we put an IP address in each VLAN? How does the router know which IP address belongs in each vlan?  
+
+The router's physical interface is connected to the switch, but the physical interface can be divided up into several  
+**virtual subinterfaces**. This is very similar to how we divided our switch into several VLANs.  
+On a router, we divide up interfaces and we **map each subinterface to a different vlan**.  
+
+Once we have several virtual interfaces, we configure them independently. This includes a different IP for each one.  
+And these interfaces, even though they're virtual, still behave like regular interfaces, so we can still use them  
+to route traffic between VLANs. This way of configuring a router is called **"router on a stick"** or **ROAS**.  
+It's called this because the single trunk link between the router and switch looks a bit like a stick.
+
+Onto each switch:
+```
+en
+conf t
+int gi 0/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no shut
+```
+
+We need to configure the router's port as a trunk too.  
+First, we make sure the router's port is up, and we create our subinterfaces:  
+```
+en
+conf t
+int gi 0/1
+no shut
+int gi 0/1.10
+encapsulation dot1q 10
+ip address 192.168.10.254 255.255.255.0
+int gi 0/1.20
+encapsulation dot1q 20
+ip address 192.168.20.254 255.255.255.0
+```
+We use the vlan ID to name our subinterfaces, as it makes it easier later on.  
+The encapsulation type must match our switch. We also need to include the VLAN ID.  
+We configure the rest of the interface just like we would for any other interface, which includes setting an ip address.  
+Of course, we repeat the process a subinterface on vlan 20.  
+
+The IP addresses that we're adding to the subinterfaces are the default gateways that workstations and servers are using.  
+Now we can go and confirm it's working over on workstation 1. Let's start by pinging the router's subinterface:  
+`ping 192.168.10.254` 
+
+Now, we can try pinging a server in vlan 20:  
+`ping 192.168.20.2`  
+
+And finally, we could run a traceroute to confirm that the traffic is going through the router:  
+`traceroute -n 192.168.20.2`  
+
+Our lab configuration is over!
 
 
 ---
