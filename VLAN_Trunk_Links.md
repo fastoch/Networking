@@ -92,7 +92,7 @@ Voice networking is a subject entirely of its own (see Voice_networking.md).
 
 We've added an extra switch, which implies we have to configure a trunk link.  
 
-First, we create an configure the voice vlan onto switch1:
+First, we create a voice vlan and we configure the interface Gi 2/2 onto switch 1:
 ```
 en
 conf t
@@ -102,10 +102,90 @@ exit
 int gi 2/2
 switchport mode access
 switchport voice vlan 110
+switchport access vlan 10
 ```
-vlan 110 is for IP phones
+With this config, port Gi 2/2 is used for VLANs 10 and 110.
+- vlan 110 is for IP phones  
+- vlan 10 is for workstations  
 
+**Keep in mind that when you have a phone connected, you set the voice vlan as well as a separate access vlan.**  
 
+At this stage, if we try to ping workstation 2 from workstation 1, its' going to fail.  
+Workstation 1 is connected to switch 1 while workstation 2 is connected to switch 2.  
+We've configured ports on both switches so that our workstations are in the same vlan.
+But until we create our trunk link, these devices won't be able to talk to each other.  
+
+Let's configure our trunk link onto switch 1:
+```
+en
+conf t
+int gi 0/2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no shut
+```
+**This trunk link allows frames to be tagged (with a VLAN id) when passing between the switches.**  
+
+We need to do the same over on switch 2:
+```
+en
+conf t
+int gi 0/2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no shut
+```
+
+When we configure trunk links, we have the option of allowing some VLANs while disallowing others.  
+This is called **pruning**, and we do this with the `switchport trunk allowed vlan` command.   
+If we don't use this command, all VLANs are allowed over the link.  
+
+To allow VLANs 10 and 20 on interface gi 0/2:
+```
+enable
+config terminal
+int gi 0/2
+switchport trunk allowed vlan 10,20
+```
+
+To check our config:
+`show interfaces switchport | begin Gi0/2`
+`show interfaces trunk`
+
+But the best way to prove that this is working is to head over to workstation 1 and issue the following commands:
+```
+ping 192.168.10.2
+ping 192.168.20.1
+ping 192.168.20.2
+```
+From here, we can see the traffic is successfully flowing across the trunk link to workstation 2 and both servers.  
+
+---
+
+## Special VLANs
+
+### VLAN 1
+
+When you first turn on a switch, all the ports will, by default, belong to VLAN 1.  
+We don't do anything to configure VLAN 1, it's just always there.  
+**Control traffic between Cisco switches uses VLAN 1.**
+
+>[!note]
+>Other switch vendors may have a different way of approaching this.  
+
+It's a **good practice** to keep your devices (workstations, printers, etc.) on a separate VLAN.  
+Just leave VLAN 1 for this control traffic.  
+
+---
+
+### Native VLAN
+
+There's another special VLAN that we need to consider. This is called the **native VLAN**.  
+The native VLAN was created to support devices that don't support VLANs.
+
+Think of a hub or a cheap switch, for example.  
+If you connect one of these devices to a trunk link, they won't be able to tag any of the traffic they send.
+So this traffice will be a part of the native VLAN
 
 
 
