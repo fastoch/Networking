@@ -90,6 +90,22 @@ Voice networking is a subject entirely of its own (see Voice_networking.md).
 
 ![image](https://github.com/fastoch/Networking/assets/89261095/5a7a92da-6d8d-47cc-bc31-499a1d335e08)
 
+We've added an extra switch, which implies we have to configure a trunk link.  
+
+First, we create an configure the voice vlan onto switch1:
+```
+en
+conf t
+vlan 110
+name voice
+exit
+int gi 2/2
+switchport mode access
+switchport voice vlan 110
+```
+vlan 110 is for IP phones
+
+
 
 
 
