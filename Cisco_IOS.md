@@ -150,10 +150,10 @@ Finally, we tell the router to look for local user accounts (like the admin acco
 Firstly, SSH needs a domain name:  
 `ip domain-name fakedomain.net`  
 
-Next, specify the RSA key:  
+Next, provide an RSA key:  
 `crypto key generate RSA`  
 
-You can see the full router name when creating the key, which is <hostname.domain-name>  
+You can see the full router name when creating the key, which syntax is <hostname.domain-name>  
 SSH will use this key to encrypt & decrypt the traffic.  
 The default length for the key is 512 bits. It is recommended to use 2048 bits nowadays.  
 NIST deems RSA 2048 sufficient until 2030, balancing security strength and computational efficiency.  
