@@ -55,7 +55,13 @@ The zeros refer to the parts of the address that need to match the address in ou
 The ones are the parts that don't need to match.  
 
 For example, if our IP address is 192.168.10.0 and our wildcard mask is 0.0.0.255, this means that we're looking for  
-any IP address that starts with 192.168.10.
+any IP address that starts with 192.168.10.  
+
+**Why can't we use a subnet mask instead?**  
+A subnet mask requires all the ones and the zeros to be grouped together.  
+A wildcard mask does not have any such restriction, which means we can perform some advanced matching by mixing up the bits which are turned on or off.  
+
+
 
 
 
