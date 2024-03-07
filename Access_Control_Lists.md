@@ -41,8 +41,11 @@ At this time, the router stops evaluating more rules. The **keypoint** from this
 So when you create ACLs, it's essential to consider the order of the rules, otherwise you may not get the expected results.  
 
 **What happens if none of our entries match incoming traffic?**  
-There's an invisible rule at the end of the list called **the implicit deny**. This will drop the traffic when none of our rules match.  
+There's an **invisible rule** at the end of the list called **the implicit deny**.  
+This rule will make the router drop the traffic when none of our rules match.  
 This rule is written: `deny any any`, and there's no sequence number in front of it.  
+
+**When no ACL is configured on an interface, all the traffic is allowed.**
 
 ---
 
@@ -118,7 +121,15 @@ There are 2 directions called **ingress** and **egress**.
 
 **There can only be one ACL per interface per direction.**  
 
+---
 
+## Lab
+
+We're still using the same topology with 2 VLANs:
+- VLAN 10 for workstations, subnet 192.168.10.0 /24
+- VLAN 20 for servers, subnet 192.168.20.0 /24
+- A router configured as Router on a stick (ROAS), 
+- 
 
 
 
