@@ -151,14 +151,18 @@ To block HTTP traffic to the servers, we'll use the **access-list** command to c
 ```
 conf t
 access-list ?
-access-list 150 deny tcp any 192.168.20.0 0.0.0.255
+access-list 150 deny tcp any 192.168.20.0 0.0.0.255 eq www
 ```
 `access-list ?` shows us the different ranges we can use and the corresponding types of ACL  
-150 is for an extended ACL  
-HTTP uses TCP  
-The above ACL denies tcp traffic from any source and when destination address is 192.168.20.x
+150 is for an extended ACL and HTTP uses TCP  
+eq = equals, other operators are gt (greater than), lt, range, etc.  
+www could be replaced with 80
 
-@13min
+Syntax is: `access-list number protocol source destination operator port|protocol`
+The above ACL denies http traffic from any source when destination address is 192.168.20.x and port number is 80.  
+
+Our first entry is done.
+@14min
 
 >[!tip]
 >Using the **question mark** provides you with available options for completing your command.
