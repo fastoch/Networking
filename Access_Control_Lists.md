@@ -125,11 +125,24 @@ There are 2 directions called **ingress** and **egress**.
 
 ## Lab
 
-We're still using the same topology with 2 VLANs:
+We're still using the same topology (see VLAN_Trunk_Links.md) with 2 VLANs:
 - VLAN 10 for workstations, subnet 192.168.10.0 /24
 - VLAN 20 for servers, subnet 192.168.20.0 /24
-- A router configured as Router on a stick (ROAS), 
-- 
+- A router configured as Router on a stick (ROAS) to pass traffic between the 2 subnets
+
+Right now, all traffic is allowed between these subnets, but we want to restrict this a bit.  
+
+**Goal #1**:
+- block regular HTTP traffic to the servers
+- allow https traffic to the servers
+- block all other traffic to the servers
+
+**Goal #2**:
+- allow the servers to SSH to the router
+- don't let the workstations SSH to the router
+- prevent telnet to the router from any location
+- do not block any other IP traffic to the router
+
 
 
 
