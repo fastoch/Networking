@@ -87,6 +87,14 @@ There are many types of ACLs, each having a different functionality:
 - infrastructure protection
 - transit
 
+The **standard** ACL can only match based on source address. This is the first one that Cisco created.  
+It can't look at the destination, the protocol or the ports used.  
+
+One way we can configure ACLs is to give them a number.  
+We configure each entry individually, and any entries sharing the same number are part of the same ACL.  
+This number also determines if this is a standard or extended ACL, as you can see in this table:
+![image](https://github.com/fastoch/Networking/assets/89261095/14dd45a4-57f3-40a2-9676-084b1a6275aa)
+
 
 
 
