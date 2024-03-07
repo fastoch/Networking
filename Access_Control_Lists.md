@@ -40,6 +40,10 @@ As soon as in incoming packet matches one of these entries, the action is applie
 At this time, the router stops evaluating more rules. The **keypoint** from this is that the **first match wins**.  
 So when you create ACLs, it's essential to consider the order of the rules, otherwise you may not get the expected results.  
 
+ACL example:
+![image](https://github.com/fastoch/Networking/assets/89261095/1f441372-184d-4036-b80e-638c7e4bec82)
+
+
 **What happens if none of our entries match incoming traffic?**  
 There's an invisible rule at the end of the list called **the implicit deny**. This will drop the traffic when none of our rules match.  
 This rule is written: `deny any any`, and there's no sequence number in front of it.  
@@ -60,6 +64,12 @@ any IP address that starts with 192.168.10.
 **Why can't we use a subnet mask instead?**  
 A subnet mask requires all the ones and the zeros to be grouped together.  
 A wildcard mask does not have any such restriction, which means we can perform some advanced matching by mixing up the bits which are turned on or off.  
+
+Here's a more complicated example: 10.22.32.0 with a wildcard mask of 0.0.15.255  
+Matching addresses go from 10.22.32.0 to 10.22.47.255  
+You can check on https://subnetonline.com/pages/subnet-calculators/ipv4-wildcard-calculator.php  
+
+
 
 
 
