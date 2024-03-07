@@ -145,7 +145,23 @@ Right now, all traffic is allowed between these subnets, but we want to restrict
 - prevent telnet to the router from any location
 - do not block any other IP traffic to the router
 
-The starting configuration has already been done.
+The starting configuration has already been done, so we won't need to worry about that.  
+
+To block HTTP traffic to the servers, we'll use the **access-list** command to configure a numbered ACL: 
+```
+conf t
+access-list ?
+access-list 150 deny tcp any 192.168.20.0 0.0.0.255
+```
+`access-list ?` shows us the different ranges we can use and the corresponding types of ACL  
+150 is for an extended ACL  
+HTTP uses TCP  
+The above ACL denies tcp traffic from any source and when destination address is 192.168.20.x
+
+
+>[!tip]- Cisco IOS tip
+>Remember using the **question mark** any time you need to get the available options for completing your command.
+
 
 
 
