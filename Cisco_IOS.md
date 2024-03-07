@@ -155,10 +155,10 @@ Next, provide an RSA key:
 
 You can see the full router name when creating the key, which syntax is <hostname.domain-name>  
 SSH will use this key to encrypt & decrypt the traffic.  
-The default length for the key is 512 bits. It is recommended to use 2048 bits nowadays.  
+The default length for the key is 512 bits. It is **recommended to use 2048 bits** nowadays.  
 NIST deems RSA 2048 sufficient until 2030, balancing security strength and computational efficiency.  
 
-Check the SSH version and turn it up to version 2 if needed:  
+Check the SSH version and turn it up to version 2 if not already the case:  
 `show ip ssh`  
 `ip ssh version 2`  
 
@@ -172,8 +172,8 @@ Intruders, stay out!!!
 #
 ```
 Everything between the two delimiters is the banner.  
-
 The login banner is only shown when the router asks you for login details.  
+
 There's another kind of banner: the message of the day, or motd for short.  
 `banner motd #`
 ```
