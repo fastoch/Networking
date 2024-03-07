@@ -158,9 +158,10 @@ access-list 150 deny tcp any 192.168.20.0 0.0.0.255
 HTTP uses TCP  
 The above ACL denies tcp traffic from any source and when destination address is 192.168.20.x
 
+@13min
 
->[!tip]- Cisco IOS tip
->Remember using the **question mark** any time you need to get the available options for completing your command.
+>[!tip]
+>Using the **question mark** provides you with available options for completing your command.
 
 
 
