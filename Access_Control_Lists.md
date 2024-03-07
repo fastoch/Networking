@@ -90,14 +90,33 @@ There are many types of ACLs, each having a different functionality:
 The **standard** ACL can only match based on source address. This is the first one that Cisco created.  
 It can't look at the destination, the protocol or the ports used.  
 
+### Numbered ACL
+
 One way we can configure ACLs is to give them a number.  
 We configure each entry individually, and any entries sharing the same number are part of the same ACL.  
 This number also determines if this is a standard or extended ACL, as you can see in this table:
 ![image](https://github.com/fastoch/Networking/assets/89261095/14dd45a4-57f3-40a2-9676-084b1a6275aa)
 
+Aside from picking a number in the right range, no particular number is any better than any other number.  
+They just act as labels to organize the entries into a list.  
 
+### Named ACL
 
+The more modern (and recommended) alternative to numbered ACLs is **named ACLs**.  
+Every list has a name and acts like a container. Entries are nested inside the container.  
 
+In addition, there's no ranges or numbers to worry about.  
+During configuration, we simply tell the router if this a standard or extended ACL.  
+
+On its own, an ACL does nothing. We must tell the router that we want to use the ACL as a packet filter.  
+So we need to apply the ACL to one or more of the router's interfaces.  
+
+When we **apply an ACL to an interface**, we also have to apply it in a **direction**.  
+There are 2 directions called **ingress** and **egress**.  
+- ingress is when traffic is coming into the router
+- egress is when traffic is leaving the router
+
+**There can only be one ACL per interface per direction.**  
 
 
 
