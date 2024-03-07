@@ -163,7 +163,7 @@ HTTP uses TCP
 eq = equals, other operators are gt (greater than), lt, range, etc.  
 www could be replaced with 80 since HTTP uses port 80
 
-Syntax is: `access-list number protocol source destination operator port`
+Syntax is: `access-list number protocol source destination operator port`  
 The above ACL denies http traffic from any source when destination address is 192.168.20.x and port number is 80.  
 
 >[!tip]
@@ -173,18 +173,34 @@ Our first entry is done. We can check this with `do show access-lists`.
 We use the `do` keyword to be able to run this cmd from within the config mode.  
 
 We have one ACL #150 with a single entry. This is good, but our ACL is not done.  
-We now need an entry to allow HTTPS traffic:
+We now need an entry to allow HTTPS traffic:  
 `access-list 150 permit tcp any 192.168.20.0 0.0.0.255 eq 443`  
 
 While we're at it, we can add a remark to the ACL.  
 A remark is just a comment that makes it easier for us to understand what we've configured later.  
 `access-list remark Servers-ACL`  
 
-![image](https://github.com/fastoch/Networking/assets/89261095/248bd71a-b1c1-43a5-ac97-cd31befc7e88)
+We now have 2 entries for our ACL:  
+![image](https://github.com/fastoch/Networking/assets/89261095/248bd71a-b1c1-43a5-ac97-cd31befc7e88)  
+The new entry has been added to the bottom of the list.  
 
+Lastly, we have to block all other traffic to the servers.  
+Although it's not shown as an entry in our list, there is that **implicit deny** rule at the end.  
+Any traffic that we haven't matched will automatically be blocked.  
+In fact, we don't even need a rule to block HTTP, but it can be handy as we'll see soon.  
 
+We still need to apply this ACL to an interface.  
+In this case, gi 0/1.10, the interface that connects vlan 10 (workstations) to the router.  
+Onto the router:  
+```
+conf t
+int gi 0/1.10
+ip access-group ?
+ip access-group 150 ?
+ip access-ground 150 in
+```
 
-
+@16min
 
 
 
