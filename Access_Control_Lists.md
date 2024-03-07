@@ -14,6 +14,8 @@ Perhaps we want to limit the workstations that are allowed to log on to routers.
 Or maybe we want to allow only HTTPS traffic to a server.  
 We can use ACLs in bothe cases, to allow some traffic but to deny others.
 
+---
+
 ## Anatomy of an ACL
 
 An ACL is really a collection or a list of rules.  
@@ -38,7 +40,22 @@ As soon as in incoming packet matches one of these entries, the action is applie
 At this time, the router stops evaluating more rules. The **keypoint** from this is that the **first match wins**.  
 So when you create ACLs, it's essential to consider the order of the rules, otherwise you may not get the expected results.  
 
-If none of our entries match incoming traffic, 
+**What happens if none of our entries match incoming traffic?**  
+There's an invisible rule at the end of the list called **the implicit deny**. This will drop the traffic when none of our rules match.  
+This rule is written: `deny any any`, and there's no sequence number in front of it.  
+
+---
+
+## Wildcard masks
+
+A subnet mask uses binary ones and zeros to determine which part of an IP address is the network and which part is the host.  
+
+A wilcard mask is used to match IP addresses.  
+The zeros refer to the parts of the address that need to match the address in our rule.  
+The ones are the parts that don't need to match.  
+
+For example, if our IP address is 192.168.10.0 and our wildcard mask is 0.0.0.255, this means that we're looking for  
+any IP address that starts with 192.168.10.
 
 
 
