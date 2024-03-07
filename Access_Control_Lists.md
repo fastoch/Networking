@@ -151,21 +151,40 @@ To block HTTP traffic to the servers, we'll use the **access-list** command to c
 ```
 conf t
 access-list ?
+acces-list 150 ?
+access-list 150 deny ?
+access-list 150 deny tcp ?
+access-list 150 deny tcp any ?
 access-list 150 deny tcp any 192.168.20.0 0.0.0.255 eq www
 ```
 `access-list ?` shows us the different ranges we can use and the corresponding types of ACL  
-150 is for an extended ACL and HTTP uses TCP  
+150 is for an extended ACL  
+HTTP uses TCP  
 eq = equals, other operators are gt (greater than), lt, range, etc.  
-www could be replaced with 80
+www could be replaced with 80 since HTTP uses port 80
 
-Syntax is: `access-list number protocol source destination operator port|protocol`
+Syntax is: `access-list number protocol source destination operator port`
 The above ACL denies http traffic from any source when destination address is 192.168.20.x and port number is 80.  
 
-Our first entry is done.
-@14min
-
 >[!tip]
->Using the **question mark** provides you with available options for completing your command.
+>Use the **question mark** as often as needed. It shows you the available options for completing your command.
+
+Our first entry is done. We can check this with `do show access-lists`.  
+We use the `do` keyword to be able to run this cmd from within the config mode.  
+
+We have one ACL #150 with a single entry. This is good, but our ACL is not done.  
+We now need an entry to allow HTTPS traffic:
+`access-list 150 permit tcp any 192.168.20.0 0.0.0.255 eq 443`  
+
+While we're at it, we can add a remark to the ACL.  
+A remark is just a comment that makes it easier for us to understand what we've configured later.  
+`access-list remark Servers-ACL`  
+
+![image](https://github.com/fastoch/Networking/assets/89261095/248bd71a-b1c1-43a5-ac97-cd31befc7e88)
+
+
+
+
 
 
 
