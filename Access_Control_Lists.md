@@ -129,6 +129,8 @@ We're still using the same topology (see VLAN_Trunk_Links.md) with 2 VLANs:
 - VLAN 10 for workstations, subnet 192.168.10.0 /24
 - VLAN 20 for servers, subnet 192.168.20.0 /24
 - A router configured as Router on a stick (ROAS) to pass traffic between the 2 subnets
+  
+![image](https://github.com/fastoch/Networking/assets/89261095/47ebd45f-d0e8-4529-956f-ac9f8761a9d3)
 
 Right now, all traffic is allowed between these subnets, but we want to restrict this a bit.  
 
@@ -143,6 +145,7 @@ Right now, all traffic is allowed between these subnets, but we want to restrict
 - prevent telnet to the router from any location
 - do not block any other IP traffic to the router
 
+The starting configuration has already been done.
 
 
 
