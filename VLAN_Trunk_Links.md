@@ -216,7 +216,7 @@ We could also disable it on some individual ports while leaving it active on oth
 CPD can help when troubleshooting the network, or if your network documentation is not up to date.  
 Also, if you're connecting Cisco phones, CDP helps you setting your voice network.  
 
-**But what happens when you connect a device made by another manufacturer?**
+**But what happens when you connect a device made by another manufacturer?**  
 Some other vendors like VMware do support CDP, but a lot of vendors don't.  
 Fortunately, there's an alternative called LLDP or **Link Layer Discovery Protocol**.  
 
