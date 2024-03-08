@@ -92,7 +92,7 @@ Voice networking is a subject entirely of its own (see Voice_networking.md).
 
 We've added an extra switch, which implies we have to configure a trunk link.  
 
-First, we create a voice vlan and we configure the interface Gi 2/2 onto switch 1:
+First, we create a voice vlan and we configure the interface Gi 2/2 onto switch 2:
 ```
 en
 conf t
