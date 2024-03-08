@@ -198,7 +198,7 @@ This keeps compatibility with these non-VLAN-enabled devices.
 
 `show vlan brief` to see the vlans on the switch.  
 
-Under interface config mode (config-if), we can use the following cmd to change trunking parameters:
+Under interface config mode (config-if), we can use the following cmd to change trunking parameters:  
 `switchport trunk native vlan 2`  
 The native vlan became vlan 2 instead of vlan 1.
 
