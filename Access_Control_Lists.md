@@ -202,7 +202,10 @@ ip access-group 150 ?
 ip access-group 150 in
 ```
 
-To verify this: `do show ip interface gi 0/1.10`  
+>[!note]
+>You do not need to add a space between the interface type and the interface number.
+
+To verify this: `do show ip interface gi0/1.10`  
 Look for the outgoing and inbound access list entries:  
 ![image](https://github.com/fastoch/Networking/assets/89261095/44746483-690e-4a7a-bbe4-fdff4348a312)
 
@@ -235,7 +238,7 @@ Let's move on to **Goal #2**, where we only allow SSH from the servers and not t
 If we try to SSH to the router on a workstation, you can see that part of our job is already done:  
 `ssh cisco@192.168.10.254` > "no route to host"  
 The ACL we've already configured is already (implicitly) denying SSH to the router.  
-This is the same implicit rule that will also blog ping and telnet.  
+This is the same implicit rule that is also blocking ping and telnet.  
 
 To block telnet and allow ssh from the servers, we need to create a new ACL.  
 We'll then apply this ACL to interface Gi 0/1.20.  
@@ -258,9 +261,20 @@ This means we don't need to worry about a wildcard mask (wildcard masks are only
 
 Now we can add a rule to allow ssh to the routers from the servers:
 ```
-permit tcp 192.168.20.0 0.0.0.255 host 192.168.20.254 eq ssh
+permit tcp 192.168.20.0 0.0.0.255 host 192.168.20.254 eq 22
 ```
 
+Finally, we need to allow any other IP traffic to the router.  
+Right now, the implicit deny rule is blocking all other traffic.  
+We need to add a rule to allow all other traffic:
+```
+permit ip any any 
+```
+This is a very simple rule that permits IP traffic from anywhere to anywhere.  
+
+And finally, we just need to apply 
+```
+interace gi0/1.20
 
 
 
