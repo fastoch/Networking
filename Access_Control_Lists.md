@@ -186,24 +186,59 @@ The new entry has been added to the bottom of the list.
 
 Lastly, we have to block all other traffic to the servers.  
 Although it's not shown as an entry in our list, there is that **implicit deny** rule at the end.  
-Any traffic that we haven't matched will automatically be blocked.  
-In fact, we don't even need a rule to block HTTP, but it can be handy as we'll see soon.  
+Any traffic that we haven't matched in our ACL will automatically be blocked.  
+**In fact, we don't even need a rule to block HTTP, but it can be handy as we'll see soon.**  
 
 We still need to apply this ACL to an interface.  
 In this case, gi 0/1.10, the interface that connects vlan 10 (workstations) to the router.  
+
 Onto the router:  
 ```
 conf t
 int gi 0/1.10
 ip access-group ?
 ip access-group 150 ?
-ip access-ground 150 in
+ip access-group 150 in
 ```
 
-@16min
+To verify this: `do show ip interface gi 0/1.10`  
+Look for the outgoing and inbound access list entries:  
+![image](https://github.com/fastoch/Networking/assets/89261095/44746483-690e-4a7a-bbe4-fdff4348a312)
+
+Over on the workstation, we can use the following Linux command to try to retrieve a web page from the server:  
+`curl 192.168.20.1:80` it fails because HTTP traffic is blocked ("no route to host")  
+`curl 192.168.20.1:443` it fails because the server doesn't have a web page, but the traffic is reaching the server this time
+
+A ping from the workstation to the server would not get a response either, as the traffic isn't getting past the packet filter.  
+That's because of the implicit deny rule at the end of our ACL.  
+
+**We didn't block pings on purpose**, which shows that applying ACLs can sometimes lead to unwanted results.  
+So, it's really important that we **test our changes thoroughly** before pushing our new config to the running config.  
+
+If we take another look at our ACL on the router with `do show access-lists`, we can see that each rule now has 1 match.  
+This is a result of the traffic that we've just generated with our previous `curl` commands.  
+This is another way to see that our ACL is working.  
+
+You'll notice though that there's **no match counter for the implicit deny rule**.  
+**This is one reason why sometimes it's useful to create a deny rule like we did for HTTP.**  
+
+As we already mentioned, each rule in our ACL starts with a sequence number. In our case, it's 10 and 20.  
+These numbers show the order the rules are evaluated in.  
+We can give rules specific sequence numbers.  
+But if we don't, Cisco IOS will automatically assign numbers like it has done here.  
+
+Let's move on to Goal #2, where we only allow SSH from the servers and not the workstations.  
+
+If we try to SSH to the router on a workstation, you can see that part of our job is already done:  
+`ssh cisco@192.168.10.254` > "no route to host"  
+The ACL we've already configured is already (implicitly) denying SSH to the router.  
 
 
 
+
+
+
+@18/22
 
 ---
 EOF
