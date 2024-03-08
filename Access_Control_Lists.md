@@ -147,7 +147,8 @@ Right now, all traffic is allowed between these subnets, but we want to restrict
 
 The starting configuration has already been done, so we won't need to worry about that.  
 
-To block HTTP traffic to the servers, we'll use the **access-list** command to configure a numbered ACL: 
+To block HTTP traffic to the servers, we'll use the **access-list** command to configure a **numbered ACL**.  
+Onto the router:
 ```
 conf t
 access-list ?
@@ -176,9 +177,9 @@ We have one ACL #150 with a single entry. This is good, but our ACL is not done.
 We now need an entry to allow HTTPS traffic:  
 `access-list 150 permit tcp any 192.168.20.0 0.0.0.255 eq 443`  
 
-While we're at it, we can add a remark to the ACL.  
+While we're at it, we can add a **remark** to the ACL.  
 A remark is just a comment that makes it easier for us to understand what we've configured later.  
-`access-list remark Servers-ACL`  
+`access-list remark WORKSTATION-ACL`  
 
 We now have 2 entries for our ACL:  
 ![image](https://github.com/fastoch/Networking/assets/89261095/248bd71a-b1c1-43a5-ac97-cd31befc7e88)  
@@ -227,18 +228,45 @@ These numbers show the order the rules are evaluated in.
 We can give rules specific sequence numbers.  
 But if we don't, Cisco IOS will automatically assign numbers like it has done here.  
 
-Let's move on to Goal #2, where we only allow SSH from the servers and not the workstations.  
+---
+
+Let's move on to **Goal #2**, where we only allow SSH from the servers and not the workstations.  
 
 If we try to SSH to the router on a workstation, you can see that part of our job is already done:  
 `ssh cisco@192.168.10.254` > "no route to host"  
 The ACL we've already configured is already (implicitly) denying SSH to the router.  
+This is the same implicit rule that will also blog ping and telnet.  
+
+To block telnet and allow ssh from the servers, we need to create a new ACL.  
+We'll then apply this ACL to interface Gi 0/1.20.  
+
+For some variety, we'll configure this one as a **named ACL**.  
+Named ACLs are configure with `ip access-list`.  
+Onto the router:
+```
+ip access-list ?
+ip access-list extended ?
+ip access-list extended SERVER-ACL
+deny tcp any ?
+deny tcp any host ?
+deny tcp any host 192.168.20.254 eq telnet
+```
+After the 3rd line, we enter the named-ACL subconfiguration mode. The prompt becomes (config-ext-nacl).  
+We deny telnet traffic from any source to the router (host) only on specified IP (the router's IP on vlan 20, the gateway).  
+To simplify things, we use the 'host' keyword as the destination and enter our single IP address.  
+This means we don't need to worry about a wildcard mask (wildcard masks are only required when there are several IP addresses).  
+
+Now we can add a rule to allow ssh to the routers from the servers:
+```
+permit tcp 192.168.20.0 0.0.0.255 host 192.168.20.254 eq ssh
+```
 
 
 
 
 
 
-@18/22
+
 
 ---
 EOF
