@@ -140,7 +140,7 @@ When we configure trunk links, we have the option of allowing some VLANs while d
 This is called **pruning**, and we do this with the `switchport trunk allowed vlan` command.   
 If we don't use this command, all VLANs are allowed over the link.  
 
-To allow VLANs 10 and 20 on interface gi 0/2:
+To allow VLANs 10 and 20 on interface gi 0/2 (on both switches):
 ```
 enable
 config terminal
@@ -148,8 +148,8 @@ int gi 0/2
 switchport trunk allowed vlan 10,20
 ```
 
-To check our config:
-`show interfaces switchport | begin Gi0/2`
+To check our config:  
+`show interfaces switchport | begin Gi0/2`  
 `show interfaces trunk`
 
 But the best way to prove that this is working is to head over to workstation 1 and issue the following commands:
