@@ -273,13 +273,15 @@ permit ip any any
 ```
 This is a very simple rule that permits IP traffic from anywhere to anywhere.  
 
-And finally, we just need to apply 
+And finally, we just need to apply this to an interface like we did before:
 ```
 interace gi0/1.20
+ip access-group SERVER-ACL in
+```
+This time we use the name of the ACL since it's a named ACL.  
+For our first ACL, we've used a number since it was a numbered ACL.  
 
-
-
-
+We're not finished yet. Our original ACL (ACL #150) is still blocking all other traffic to the router.
 
 
 
