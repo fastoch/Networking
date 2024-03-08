@@ -245,7 +245,7 @@ To block telnet and allow ssh from the servers, we need to create a new ACL.
 We'll then apply this ACL to interface Gi 0/1.20.  
 
 For some variety, we'll configure this one as a **named ACL**.  
-Named ACLs are configure with `ip access-list`.  
+Named ACLs are configured with `ip access-list`, whereas our numbered ACL has been configure with `access-list`.  
 Onto the router:
 ```
 ip access-list ?
@@ -275,15 +275,39 @@ This is a very simple rule that permits IP traffic from anywhere to anywhere.
 
 And finally, we just need to apply this to an interface like we did before:
 ```
-interace gi0/1.20
+interface gi0/1.20
 ip access-group SERVER-ACL in
 ```
 This time we use the name of the ACL since it's a named ACL.  
 For our first ACL, we've used a number since it was a numbered ACL.  
 
-We're not finished yet. Our original ACL (ACL #150) is still blocking all other traffic to the router.
+We're not finished yet. Our original ACL (ACL #150) is still blocking all other traffic to the router.  
+We can put in a rule at the end of the first ACL to permit all other traffic but only to the router's IP.
+```
+exit
+access-list 150 permit ip any host 192.168.20.254
+```
+We had to exit the (config-subif) mode before being able to add our rule.  
 
+As you can see, we can add more rules to an ACL at any time we want. 
 
+---
+
+## What about Firewalls?
+
+We can't really talk about using ACLs for security without mentioning firewalls.  
+Firewalls are special devices that are built just to filter traffic.  
+They definitely do use ACLs to block and allow packets, just like we've done on our router.  
+
+**But if regular routers can filter packets, why would we need a firewall?**  
+
+Because firewalls do so much more than just filter packets.  
+For one they can do stateful packet filtering, which is different to what routers do.  
+And they can look at the contents of a packet, not just the headers.  
+
+Often, which one you choose comes down to balance.  
+Sometimes you'll want to use a firewall for heavy-duty protection, like on the edge of your network where your Internet is connected.  
+Sometimes a simple ACL on a router is more useful, like when we blocked SSH from the workstations.
 
 ---
 EOF
