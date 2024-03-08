@@ -112,7 +112,7 @@ With this config, port Gi 2/2 is used for VLANs 10 and 110.
 
 At this stage, if we try to ping workstation 2 from workstation 1, its' going to fail.  
 Workstation 1 is connected to switch 1 while workstation 2 is connected to switch 2.  
-We've configured ports on both switches so that our workstations are in the same vlan.
+We've configured ports on both switches so that our workstations are in the same vlan.  
 But until we create our trunk link, these devices won't be able to talk to each other.  
 
 Let's configure our trunk link onto switch 1:
