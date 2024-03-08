@@ -259,7 +259,7 @@ On a router, we divide up interfaces and we **map each subinterface to a differe
 Once we have several virtual interfaces, we configure them independently. This includes a different IP for each one.  
 And these interfaces, even though they're virtual, still behave like regular interfaces, so we can still use them  
 to route traffic between VLANs. This way of configuring a router is called **"router on a stick"** or **ROAS**.  
-It's called this because the single trunk link between the router and switch looks a bit like a stick.
+It's called this because the single trunk link between the router and switches looks a bit like a stick.
 
 Onto each switch:
 ```
@@ -285,12 +285,12 @@ int gi 0/1.20
 encapsulation dot1q 20
 ip address 192.168.20.254 255.255.255.0
 ```
-We use the vlan ID to name our subinterfaces, as it makes it easier later on.  
+We use the vlan ID to name our subinterfaces, just for the sake of consistency.  
 The encapsulation type must match our switch. We also need to include the VLAN ID.  
 We configure the rest of the interface just like we would for any other interface, which includes setting an ip address.  
-Of course, we repeat the process a subinterface on vlan 20.  
+Of course, we repeat the process and create a subinterface on vlan 20.  
 
-The IP addresses that we're adding to the subinterfaces are the default gateways that workstations and servers are using.  
+The IP addresses that we add to the subinterfaces are the default gateways that workstations and servers use to talk to the router.  
 Now we can go and confirm it's working over on workstation 1. Let's start by pinging the router's subinterface:  
 `ping 192.168.10.254` 
 
