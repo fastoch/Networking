@@ -205,7 +205,8 @@ ip access-group 150 in
 >[!note]
 >You do not need to add a space between the interface type and the interface number.
 
-To verify this: `do show ip interface gi0/1.10`  
+
+To verify our configuration: `do show ip interface gi0/1.10`  
 Look for the outgoing and inbound access list entries:  
 ![image](https://github.com/fastoch/Networking/assets/89261095/44746483-690e-4a7a-bbe4-fdff4348a312)
 
