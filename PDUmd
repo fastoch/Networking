@@ -1,3 +1,5 @@
+PDU = Protocol Data Unit 
+
 Layer 1 - Physical = **Bits** (zeros & ones)  
 Layer 2 - Data Link = **Frames**  
 Layer 3 - Network = **Packets**  
