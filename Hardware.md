@@ -23,8 +23,8 @@ We use rules to permit or deny traffic. A firewall can be placed in front of the
 In most cases, you will have: Internet > router > firewall > switch.  
 
 **Next-Generation Firewall** = support features such as IPS (intrusion prevention syst) or IDS (intrusion detection).  
-An IDS simply warns you when there's an attack.  
-An IPS also alerts you, but it can block the attack.
+- An IDS simply warns you when there's an attack.  
+- An IPS also alerts you, but it can block the attack.
 
 **Wireless LAN controller** = used to manage numerous Wi-Fi Access Points. Abbreviated to WLC.  
 They don't have many ports, so they usually connect to the Access Points through one or more switches.  
