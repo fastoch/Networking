@@ -51,3 +51,40 @@ used to communicate with all devices on the local network.
 The entire address is populated with binary ones: 255.255.255.255  
 This address is used, for example, by a host when requesting an IP address from a DHCP server.
 
+>[!note]
+>DHCP = Dynamic Host Configuration Protocol
+
+>[!warning]
+>Local Broadcast addresses are always dropped by Layer 3 devices such as routers and Layer 3 switches. You can override that functionality
+>by configuring what is called "**DHCP forwarding**" or "**DHCP relay**" on the switch or router.
+
+### Local Loopback Address
+used to let a device send a message to itself for testing.  
+This is very useful to make sure that the TCP/IP stack is correctly installed on a machine.  
+A typical loopback address is 127.0.0.1.  
+
+>[!note]
+>Anything in the 127.x.x.x range is deemed a local loopback address.
+
+In **IPv6**, a different address is used for the loopback, it's **::1**.  
+
+>[!note]
+>Routers and switches also have loopback addresses which are not the same as the local loopback address.
+
+---
+
+## Private Addresses
+
+RFC1918 (February 1996) discusses **private IP addresses**, which are non-routable on the Internet.  
+Its purpose was to prevent the exhaustion of IPv4 addresses.  
+
+The IANA has reserved the following 3 blocks of the IP address space for private internets:
+- 10.0.0.0 to 10.255.255.255 (10/8 prefix)
+- 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
+- 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
+
+>[!note]
+>RFCs or Requests For Comments are formal documents from the IETF (Internet Engineering Rask Force).
+>A final version of an RFC will become an Internet standard.
+
+
