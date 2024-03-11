@@ -128,7 +128,20 @@ Subnets masks must start with contiguous binary ones and end with contiguous zer
 
 ### CIDR Notation
 
+CIDR = Classless Inter-Domain Routing  
+introduced in 1993, replaces classful IP addresses  
+allows us to use **VLSM** (Variable Length Subnet Mask)  
 
+255.255.255.0 = /24
+255.255.240.0 = /20
+255.255.0.0 = /16
+255.240.0.0 = /12
+255.0.0.0 = /8
 
+**Before CIDR**:
+- class A: 16 million hosts, subnet mask of /8
+- class B: 65500 hosts, subnet mask of /16
+- class C: 254 hosts (256 minus network & broadcast addresses), subnet mask of /24
 
-
+---
+EOF
