@@ -75,7 +75,7 @@ In **IPv6**, a different address is used for the loopback, it's **::1**.
 
 ## Private Addresses
 
-RFC1918 (February 1996) discusses **private IP addresses**, which are non-routable on the Internet.  
+**RFC1918** (February 1996) discusses **private IP addresses**, which are non-routable on the Internet.  
 Its purpose was to prevent the exhaustion of IPv4 addresses.  
 
 The IANA has reserved the following 3 blocks of the IP address space for private internets:
@@ -83,8 +83,52 @@ The IANA has reserved the following 3 blocks of the IP address space for private
 - 172.16.0.0 to 172.31.255.255 (172.16/12 prefix)
 - 192.168.0.0 to 192.168.255.255 (192.168/16 prefix)
 
+In brief, **NAT** (network address translation) will translate one of these IP addresses to a publicly  
+routable address when traversing a router (our local Internet gateway).
+
 >[!note]
 >RFCs or Requests For Comments are formal documents from the IETF (Internet Engineering Rask Force).
 >A final version of an RFC will become an Internet standard.
+
+---
+
+## Link-Local Addresses 
+
+**RFC3927** - May 2005
+Automatic Private IP Address (APIPA) - only works on Microsoft Windows operating systems.  
+It's used when a PC is configured for DHCP but no DHCP servers are available.  
+Allows 2 computers in the same LAN to communicate when there are no DHCP servers available.
+- range: 169.254.0.0/16
+- no manual configuration required
+- host randomly generate the host specific portion of the address
+- Be aware that this address range is not routable, it's only for communication within the local link.
+
+---
+
+## Subnet Masks
+used to determine which part of an IP address is the network portion and which part is the host portion.  
+
+This allows a local machine to determine whether the device it wants to communicate with is:
+- on a remote network and thus can be reached via a default gateway 
+- on the local subnet and therefore does not require the use of a default gateway
+
+The network portion in a subnet mask consists of contiguous ones starting from the left hand side.
+The host portion in a subnet mask consists of contiguous zeros starting from the right hand side.
+
+---
+
+## Discontiguous Network Mask
+
+Cisco and most network vendors do not support discontiguous subnet masks.  
+"Discontiguous" means that ones and zeros are mixed, they're not grouped together.  
+
+Subnets masks must start with contiguous binary ones and end with contiguous zeros.
+
+---
+
+### CIDR Notation
+
+
+
 
 
