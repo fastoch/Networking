@@ -33,6 +33,7 @@ Click 'Open' to initiate the connection to the switch.
 
 Since it's a brand new switch, you're automatically logged in, no credentials required.  
 Type `enable` and press Enter to quit **user mode** and enter **privileged mode**.  
+Type `disable` to go back to user mode.
 
 To erase the current configuration: `erase startup-config`  
 Once the config has been erased and the switch has rebooted, go back to Putty.
@@ -68,9 +69,27 @@ When the output of a command is too long:
 
 # Initial configuration of a router
 
+```
+en
+show ip int brief
+conf t
+int g0/0/0
+ip address 10.1.1.1 255.255.255.0
+no shut
+exit
+hostname Router1
+end
+copy running-config startup-config
+```
+
+`show ip int brief`  shows your interfaces, their IP and their status.  
 
 
+>[!note]
+>Most switches' interfaces start at Gi1/0/1 whereas routers' start at Gi0/0/0.
 
+Another difference is that interfaces of a switch are generally up by default, whereas interfaces of a router are down.  
+On a router, you need to enable interfaces by using the `no shut` command.  
 
 ---
 EOF
