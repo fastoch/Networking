@@ -42,11 +42,16 @@ Once the config has been erased and the switch has rebooted, go back to Putty.
 >Just unplug the console cable while it's booting up, and replug it once the boot process is over.
 
 In your terminal, the switch prompts you to enter the inital config dialog. Say no.  
-Enter the command `en`, which is short for `enable`.  
+Enter privileged mode with the command `en`, which is short for `enable`.  
 
 Run `show version` to display information about the switch (OS, model, etc.).  
+
 `conf t` to enter the global configuration mode (short for `configure terminal`).  
-`hostname newName` to rename the device.
+`hostname newName` to rename the device.  
+`end` to quit config mode and go back to privileged mode.  
+
+`copy running-config startup-config` to save the configuration.  
+This command can be replaced by `wr`, which is an older command that writes changes to the nvram (non-volatile memory).
 
 >[!tip]
 >Use **question mark** when you're not sure about a command or when you want to see available options to complete a command.
@@ -55,6 +60,15 @@ When the output of a command is too long:
 - press Enter to show next entry,
 - press Space to show next page,
 - press Q to quit and go back to the prompt
+
+>[!tip]
+>Use the Tab key for autocompletion.
+
+---
+
+# Initial configuration of a router
+
+
 
 
 
