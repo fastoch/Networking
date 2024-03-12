@@ -143,5 +143,10 @@ allows us to use **VLSM** (Variable Length Subnet Mask)
 - class B: 65500 hosts, subnet mask of /16
 - class C: 254 hosts (256 minus network & broadcast addresses), subnet mask of /24
 
+**What if a company needs 3000 hosts?**  
+With CIDR, we don't have to set the mask on the octet boundary (/8, /16 or /24).  
+Wecan use a subnet mask of /20, which gives us around 4000 addresses for our hosts.  
+This way, our network size is consistent with our need and we avoid wasting too many addresses.
+
 ---
 EOF
