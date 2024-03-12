@@ -21,4 +21,13 @@
 - broadcast = 172.16.255.255
 
 ---
+
+**How to divide a network when given:**
+- a specific number of hosts
+- a specific number of subnets
+
+192.168.1.0/24 with 
+
+
+---
 EOF
