@@ -26,7 +26,20 @@
 - a specific number of hosts
 - a specific number of subnets
 
-192.168.1.0/24 with 
+Number of hosts = 2 to the power of n minus 2, where n is the number of host bits (zeros) in the subnet mask  
+Number of subnets = 2 to the power of n, where n is the number of network bits (ones) in the subnet mask  
+
+We subtract 2 to calculate the number of hosts because we must allocate 1 address for the subnet and 1 for the broadcast.  
+
+**Example**: 10.1.1.0/24
+Split this into smaller subnets, each subnet needs to support 14 machines.  
+14 hosts = 2 to the power of 4 minus 2, so we only need 4 host bits 
+- Our first subnet will be 10.1.1.0/28
+- Our second subnet will be 10.1.1.16/28
+- Our third subnet will be 10.1.1.32/28
+- ...
+- Last subnet will be 10.1.1.240/28
+
 
 
 ---
