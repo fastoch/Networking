@@ -66,17 +66,17 @@ Subnet this into 4 subnets as follows:
 - Subnet 3 for site 2
 - Subnet 4 for the link between R2 and the Internet Router
 
-**Solution**:
-4 subnets means borrowing 2 bits to the network portion.
+**Solution**:  
+4 subnets means borrowing 2 bits to the network portion.  
 Our mask will be 24 + 2 = /26
-- subnet 1 = 192.168.1.0/26
+- subnet 1 = 192.168.1.0/26 (site 1)
 - subnet 2 = 192.168.1.64/26
-- subnet 3 = 192.168.1.128/26
+- subnet 3 = 192.168.1.128/26 (site 2)
 - subnet 4 = 192.168.1.192/26
 
 ## Configuring the routers
 
-IP address for R1 = 192.168.1.62/26  
+IP address for Router1, int Gi 0/0/0 = 192.168.1.62/26 (link between router1 and switch1).
 ```
 en
 sh ip int brief
@@ -86,6 +86,15 @@ no shut
 ip address 192.168.1.62 255.255.255.192
 end
 sh ip int brief
+wr
+```
+
+IP address for Router1, int Serial 0/1/0 = 192.168.1.126/26  
+Serial port is used to connect Router1 to the Internet router.
+```
+en
+conf t
+
 ```
 
 IP address for R2 = 192.168.1.190/26  
@@ -98,6 +107,7 @@ no shut
 ip address 192.168.1.190 255.255.255.192
 end
 sh ip int brief
+wr
 ```
 
 ## Configuring the switches 
@@ -115,6 +125,7 @@ ip address 192.168.1.61 255.255.255.192
 end
 sh ip int brief
 ping 192.168.1.62
+wr
 ```
 
 IP address for switch 2 = 192.168.1.189/26  
@@ -130,6 +141,7 @@ ip address 192.168.1.189 255.255.255.192
 end
 sh ip int brief
 ping 192.168.1.190
+wr
 ```
 ## Configuring the DHCP servers
 
