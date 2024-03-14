@@ -82,13 +82,23 @@ en
 sh ip int brief
 conf t
 int g0/0/0
+no shut
 ip address 192.168.1.62 255.255.255.192
 end
 sh ip int brief
 ```
 
-IP address for R2 = 192.168.1.190/26
-
+IP address for R2 = 192.168.1.190/26  
+```
+en
+sh ip int brief
+conf t
+int g0/0/0
+no shut
+ip address 192.168.1.190 255.255.255.192
+end
+sh ip int brief
+```
 
 ## Configuring the switches 
 
@@ -97,19 +107,39 @@ IP address for switch 1 = 192.168.1.61/26
 en
 sh ip int brief
 conf t
-int g1/0/1
+host S1
+ip default-gateway 192.168.1.62
+int vlan1
+no shut
 ip address 192.168.1.61 255.255.255.192
 end
 sh ip int brief
+ping 192.168.1.62
 ```
 
-IP address for switch 2 = 192.168.1.189/26
-
-
+IP address for switch 2 = 192.168.1.189/26  
+```
+en
+sh ip int brief
+conf t
+host S1
+ip default-gateway 192.168.1.190
+int vlan1
+no shut
+ip address 192.168.1.189 255.255.255.192
+end
+sh ip int brief
+ping 192.168.1.190
+```
 ## Configuring the DHCP servers
 
-IP address for DHCP server 1 = 192.168.1.60/26  
-IP address for DHCP server 2 = 192.168.1.188/26
+IP address for DHCP server 1 = 192.168.1.60/26 with gateway 192.168.1.62  
+On the DHCP server, we need to configure a **DHCP pool**.  
+- start IP address = 192.168.1.1/26
+- maximum number of users = 50
+- Default gateway is router 1, so 192.168.1.62
+
+IP address for DHCP server 2 = 192.168.1.188/26 with gateway 192.168.1.190
 
 
 
