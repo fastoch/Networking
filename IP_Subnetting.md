@@ -59,6 +59,8 @@ We've created 32 subnets that can each contain 510 hosts.
 
 # Subnetting Lab 1
 
+![image](https://github.com/fastoch/Networking/assets/89261095/ae7b7fb6-ce2f-469b-a735-d6f60c3a774d)
+
 You've been allocated subnet 192.168.1.0/24.  
 Subnet this into 4 subnets as follows:
 - Subnet 1 for site 1
@@ -70,9 +72,9 @@ Subnet this into 4 subnets as follows:
 4 subnets means borrowing 2 bits to the network portion.  
 Our mask will be 24 + 2 = /26
 - subnet 1 = 192.168.1.0/26 (site 1)
-- subnet 2 = 192.168.1.64/26
+- subnet 2 = 192.168.1.64/26 (Router1 to InternetRouter)
 - subnet 3 = 192.168.1.128/26 (site 2)
-- subnet 4 = 192.168.1.192/26
+- subnet 4 = 192.168.1.192/26 (Router2 to InternetRouter)
 
 ## Configuring the routers
 
@@ -117,12 +119,27 @@ no shut
 ip address 192.168.1.126 255.255.255.192
 end
 sh ip int brief
+ping 192.168.1.65
+wr
+```
+The above config is for the interface of the internet router that is connected to router 1.  
+Now, we must configure the interface that is connected to router 2:
+```
+en
+sh ip int brief
+conf t
+int s0/1/1
+no shut
+ip address 192.168.1.254 255.255.255.192
+end
+sh ip int brief
+ping 192.168.1.193
 wr
 ```
 
 ### Router 2
 
-IP address for Router 2, int Gi 0/0/0 = 192.168.1.190/26  
+IP address for Router 2, int Gi 0/0/0 = 192.168.1.190/26 (link between Router2 and Switch2)  
 ```
 en
 sh ip int brief
@@ -134,6 +151,21 @@ end
 sh ip int brief
 wr
 ```
+
+IP address for Router 2, int Serial 0/1/0  
+Serial port is used to connect Router2 to the Internet router.
+```
+en
+sh ip int brief
+conf t
+int s0/1/0
+no shut
+ip address 192.168.1.193 255.255.255.192
+end
+sh ip int brief
+wr
+```
+
 
 ## Configuring the switches 
 
