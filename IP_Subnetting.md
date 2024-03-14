@@ -76,6 +76,8 @@ Our mask will be 24 + 2 = /26
 
 ## Configuring the routers
 
+### Router 1
+
 IP address for Router1, int Gi 0/0/0 = 192.168.1.62/26 (link between router1 and switch1).
 ```
 en
@@ -89,15 +91,38 @@ sh ip int brief
 wr
 ```
 
-IP address for Router1, int Serial 0/1/0 = 192.168.1.126/26  
+IP address for Router1, int Serial 0/1/0 = 192.168.1.65/26  
 Serial port is used to connect Router1 to the Internet router.
 ```
 en
+sh ip int brief
 conf t
-
+int s0/1/0
+no shut
+ip address 192.168.1.65 255.255.255.192
+end
+sh ip int brief
+wr
 ```
 
-IP address for R2 = 192.168.1.190/26  
+### Internet Router
+
+On the Internet Router, we'll pick the last address before the next subnet (.127 is for broadcast):
+```
+en
+sh ip int brief
+conf t
+int s0/1/0
+no shut
+ip address 192.168.1.126 255.255.255.192
+end
+sh ip int brief
+wr
+```
+
+### Router 2
+
+IP address for Router 2, int Gi 0/0/0 = 192.168.1.190/26  
 ```
 en
 sh ip int brief
@@ -112,7 +137,9 @@ wr
 
 ## Configuring the switches 
 
-IP address for switch 1 = 192.168.1.61/26  
+### Switch 1
+
+IP address for switch 1, int Vlan1 = 192.168.1.61/26  
 ```
 en
 sh ip int brief
@@ -128,7 +155,9 @@ ping 192.168.1.62
 wr
 ```
 
-IP address for switch 2 = 192.168.1.189/26  
+### Switch 2
+
+IP address for switch 2, int Vlan1 = 192.168.1.189/26  
 ```
 en
 sh ip int brief
@@ -143,6 +172,7 @@ sh ip int brief
 ping 192.168.1.190
 wr
 ```
+
 ## Configuring the DHCP servers
 
 IP address for DHCP server 1 = 192.168.1.60/26 with gateway 192.168.1.62  
