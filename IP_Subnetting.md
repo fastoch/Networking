@@ -76,20 +76,40 @@ Our mask will be 24 + 2 = /26
 
 ## Configuring the routers
 
-IP address for R1 = 192.168.1.63/26  
-IP address for R2 = 192.168.1.191/26
+IP address for R1 = 192.168.1.62/26  
+```
+en
+sh ip int brief
+conf t
+int g0/0/0
+ip address 192.168.1.62 255.255.255.192
+end
+sh ip int brief
+```
+
+IP address for R2 = 192.168.1.190/26
 
 
 ## Configuring the switches 
 
-IP address for switch 1 = 192.168.1.62/26  
-IP address for switch 2 = 192.168.1.190/26
+IP address for switch 1 = 192.168.1.61/26  
+```
+en
+sh ip int brief
+conf t
+int g1/0/1
+ip address 192.168.1.61 255.255.255.192
+end
+sh ip int brief
+```
+
+IP address for switch 2 = 192.168.1.189/26
 
 
 ## Configuring the DHCP servers
 
-IP address for DHCP server 1 = 192.168.1.61/26  
-IP address for DHCP server 2 = 192.168.1.189/26
+IP address for DHCP server 1 = 192.168.1.60/26  
+IP address for DHCP server 2 = 192.168.1.188/26
 
 
 
