@@ -56,4 +56,30 @@ Our subnet mask will be: 18 + 5 = /23
 We've created 32 subnets that can each contain 510 hosts.
 
 ---
+
+# Subnetting Lab 1
+
+You've been allocated subnet 192.168.1.0/24.  
+Subnet this into 4 subnets as follows:
+- Subnet 1 for site 1
+- Subnet 2 for the link between R1 and the Internet Router
+- Subnet 3 for site 2
+- Subnet 4 for the link between R2 and the Internet Router
+
+**Solution**:
+
+
+## Configuring the routers
+
+
+
+## Configuring the switches 
+
+
+
+## Configuring the DHCP servers
+
+
+
+---
 EOF
