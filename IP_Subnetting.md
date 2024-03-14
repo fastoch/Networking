@@ -176,7 +176,7 @@ IP address for switch 1, int Vlan1 = 192.168.1.61/26
 en
 sh ip int brief
 conf t
-host S1
+host Switch1
 ip default-gateway 192.168.1.62
 int vlan1
 no shut
@@ -194,7 +194,7 @@ IP address for switch 2, int Vlan1 = 192.168.1.189/26
 en
 sh ip int brief
 conf t
-host S1
+host Switch2
 ip default-gateway 192.168.1.190
 int vlan1
 no shut
