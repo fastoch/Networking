@@ -80,7 +80,8 @@ Our mask will be 24 + 2 = /26
 
 ### Router 1
 
-IP address for Router1, int Gi 0/0/0 = 192.168.1.62/26 (link between router1 and switch1).
+IP address for Router1 needs to be last address available on subnet 1 (broadcast is 192.168.1.63).    
+On int Gi 0/0/0, we allocate 192.168.1.62/26 (link between router1 and switch1).
 ```
 en
 sh ip int brief
@@ -93,8 +94,8 @@ sh ip int brief
 wr
 ```
 
-IP address for Router1, int Serial 0/1/0 = 192.168.1.65/26  
-Serial port is used to connect Router1 to the Internet router.
+IP address for Router1 needs to be first address on subnet 2.  
+On interface S0/1/0, we allocate 192.168.1.65/26 (serial port is used to connect Router1 to the Internet router).
 ```
 en
 sh ip int brief
@@ -109,7 +110,8 @@ wr
 
 ### Internet Router
 
-On the Internet Router, we'll pick the last address before the next subnet (.127 is for broadcast):
+On the Internet Router, the IP address needs to be the last one on subnet 3 (link between Router1 and Internet Router).  
+We'll pick the last address before the next subnet (.127 is for broadcast):
 ```
 en
 sh ip int brief
@@ -122,8 +124,10 @@ sh ip int brief
 ping 192.168.1.65
 wr
 ```
+
 The above config is for the interface of the internet router that is connected to router 1.  
-Now, we must configure the interface that is connected to router 2:
+Now, we must configure the interface that is connected to router 2.  
+We'll allocate last IP address on subnet 4:
 ```
 en
 sh ip int brief
@@ -139,7 +143,8 @@ wr
 
 ### Router 2
 
-IP address for Router 2, int Gi 0/0/0 = 192.168.1.190/26 (link between Router2 and Switch2)  
+IP address for Router 2, int Gi 0/0/0 = 192.168.1.190/26 (link between Router2 and Switch2).  
+Last IP address on subnet 3:
 ```
 en
 sh ip int brief
@@ -152,7 +157,7 @@ sh ip int brief
 wr
 ```
 
-IP address for Router 2, int Serial 0/1/0  
+IP address for Router 2, int Serial 0/1/0, first IP address on subnet 4.  
 Serial port is used to connect Router2 to the Internet router.
 ```
 en
@@ -166,12 +171,11 @@ sh ip int brief
 wr
 ```
 
-
 ## Configuring the switches 
 
 ### Switch 1
 
-IP address for switch 1, int Vlan1 = 192.168.1.61/26  
+IP address for switch 1, interface Vlan1 = 192.168.1.61/26, second last IP on subnet 1:
 ```
 en
 sh ip int brief
@@ -189,7 +193,7 @@ wr
 
 ### Switch 2
 
-IP address for switch 2, int Vlan1 = 192.168.1.189/26  
+IP address for switch 2, int Vlan1 = 192.168.1.189/26, second last IP address on subnet 3:
 ```
 en
 sh ip int brief
@@ -207,13 +211,16 @@ wr
 
 ## Configuring the DHCP servers
 
-IP address for DHCP server 1 = 192.168.1.60/26 with gateway 192.168.1.62  
+IP address for **DHCP server 1** = 192.168.1.60/26 
+We allocate the third last IP address on subnet 1.  
+
 On the DHCP server, we need to configure a **DHCP pool**.  
 - start IP address = 192.168.1.1/26
 - maximum number of users = 50
 - Default gateway is router 1, so 192.168.1.62
 
-IP address for DHCP server 2 = 192.168.1.188/26 with gateway 192.168.1.190
+IP address for **DHCP server 2** = 192.168.1.188/26 with gateway 192.168.1.190  
+We allocate the third last IP address on subnet 3.
 
 
 
