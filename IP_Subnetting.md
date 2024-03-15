@@ -232,11 +232,6 @@ On the DHCP server, we need to configure a **DHCP pool**.
 - maximum number of users = 50
 - Default gateway is router 2, so 192.168.1.190
 
----
-
-# Subnetting - Packet Tracer - Lab 2
-
-
 
 ---
 EOF
