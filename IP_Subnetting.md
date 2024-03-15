@@ -57,7 +57,7 @@ We've created 32 subnets that can each contain 510 hosts.
 
 ---
 
-# Subnetting Lab 1
+# Subnetting - Packet Tracer - Lab 1
 
 ![image](https://github.com/fastoch/Networking/assets/89261095/ae7b7fb6-ce2f-469b-a735-d6f60c3a774d)
 
@@ -219,8 +219,22 @@ On the DHCP server, we need to configure a **DHCP pool**.
 - maximum number of users = 50
 - Default gateway is router 1, so 192.168.1.62
 
-IP address for **DHCP server 2** = 192.168.1.188/26 with gateway 192.168.1.190  
-We allocate the third last IP address on subnet 3.
+In this example, we chose to allocate a maximum of 50 dynamic IP addresses, but this number depends on  
+how many static IP addresses we want to have in our subnet.
+
+---
+
+IP address for **DHCP server 2** = 192.168.1.188/26
+We allocate the third last IP address on subnet 3.  
+
+On the DHCP server, we need to configure a **DHCP pool**.  
+- start IP address = 192.168.1.129/26
+- maximum number of users = 50
+- Default gateway is router 2, so 192.168.1.190
+
+---
+
+# Subnetting - Packet Tracer - Lab 2
 
 
 
