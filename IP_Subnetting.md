@@ -29,7 +29,7 @@
 **Example 1**: 10.1.1.0/24  
 Split this into smaller subnets, each subnet needs to support 14 machines. 
 
-14 hosts means that we only need 4 bits for the host portion, since 2 to the power of 4 = 16  
+14 hosts means that we only need 4 bits for the host portion, since 2⁴ = 16  
 The 2 remaining addresses in each subnet will be for the subnet id and for the broadcast.
 
 Our subnet mask will be: 32 - 4 = /28  
@@ -44,7 +44,7 @@ We've created 16 subnets that can each contain 14 hosts.
 **Example 2**: 10.128.192.0/18  
 Create 30 subnets with as many hosts as possible.  
 
-30 subnets means that we need 5 bits for the network portion, since 2 to the power of 5 = 32  
+30 subnets means that we need 5 bits for the network portion, since 2⁵ = 32  
 
 Our subnet mask will be: 18 + 5 = /23
 - first subnet will be 10.128.192.0/23
