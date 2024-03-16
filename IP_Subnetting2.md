@@ -33,7 +33,12 @@ So we'll have a /28 subnet mask in each new subnet.
 - 192.168.1.96/28
 - 192.168.1.112/28
 
+Site 3 will be allocated subnet 192.168.1.80/28  
+Router 3 IP address on int Gi0/0/0 will be 192.168.1.94/28  
+Switch 3 IP address on int Gi1/0/1 will be 192.168.1.93/28  
+Hosts IP adresses will go from 192.168.1.81/28 to 192.168.1.88/28  
 
+Now we must subnet 
 
 ---
 EOF
