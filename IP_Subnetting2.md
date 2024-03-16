@@ -44,9 +44,34 @@ Now we must subnet the last new subnet, which is 192.168.112/28, into /30 subnet
 - 192.168.1.120/30
 - 192.168.1.124/30
   
-We'll allocate the first new subnet to the interface s0/1/0 on router 1 (serial link between router 1 and the Internet router).  
-The second new subnet will be allocated to s0/1/0 on router 2 (serial link between router 2 and the Internet router).  
-The third new subnet will be allocated to s0/1/0 on router 3 (serial link between router 3 and the Internet router). 
+We'll allocate the first new subnet to the serial link between router 1 and the Internet router.
+
+On router 1:
+```
+en
+sh run
+conf t
+int s0/1/0
+ip address 192.168.1.113 255.255.255.252
+end
+sh run
+wr
+```
+
+On the Internet Router:
+```
+en
+sh run
+conf t
+int s0/1/0
+ip address 192.168.1.114 255.255.255.252
+end
+sh run
+wr
+```
+
+The second new subnet will be allocated to the serial link between router 2 and the Internet router.  
+The third new subnet will be allocated to the serial link between router 3 and the Internet router. 
 
 ---
 EOF
