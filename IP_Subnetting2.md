@@ -38,7 +38,15 @@ Router 3 IP address on int Gi0/0/0 will be 192.168.1.94/28
 Switch 3 IP address on int Gi1/0/1 will be 192.168.1.93/28  
 Hosts IP adresses will go from 192.168.1.81/28 to 192.168.1.88/28  
 
-Now we must subnet 
+Now we must subnet the last new subnet, which is 192.168.112/28, into /30 subnets:
+- 192.168.1.112/30
+- 192.168.1.116/30
+- 192.168.1.120/30
+- 192.168.1.124/30
+  
+We'll allocate the first new subnet to the interface s0/1/0 on router 1 (serial link between router 1 and the Internet router).  
+The second new subnet will be allocated to s0/1/0 on router 2 (serial link between router 2 and the Internet router).  
+The third new subnet will be allocated to s0/1/0 on router 3 (serial link between router 3 and the Internet router). 
 
 ---
 EOF
