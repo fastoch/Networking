@@ -35,7 +35,7 @@ So we'll have a /28 subnet mask in each new subnet.
 
 Site 3 will be allocated subnet 192.168.1.64/28  
 Router 3 IP address on int Gi0/0/0 will be 192.168.1.78/28  
-Switch 3 IP address on int Gi1/0/1 will be 192.168.1.77/28  
+Switch 3 IP address on int vlan1 will be 192.168.1.77/28  
 Hosts IP adresses will go from 192.168.1.65/28 to 192.168.1.72/28  
 
 Now we must subnet the last new subnet, which is 192.168.112/28, into /30 subnets:
@@ -52,6 +52,7 @@ en
 sh run
 conf t
 int s0/1/0
+no shut
 ip address 192.168.1.113 255.255.255.252
 end
 sh run
@@ -64,6 +65,7 @@ en
 sh run
 conf t
 int s0/1/0
+no shut
 ip address 192.168.1.114 255.255.255.252
 end
 sh run
@@ -72,6 +74,14 @@ wr
 
 The second new subnet will be allocated to the serial link between router 2 and the Internet router.  
 The third new subnet will be allocated to the serial link between router 3 and the Internet router. 
+
+---
+
+>[!tip]
+>Use the `ip domain-lookup` command to enable DNS.
+
+>[!tip]
+>Use `ip name-server 8.8.8.8` to set Google public DNS as the name server for the device.
 
 ---
 EOF
