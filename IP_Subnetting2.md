@@ -35,8 +35,13 @@ So we'll have a /28 subnet mask in each new subnet.
 
 Site 3 will be allocated subnet 192.168.1.64/28  
 Router 3 IP address on int Gi0/0/0 will be 192.168.1.78/28  
-Switch 3 IP address on int vlan1 will be 192.168.1.77/28  
+Switch 3 IP address on int vlan1 will be 192.168.1.77/28 and its default gateway will be 192.168.1.78  
 Hosts IP adresses will go from 192.168.1.65/28 to 192.168.1.72/28  
+
+>[!note]
+>In the real world, switch 3 would not need a default gateway to communicate with router 3 since they're in the same subnet.
+
+---
 
 Now we must subnet the last new subnet, which is 192.168.112/28, into /30 subnets:
 - 192.168.1.112/30
