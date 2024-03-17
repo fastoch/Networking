@@ -83,7 +83,7 @@ The third new subnet will be allocated to the serial link between router 3 and t
 ---
 
 >[!tip]
->Use the `ip domain-lookup` command to enable DNS.
+>Use the `ip domain-lookup` command to enable DNS on the device.
 
 >[!tip]
 >Use `ip name-server 8.8.8.8` to set Google public DNS as the name server for the device.
