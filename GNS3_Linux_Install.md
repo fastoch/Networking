@@ -7,7 +7,7 @@ source = https://www.youtube.com/watch?v=tBswpi22q_0
 Proprietary tools like Packet Tracer and VIRL are limited, in addition to being paid.  
 What you need is a network emulator that is capable of network equipment and end device virtualization regardless of the brand.  
 
-GNS3 is completely free and open-source.  
+GNS3 stands for **Graphical Network Simulator**. It's completely free and open-source.  
 
 ---
 
