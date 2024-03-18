@@ -1,4 +1,5 @@
 In the past, you had to know when to use a straight through or a crossover cable.  
+Nowadays, automatic crossover or Auto MDIX is widely used.  
 
 Any of the following connections would have required a straight through cable:
 - PC to hub
@@ -15,9 +16,13 @@ Any of the following connections would have required a crossover cable:
 - switch to switch
 - router to router 
 
-Nowadays, automatic crossover or Auto MDIX is widely used.  
-Auto MDIX was introduced in 1998, and it made the requirement for crossover cables obsolete.  
-
 Normally, routers and PCs use MDI, whereas switches use MDIX.  
 MDI = Medium Dependent Interface  
-MDIX = Medium Dependent Interface Crossover
+MDIX = Medium Dependent Interface Crossover  
+
+Auto MDIX was introduced in 1998, and it made the requirement for crossover cables obsolete.  
+
+In the old days, certains ports would have a button to flip the roll from MDIX to MDI.  
+Today, Auto MDI/MDIX allows for automating switching once a cable is connected.  
+Devices auto-detect the cable type so we don't need to worry about cable types.
+
