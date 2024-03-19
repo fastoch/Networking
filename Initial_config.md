@@ -6,7 +6,7 @@ But when you configure it for the first time, you access it via its **console po
 Traditionally, a Cisco router or switch would only have an **RJ45 console port**.  
 Fortunately, modern devices now have a **USB port**.  
 
-When connecting via an RJ45 console port, you can use a rollover cable and an adapter.  
+When connecting via an RJ45 console port, you can use a **rollover cable** and a serial-to-usb converter.  
 Connect one side of the rollover cable to the router or switch, and use a RJ45-to-DB9 (Ethernet to Serial) connector   
 to connect the other side to your computer. This means you need a serial port available on your laptop.  
 Nowadays, we use RJ45 to DB9 cables, where the DB9 connector is already included at one end of the cable.
