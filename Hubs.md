@@ -26,11 +26,10 @@ Another advantage is that UTP cabling is cheaper and easier to manage.
 
 ---
 
-**Note about old Ethernet variants:**
+**Note about Ethernet variants:**
 - 10base5 = 10Mbps baseband over thick coaxial cable (first variant of Ethernet, 1982)
 - 10base2 = 10Mbps baseband over thin coaxial cable (mid to late 1980s)
 - 10base-T = 10Mbps baseband over Twisted Pair cables (1990)
 
 ---
-
-
+EOF
