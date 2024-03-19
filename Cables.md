@@ -57,6 +57,5 @@ A special cable used to connect to the consoles of networking devices.
 It allows you to connect from the serial port of your computer to the console of a router or switch.  
 Modern laptops don't have a serial port, you need to use a usb-to-serial port converter.  
 
-
-
-
+---
+EOF
