@@ -32,4 +32,8 @@ Another advantage is that UTP cabling is cheaper and easier to manage.
 - 10base-T = 10Mbps baseband over Twisted Pair cables (1990)
 
 ---
+
+
+
+---
 EOF
