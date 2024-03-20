@@ -83,9 +83,7 @@ So assuming there are 4 devices in the network, with a maximum utilization of 30
 It's not 10 Mbps dedicated, it's 10 Mbps shared between all the devices in the network.
 
 >[!note]
->You don't generally get more than 30 to 40%
-
-
+>You don't generally get more than 30 to 40% utilization because of collisions.
 
 
 ---
