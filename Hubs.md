@@ -79,7 +79,11 @@ In addition, broadcasts are received by everyone, as this is a single broadcast 
 Broadcast traffic will flood through the entire network and interrupt the CPU of every device.  
 
 From a bandwidth point of view, this may be 10baseT, but it's 10 Mbps shared between all devices in the network.  
-So assuming there are 4 devices in the network, with a maximum utilization of 30%, each device will only get 0.75 Mbps.  
+So assuming there are 4 devices in the network, with a maximum utilization of 30%, each device only gets 0.75 Mbps.  
+It's not 10 Mbps dedicated, it's 10 Mbps shared between all the devices in the network.
+
+>[!note]
+>You don't generally get more than 30 to 40%
 
 
 
