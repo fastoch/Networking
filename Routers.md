@@ -32,8 +32,10 @@ It's an **invaluable tool** for network engineers.
 
 ---
 
-When a device wants to communicate with another device in the same subnet, it will send a broadcast onto the local segment 
+In summary, when a device wants to communicate with another device in the same subnet, it will send a broadcast onto the local segment 
 to find the MAC address of the device using the target IP address.
+
+---
 
 ## Routing between subnets
 
