@@ -27,8 +27,7 @@ and the layer 2 MAC address.
 
 ---
 
-**Wireshark** is a sniffing tool that allows you to capture localhost traffic.  
-It's an **invaluable tool** for network engineers.  
+**Wireshark** is a sniffing tool that allows you to capture localhost traffic. It's an **invaluable tool** for network engineers.  
 
 ---
 
@@ -49,7 +48,20 @@ If the network portion of the address is different, the local PC knows that the 
 And it will therefore send the traffic to its default gateway.  
 
 The PC will firstly check if it has the router's MAC address in its local ARP cache.  
-@2min
+It does this because we're on an Ethernet segment, so it has to know the MAC address associated with the gateway's IP address.
+
+If the PC doesn't know the router's MAC address, it will send an arp request to ask the router to provide its MAC address.  
+The router responds to the arp request and the PC now knows which MAC address is associated with the IP address of the router.  
+
+Then, the PC can send traffic to the remote machine via its default gateway (the router), using the destination MAC address  
+of the router and the destination IP address of the remote host.  
+
+So, when sending traffic from one subnet to another subnet, the Layer 3 headers contain the source host IP address and the  
+destination host IP address. But at Layer 2, the source MAC address is the local host and the destination MAC address is  
+the local router on the local Ethernet segment.  
+
+When the frame gets to the router, the router will strip the Layer 2 headers and then read the Layer 3 headers.
+
 
 
 
