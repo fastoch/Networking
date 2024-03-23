@@ -32,12 +32,24 @@ It's an **invaluable tool** for network engineers.
 
 ---
 
-In summary, when a device wants to communicate with another device **within the same subnet**, it will send a broadcast onto the local segment 
-to find the MAC address of the device using the target IP address.
+In summary, when a device wants to communicate with another device **within the same subnet**, it will send a broadcast onto the 
+local segment to find the MAC address of the device using the target IP address.
 
 ---
 
 ## Routing between subnets
+
+The first thing a computer will do is to check whether the IP address it's trying to communicate with is in a separate subnet  
+or in the same subnet as itself. It does this by applying a logical AND between the IP address and the subnet mask.  
+
+By doing so, the computer compares the network portion with the device that it's trying to communicate with to check if  
+this device is local or remote.  
+
+If the network portion of the address is different, the local PC knows that the targeted device is in a different subnet to itself.  
+And it will therefore send the traffic to its default gateway.  
+
+The PC will firstly check if it has the router's MAC address in its local ARP cache.  
+@2min
 
 
 
