@@ -32,7 +32,7 @@ and the layer 2 MAC address.
 ---
 
 In summary, when a device wants to communicate with another device **within the same subnet**, it will send a broadcast onto the 
-local segment to find the MAC address of the device using the target IP address.
+local segment to find the MAC address of the targeted device, asking "Who has the following IP address?".
 
 ---
 
