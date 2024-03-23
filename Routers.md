@@ -56,11 +56,19 @@ The router responds to the arp request and the PC now knows which MAC address is
 Then, the PC can send traffic to the remote machine via its default gateway (the router), using the destination MAC address  
 of the router and the destination IP address of the remote host.  
 
+---
+
 So, when sending traffic from one subnet to another subnet, the Layer 3 headers contain the source host IP address and the  
 destination host IP address. But at Layer 2, the source MAC address is the local host and the destination MAC address is  
 the local router on the local Ethernet segment.  
 
-When the frame gets to the router, the router will strip the Layer 2 headers and then read the Layer 3 headers.
+When the frame gets to the router, the router will strip the Layer 2 headers and then read the Layer 3 headers to determine  
+what to do with the traffic. The router will then check if the destination IP address is a local address.  
+
+If it's not a local address, it checks its routing table to determine where to send the traffic for this IP address.  
+Once the router knows where to forward the traffic, it sends it out of the port associated with the destination IP address.
+
+Before sending the traffic, the router has to check its arp cache 
 
 
 
