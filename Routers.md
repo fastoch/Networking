@@ -64,11 +64,23 @@ the local router on the local Ethernet segment.
 
 When the frame gets to the router, the router will strip the Layer 2 headers and then read the Layer 3 headers to determine  
 what to do with the traffic. The router will then check if the destination IP address is a local address.  
-
 If it's not a local address, it checks its routing table to determine where to send the traffic for this IP address.  
-Once the router knows where to forward the traffic, it sends it out of the port associated with the destination IP address.
 
-Before sending the traffic, the router has to check its arp cache 
+Before sending the traffic, the router has to check its arp cache to see if it has an entry for the destination IP address.  
+If there is no arp entry for this IP address, the router sends a broadcast in order to get the associated MAC address.  
+This broadcast is once again an arp request that will be replied by the device having the requested MAC address.  
+The arp reply will contain the requested MAC address and the router will then update its arp cache.  
+
+Once the router has the MAC address corresponding to the destination IP, it can relay the traffic sent by the source host.  
+When it sends the traffic, the router **rewrites** the source MAC address entry so that the MAC address of the source host is   
+replaced by the MAC address of the interface through which the traffic exits the router.  
+
+---
+
+It's important to remember that when traversing a router or a Layer 3 switch, **the Layer 2 information is rewritten**.  
+The Layer 3 information is left the same, but every time traffic hops across a router or is sent from one vlan to another,  
+the Layer 2 information is rewritten in the frame.
+
 
 
 
