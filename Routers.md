@@ -79,10 +79,17 @@ replaced by the MAC address of the interface through which the traffic exits the
 
 It's important to remember that when traversing a router or a Layer 3 switch, **the Layer 2 information is rewritten**.  
 The Layer 3 information is left the same, but every time traffic hops across a router or is sent from one vlan to another,  
-the Layer 2 information is rewritten in the frame.
+the Layer 2 information is rewritten in the frame.  
 
+In some cases, you'll notice that when you ping a device, the first ping fails.  
+That's typically because of the ARP request and replies that need to take place to populate the ARP caches of devices between  
+the source and the destination.  
 
+**The important thing to remember is that when you ping across a router or a Layer 3 switch, the Layer 2 information is  
+updated at each hop, but the Layer 3 information remains the same unless NAT (Network Address Translation) is used.**  
 
+When you move from one VLAN to another VLAN on a Layer 3 switch, or move from one interface to another on a router, the  
+Layer 3 information is not changed, but the Layer 2 headers are rewritten. 
 
 
 ---
