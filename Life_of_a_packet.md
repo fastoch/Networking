@@ -41,7 +41,8 @@ No MAC address. Frame is encapsulated in an IP packet and sent from Router2 Seri
 ### From Router1 to PC1
 
 IP packet is received by Router1 Serial interface and then moved to Router1 Gigabit interface.
-IP headers are removed and frame is sent from Router1 Gigabit interface to PC1.
+IP headers are removed and frame is sent from Router1 Gigabit interface to PC1.  
+Destination MAC address is PC1, source MAC address is Router1.
 
 
 ---
