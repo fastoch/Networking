@@ -1,0 +1,2 @@
+# Duplex and speed mismatch
+
