@@ -1,3 +1,5 @@
+A switch is different to a hub in that it has a separate collision domain on every port.
+
 Switches are very similar to bridges, as they both reside at layer 2 (data link) of the OSI model.  
 
 The big advantage of switching when compared to bridging is that **processing can be done in hardware**, using what are  
@@ -38,14 +40,15 @@ Using full-duplex implies that collision detection is turned off. This can cause
 
 Full-duplex is often negotiated automatically between devices.  
 It does happen that one side chooses full-duplex and the other side chooses half-duplex. This will cause problems on that link.  
-If a user is complaining about slow throughput, check the duplex on both sides.
+
+>[!tip]
+>If a user is complaining about slow throughput, check the duplex on both sides.
 
 The throughput of modern switches is much much greater than hubs or bridges.  
 
 Be aware however that in **wireless networks**, access points tend to **operate like hubs**, which means they have a shared infrastructure.
 Shared infrastructure means **shared bandwidth**.  
 Whereas with **switches** devices have **dedicated bandwidth**.
-
 
 
 ---
