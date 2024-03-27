@@ -1,12 +1,12 @@
 # Duplex and speed mismatch
 
 With Full Duplex, a device can transmit and receive at the same time.  
-With Half Duplex, one device sends data while other devices receives it.
+With Half Duplex, devices of the network are either sending data or receiving it, they can't do both.
 
 Originally, Ethernet was half-duplex because devices were connected to hubs.  
 Devices connected to a hub are in the same collision domain, therefore they can't communicate simultaneously.  
 
-These days, because of the use of Ethernet switches, we generally want to use Full Duplex.  
+These days, thanks to Ethernet switches, we generally use Full Duplex.  
 
 ---
 
@@ -17,7 +17,7 @@ Duplex mismatches do cause performance issues. Pings may succeed, but the moveme
 UDP in particular may have problems with recovering from duplex mismatch issues.  
 
 When there is a mismatch, the side that is set for half duplex will see late collisions on the connection.  
-But this only occurs when you're sending enough traffic. A standard ping doesn't show that problem.  
+Keep in mind that this only occurs when you're sending enough traffic. A standard ping doesn't show that problem.  
 But when a large amount of traffic is sent on the half duplex connection, we're getting late collisions. 
 
 ---
