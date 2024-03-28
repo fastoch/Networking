@@ -61,6 +61,28 @@ Just replace x with the router's number (1 for router1, 2 for router2, etc.)
 
 # Another reason to use loopbacks - OSPF
 
+Routing protocols such as OSPF use the loopback to determine the ID of routers in an OSPF network.  
+When we enable a routing protocol such as ospf, it selects a router ID for itself.  
+
+To enable OSPF on all interfaces of a router and put them in area 0:
+```
+conf t
+router ospf 1
+network 0.0.0.0 255.255.255.255 area 0
+end
+sh ip ospf int
+```
+
+The router ID is the highest IP address of any interface.  
+And if there are loopbacks, the loopbacks override the physical interfaces, so the router ID will be the highest loopback address.  
+
+In OSPF, a router is identified by its router ID.  
+If you don't use a loopback interface, the router ID will be selected off a physical interface.  
+And if this interface goes down, the router-id will change on next reboot, which can prevent OSPF from working properly.    
+
+For example, a virtual link between 2 routers could break if the router-id changes.  
+
+To make sure that OSPF works as expected, it is advised to create and configure loopbacks on every router.
 
 
 ---
