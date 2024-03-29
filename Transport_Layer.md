@@ -31,9 +31,11 @@ TCP and UDP reside at layer 4 of the OSI model, the Transport layer.
 Like IP, **UDP** is **connectionless**, it does not guarantee the delivery of packets.  
 UDP requires higher layer protocols to ensure the successful delivery of packets.
 
-TCP does provide **delivery acknowledgment** and **reliability**, but with the disadvantage of additional overhead.
-TCP is connection-oriented in the same way that a telephone call is.  
+TCP does provide **delivery acknowledgment** and **reliability**, but with the disadvantage of additional overhead.  
 Once the 3-way handshake has taken place, the two parties can exchange data.  
+
+TCP is connection-oriented, and every **segment** transmitted is **acknowledged** by the receiver.  
+If a segment went missing, it is **retransmitted**. 
 
 # What is a socket?
 
@@ -91,8 +93,34 @@ UDP does not support this and requires higher layer protocols to sort out the fr
 
 TCP uses end-to-end flow control to avoid sending the data too quickly, so the receiver can process the data reliably.  
 If the sender transmits the data faster than the receiver can handle it, the receiver will drop the data and require retransmission.  
+Retransmissions will waste time and network resources.  
 
+You may as an example have a PC with a powerful CPU sending data to a PDA which can only process data at a much lower rate.  
+The PDA should therefore regulate the data flow so it's not overwhelmed.  
 
+With TCP, the flow control is implemented by acknowledgment from the receiver when data has been transmitted.
+TCP uses what is called a "**sliding window**" to control the flow of data.  
+
+**Windowing** will allow a receiving computer to advertise how much data it's able to receive before transmitting an acknowledgment  
+to the sending computer.  
+
+In each TCP segment, the receiver will specify in the '**receive window**' field the amount of additional data in bytes that it is  
+willing to buffer for the connection.  
+The sending host can only send up to that amount of data before it must wait for an acknowledgment (ACK) and window size update from  
+the receiving host.  
+
+UDP does not implement flow control. And in a **VoIP** environment, as an example, which **uses UDP**, the call will stay up and the  
+sender will merrily continue sending huge amounts of data, even though the receiver cannot process the received data.  
+
+**UDP relies on higher layer protocols to implement flow control.**  
+
+---
+
+# Comparison between UDP and TCP
+
+![image](https://github.com/fastoch/Networking/assets/89261095/773b0484-ac3b-4d73-99b2-ad968366732c)
+
+---
 
 
 
