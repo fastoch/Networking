@@ -35,7 +35,10 @@ Port numbers in the range 49152 to 65535.
 
 ## Ephemeral ports
 
-They are short lived ports used for the client side of a connection.
+They are short-lived ports used for the client side of a connection.  
+When your PC initiates a session to a web server, an ephemeral port will be used.  
+This kind of port only lasts for the duration of the session.  
+IANA suggests to use Dynamically assigned port numbers.
 
 ---
 EOF
