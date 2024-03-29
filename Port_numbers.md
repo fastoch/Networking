@@ -8,7 +8,7 @@ And a well-known port number is used as the destination.
 
 ## Well-known ports
 
-Those port numbers are in the range <= 1023.
+Those port numbers are in the range 0 to 1023.
 
 - HTTP uses TCP port 80 
 - HTTPS uses TCP port 443 
@@ -20,6 +20,22 @@ Those port numbers are in the range <= 1023.
 - SNMP uses UDP port 161 
 - DHCP uses UDP port 67 on the server side and UDP port 68 on the client side
 - 
+
+## Registered ports
+
+Those port numbers are in the range 1024 to 49151.  
+
+- 
+
+## Dynamically assigned ports
+
+Port numbers in the range 49152 to 65535.  
+
+- 
+
+## Ephemeral ports
+
+They are short lived ports used for the client side of a connection.
 
 ---
 EOF
