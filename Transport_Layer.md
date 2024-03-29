@@ -31,7 +31,7 @@ TCP and UDP reside at layer 4 of the OSI model, the Transport layer.
 Like IP, **UDP** is **connectionless**, it does not guarantee the delivery of packets.  
 UDP requires higher layer protocols to ensure the successful delivery of packets.
 
-TCP does provide **delivery acknowledgment** and **reliability**, but with the disadvantage of additional overhead.  
+TCP does provide **delivery acknowledgement** and **reliability**, but with the disadvantage of additional overhead.  
 Once the 3-way handshake has taken place, the two parties can exchange data.  
 
 TCP is connection-oriented, and every **segment** transmitted is **acknowledged** by the receiver.  
@@ -98,15 +98,15 @@ Retransmissions will waste time and network resources.
 You may as an example have a PC with a powerful CPU sending data to a PDA which can only process data at a much lower rate.  
 The PDA should therefore regulate the data flow so it's not overwhelmed.  
 
-With TCP, the flow control is implemented by acknowledgment from the receiver when data has been transmitted.
+With TCP, the flow control is implemented by acknowledgement from the receiver when data has been transmitted.
 TCP uses what is called a "**sliding window**" to control the flow of data.  
 
-**Windowing** will allow a receiving computer to advertise how much data it's able to receive before transmitting an acknowledgment  
+**Windowing** will allow a receiving computer to advertise how much data it's able to receive before transmitting an acknowledgement  
 to the sending computer.  
 
 In each TCP segment, the receiver will specify in the '**receive window**' field the amount of additional data in bytes that it is  
 willing to buffer for the connection.  
-The sending host can only send up to that amount of data before it must wait for an acknowledgment (ACK) and window size update from  
+The sending host can only send up to that amount of data before it must wait for an acknowledgement (ACK) and window size update from  
 the receiving host.  
 
 UDP does not implement flow control. And in a **VoIP** environment, as an example, which **uses UDP**, the call will stay up and the  
