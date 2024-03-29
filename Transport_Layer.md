@@ -63,7 +63,8 @@ During data flow, TCP will maintain reliable delivery of the data and will close
 # MTU, MSS and Path MTU Discovery
 
 Information may be segmented for transmission across a network.  
-The **maximum transmission unit** (MTU) depends on the physical medium.  
+The **maximum transmission unit** (MTU) is the maximum size of an IP packet that can be sent over a link.  
+The MTU depends on the physical medium.  
 
 The MTU of FastEthernet is 1500 bytes.  
 TCP can theoretically support 65495 bytes in a single packet.  
@@ -75,9 +76,9 @@ The **maximum segment size** (MSS) is the largest amount of data (in bytes) that
 For best performance, the MSS should be set small enough to avoid IP fragmentation, which can lead to excessive retransmissions  
 if there's packet loss.  
 
-**Path MTU discovery** is a standardized technique in computer networking for determining the MTU size on the network path between   
-two Internet Protocol hosts, usually with the goal of avoiding IP fragmentation.  
-The sender and the receiver can automatically determine the MTU on a path between them.  
+**Path MTU discovery** (PMTUD) is a standardized technique in computer networking for determining the MTU size on the network path  
+between two Internet Protocol hosts, usually with the goal of avoiding IP fragmentation.  
+Thanks to PMTUD, the sender and the receiver can automatically determine the MTU on a path between them.  
 And TCP will only put enough data into a single packet that fits that MTU, thus avoiding fragmentation of packets and the resulting  
 overhead associated with fragmentation and the putting together of the IP fragments.  
 
@@ -88,7 +89,9 @@ UDP does not support this and requires higher layer protocols to sort out the fr
 
 # Flow Control
 
-TCP uses end-to-end flow control 
+TCP uses end-to-end flow control to avoid sending the data too quickly, so the receiver can process the data reliably.  
+If the sender transmits the data faster than the receiver can handle it, the receiver will drop the data and require retransmission.  
+
 
 
 
