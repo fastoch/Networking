@@ -10,14 +10,15 @@ And a well-known port number is used as the destination.
 
 Those port numbers are in the range <= 1023.
 
-- HTTP uses port 80 and TCP as its transport layer protocol
-- HTTPS uses port 443 and TCP 
-- FTP uses port 21 and TCP (for server and client negotiation)
-- FTP Data uses port 20 and TCP (for the actual transmission of data)
-- Telnet uses port 23 and TCP
-- DNS uses port 53 and both TCP and UDP
-- TFTP uses port 69 and UDP
-- SNMP uses port 161 and UDP
+- HTTP uses TCP port 80 
+- HTTPS uses TCP port 443 
+- FTP uses TCP port 21 for server and client negotiation
+- FTP Data uses TCP port 20 for the actual transmission of data
+- Telnet uses TCP port 23
+- DNS uses TCP or UDP port 53 
+- TFTP uses UDP port 69 
+- SNMP uses UDP port 161 
+- DHCP uses UDP port 67 on the server side and UDP port 68 on the client side
 - 
 
 ---
