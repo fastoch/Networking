@@ -80,6 +80,7 @@ if there's packet loss.
 
 **Path MTU discovery** (PMTUD) is a standardized technique in computer networking for determining the MTU size on the network path  
 between two Internet Protocol hosts, usually with the goal of avoiding IP fragmentation.  
+
 Thanks to PMTUD, the sender and the receiver can automatically determine the MTU on a path between them.  
 And TCP will only put enough data into a single packet that fits that MTU, thus avoiding fragmentation of packets and the resulting  
 overhead associated with fragmentation and the putting together of the IP fragments.  
@@ -121,6 +122,56 @@ sender will merrily continue sending huge amounts of data, even though the recei
 ![image](https://github.com/fastoch/Networking/assets/89261095/773b0484-ac3b-4d73-99b2-ad968366732c)
 
 ---
+
+# TCP 3-way handshake
+
+When using TCP, devices must first establish a connection before data transmission can take place.  
+A connection-oriented session will be established between host A and host B.  
+One machine will initiate the connection which must then be accepted by the other machine.  
+
+## Step 1
+
+The host initiating the session (A) will set the **SYN** flag in the TCP header of the first segment sent to host B.  
+Host A will also choose an initial sequence number.  
+This synchronization segment also specifies the port number the sender wants to connect to.  
+
+## Step 2
+
+The server host (B) is waiting for a connection request from a remote client.  
+
+When the SYN is received and accepted, host B will send back a TCP segment with both the **SYN** and **ACK** flags set.  
+Host B also sets an initial sequence number to indicate the next sequence number of the next bytes of data it expects to receive.  
+B also sets the ACK flag to 101. An ACK flag indicates the next portion of data the host expects to receive.  
+
+## Step 3
+
+The initiating host (A) has received the SYN from host B and sends back a TCP segment with the Control field set to ACK.  
+Host A also increments its sequence number.  
+Since the SYN flag is unset, this confirms that the 3-way handshake has completed successfully.  
+
+## TCP Seq and Ack in more detail
+
+The window size is the maximum amount of data that the receiver can handle.  
+For this example, let's assume the Window size is 1, meaning only one segment can be transmitted before an ACK is received.  
+
+Now, let's assume that host A (initiating host) starts with an initial sequence number of 5.  
+Since the window size is 1, when B receives the first segment from A, B acknowlegdes the next incoming segment as number 6.  
+Additionally, host B also starts sending segments with its own initial sequence number, let's say 10 for example.  
+
+When A receives the first segment from B, A will now send segment 6 to B, and acknowledges the next incoming segment as 11.  
+In other words, A says to B: "I've received your segment 10 and I'm expecting segment 11. Let me send you my segment 6."
+
+![image](https://github.com/fastoch/Networking/assets/89261095/d1191876-0cb9-4978-a4f9-6dc2fc2038a6)  
+
+If B receives segment 6 successfully, it will say to A:  
+"I've received your segment 6 and am expecting your segment 7. Here's my segment 11."  
+
+And this keeps on until the session is closed.  
+
+
+
+
+
 
 
 
