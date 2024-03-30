@@ -35,10 +35,13 @@ Port numbers in the range 49152 to 65535.
 
 ## Ephemeral ports
 
-They are short-lived ports used for the client side of a connection.  
+They are short-lived ports used for the client side of a connection. This kind of port only lasts for the duration of the session.  
 When your PC initiates a session to a web server, an ephemeral port will be used.  
-This kind of port only lasts for the duration of the session.  
-IANA suggests to use Dynamically assigned port numbers.
+
+IANA suggests to use the range intended for Dynamically assigned port numbers.  
+However, BSD uses ports 1024 to 4999.  
+FreeBSD uses the IANA range since release 4.6.  
+Linux uses ports 32768 to 61000.  
 
 ---
 EOF
