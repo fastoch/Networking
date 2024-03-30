@@ -183,10 +183,13 @@ to receive transmitted segments.
 
 This allows for communication between a very powerful machine and a slower one.  
 
----
+# TCP Acknowledgement & Windowing
 
-# Video 112
+The TCP window is the number of data segments the sender is allowed to send without getting an acknowledgement from the receiver.  
+The sender cannot transmit any more data until it receives an acknowledgement.  
 
+With a window size of 1, the throughput would be very low, because the receiver would have to send an ACK for each segment.  
+The sender needs to buffer outgoing segments until it receives an acknowledgement.
 
 
 ---
