@@ -149,7 +149,7 @@ The initiating host (A) has received the SYN from host B and sends back a TCP se
 Host A also increments its sequence number.  
 Since the SYN flag is unset, this confirms that the 3-way handshake has completed successfully.  
 
-## TCP Seq and Ack in more detail
+## TCP Seq & Ack in more detail
 
 The window size is the maximum amount of data that the receiver can handle.  
 For this example, let's assume the Window size is 1, meaning only one segment can be transmitted before an ACK is received.  
@@ -168,10 +168,24 @@ If B receives segment 6 successfully, it will say to A:
 
 And this keeps on until the session is closed.  
 
+# Flow Control (part 2)
 
+Once again, flow control prevents the issue of a sender overflowing the buffers of a receiver.  
+If a machine's buffer is full, it will send a "**not ready**" indicator to the sender.  
+It does this by setting the window size to 0. This tells the sender to stop sending data and wait for a "**ready**" indicator.  
 
+When the receiving host has finished processing the data in its receive buffer, it sends a "ready" indicator to the sender.  
+The sender will then resume data transmission.  
 
+Remember that hosts involved in a TCP conversation can negotiate various parameters, and one of them is Flow Control.  
+This is how a receiver can tell a sender to slow down or to stop sending data until the receiver has buffer space available  
+to receive transmitted segments.  
 
+This allows for communication between a very powerful machine and a slower one.  
+
+---
+
+# Video 112
 
 
 
