@@ -186,10 +186,20 @@ This allows for communication between a very powerful machine and a slower one.
 # TCP Acknowledgement & Windowing
 
 The TCP window is the number of data segments the sender is allowed to send without getting an acknowledgement from the receiver.  
+The sender needs to buffer outgoing segments until it receives an acknowledgement.  
 The sender cannot transmit any more data until it receives an acknowledgement.  
 
 With a window size of 1, the throughput would be very low, because the receiver would have to send an ACK for each segment.  
-The sender needs to buffer outgoing segments until it receives an acknowledgement.
+The time is reduced in half when increasing the window size from 1 to 3.  
+
+Rather than using a fixed window size, hosts tend to use **sliding windows**.  
+They start with a small window size, and then increase the window size to gauge the amount of data that the receiver can receive,  
+and what the network can handle.  
+
+The window size increases until a packet is dropped, or until the receiving host cannot handle the amount of incoming data.  
+
+
+
 
 
 ---
