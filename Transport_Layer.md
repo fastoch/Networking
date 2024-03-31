@@ -185,7 +185,9 @@ This allows for communication between a very powerful machine and a slower one.
 
 # TCP Acknowledgement & Windowing
 
+An acknowledgement or ACK is the next segment that the receiver wants to receive.  
 The TCP window is the number of data segments the sender is allowed to send without getting an acknowledgement from the receiver.  
+
 The sender needs to buffer outgoing segments until it receives an acknowledgement.  
 The sender cannot transmit any more data until it receives an acknowledgement.  
 
@@ -194,9 +196,22 @@ The time is reduced in half when increasing the window size from 1 to 3.
 
 Rather than using a fixed window size, hosts tend to use **sliding windows**.  
 They start with a small window size, and then increase the window size to gauge the amount of data that the receiver can receive,  
-and what the network can handle.  
+and that the network can handle.  
 
 The window size increases until a packet is dropped, or until the receiving host cannot handle the amount of incoming data.  
+In brief the window size is either:
+- the window granted to the sender by the receiver
+- or a calculated window called the "**congestion window**" (**CWND**)
+
+The CWND is initially set to a very low value at connection establishment.  
+It then increases at an exponential rate.  
+For every lost segment, the CWND is halved.  
+After lost segments have been successfully retransmitted, the CWND grows again until it reaches a value half of its previous max.  
+It then slows down its growth using an algorithm called "**congestion avoidance**".  
+
+In **QoS** (Quality of Service), Weighted Random Early Detection (**WRED**) can be used to improve the efficiency of TCP transmissions.
+
+
 
 
 
