@@ -210,9 +210,7 @@ After lost segments have been successfully retransmitted, the CWND grows again u
 It then slows down its growth using an algorithm called "**congestion avoidance**".  
 
 In **QoS** (Quality of Service), Weighted Random Early Detection (**WRED**) can be used to improve the efficiency of TCP transmissions.
-
-
-
+https://qos.internetworks.in/2022/02/what-is-weighted-random-early-detection.html  
 
 
 
