@@ -8,8 +8,12 @@ On the switch:
 ```
 en
 conf t
-monitor session 1 source int g0/0
-monitor session 1 destination
+monitor session 1 source interface gigabitEthernet 0/0
+monitor session 1 destination interface gigabitEthernet 0/3
 ```
 
-The source interface is  
+The switch will copy the traffic from the source interface to the destination interface.  
+In this example, we're spanning (or mirroring) the port gi0/0 to the port gi0/3 (which we've connected the monitoring device to).  
+
+
+
