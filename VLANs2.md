@@ -78,7 +78,29 @@ If you have changed the native vlan to something other than VLAN1, these protoco
 
 It's important that the native vlan on both sides of the trunk be the same. If they're not set the same, the switches will notify you by telling you that there's a native vlan mismatch. The issue that arises if the native VLANs are not the same is that traffic from one vlan on a given switch will automatically be associated and end up in a different vlan on another switch.
 
-@module 122 5:30
+### A typical scenario
+
+A PC is connected to an IP phone that is in turn connected to a switch.  
+An IP phone has a built-in 3-way switch:
+- one port is connected back to the network infrastructure 
+- a second port allows the PC to connect to the infrastructure through the phone
+- a third port allows for voice traffic from the handset to be prioritized over data when sent to the network infrastructure
+
+The IP phone can be configured in a separate vlan to the PC.  
+This way, the PC will not be able to sniff voice traffic.  
+
+Some very powerful hacking tools allow you to sniff the network and capture the voice traffic.  
+But if the phone is in a separate vlan, **security is enhanced** because the PC is not able to see the voice traffic.  
+
+From a QoS point of view, this is also a lot better to put the phone in a separate vlan.  
+Because it makes it easier to prioritize the voice traffic over the data traffic.  
+
+Setting up the network this way also has the advantage of easier IP address management, because you can assign a different subnet to your phones versus your PCs and thus scale your IP addressing.  
+
+What happens is the switch is configured with what's called a voice VLAN and a native VLAN.  
+
+
+@8min
 
 
 ---
