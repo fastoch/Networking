@@ -52,12 +52,33 @@ The 2 trunking protocols are:
 A 802.1Q frame is different to a standard Ethernet frame. It has a TAG field that contains the **VLAN id**.  
 In theory, 4096 VLANs can be configured on a 802.1Q switch, since the VLAN id size is 12 bits.  
 
+### The Native VLAN
 
+802.1Q trunks have a special vlan called the "native vlan".  
+When a port on a switch is set up as a trunk, that port can transmit and receive tagged frames.  
+However, frames that belong to the native vlan do not carry vlan tags when sent over a trunk link.  
+For this reason, management traffic will go across the native vlan.  
 
----
+For instance, STP BPDUs will use the native vlan, and so will DTP (dynamic trunking protocol).  
+DTP is a way that switches negociate to set up a trunk between themselves automatically.
 
-## 
+>[!note]
+>STP BPDU is a spanning tree protocol (STP) message unit that describes the attributes of a switch port such as its MAC address, priority and cost to reach. BPDUs enable switches that participate in a spanning tree protocol to gather information about each other.
 
+If you have left VLAN1 as the native vlan, traffic like CDP, VTP, PAgP and UDLD will be transmitted across the native vlan, untagged.  
+If you have changed the native vlan to something other than VLAN1, these protocols will be tagged in that specific vlan.  
+
+- CDP = Cisco Discovery Protocol
+- VTP = VLAN Trunking Protocol
+- PAgP = Port Aggregation Protocol
+- UDLD = Uni-Directional Link Detection
+
+>[!important]
+>The important thing to take note of here is that on trunk links there's a special vlan known as the native vlan, where traffic is sent untagged if left at the default of vlan1. A lot of management traffic will be sent across that native vlan. 
+
+It's important that the native vlan on both sides of the trunk be the same. If they're not set the same, the switches will notify you by telling you that there's a native vlan mismatch. The issue that arises if the native VLANs are not the same is that traffic from one vlan on a given switch will automatically be associated and end up in a different vlan on another switch.
+
+@module 122 5:30
 
 
 ---
