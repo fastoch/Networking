@@ -78,11 +78,11 @@ If you have changed the native vlan to something other than VLAN1, these protoco
 
 It's important that the native vlan on both sides of the trunk be the same. If they're not set the same, the switches will notify you by telling you that there's a native vlan mismatch. The issue that arises if the native VLANs are not the same is that traffic from one vlan on a given switch will automatically be associated and end up in a different vlan on another switch.
 
-## Voice VLAN
+## Voice VLAN on a Cisco switch
 
 A typical scenario is having a PC connected to an IP phone that is in turn connected to a switch.  
 
-An IP phone has a built-in 3-way switch:
+A Cisco IP phone has a built-in 3-way switch:
 - one port is connected back to the network infrastructure 
 - a second port allows the PC to connect to the infrastructure through the phone
 - a third port allows for voice traffic from the handset to be prioritized over data when sent to the network infrastructure
@@ -98,10 +98,27 @@ Because it makes it easier to prioritize the voice traffic over the data traffic
 
 Setting up the network this way also has the advantage of easier IP address management, because you can assign a different subnet to your phones versus your PCs and thus scale your IP addressing.  
 
-What happens is the switch is configured with what's called a voice VLAN and a native VLAN.  
+What happens is the switch is configured with what's called a **voice VLAN** and a native VLAN.  
+The Voice VLAN is tagged, so tagged frames get sent to the phone, and the phone, with its built-in 3-way switch, is able to read the 802.1Q frames.  
+Untagged frames are sent on what's called the "native VLAN" or "data VLAN". That information is sent to the phone, and the phone just switches that to the PC.   
+
+So, the PC receives the untagged or native VLAN frames, and the phone receives the tagged or voice VLAN frames.  
+No configuration of the phone is necessary to enable this.  
+You simply type a few commands on the switch, telling the switch what the Voice VLAN is and what the Data VLAN is.
+
+The rest happens automatically because when the phones boot up, they query the switch through CDP (Cisco Discovery Protocol) to find out which VLAN they belong to. The switch updates the phone's configuration through the use of CDP.
+
+## How ports are assigned to VLANs
+
+- They can be **statically assigned** by an administrator. Enable mode > config mode > config-if mode > put the interface into a VLAN
+- you can also create **Dynamic VLANs** using a **VLAN Membership Policy Server** (VMPS)
+
+Dynamic VLANs allow for a port's VLAN to be dynamically updated based on the MAC address of the device attached to that port.  
+Based on the source MAC address of the frames received on the port, this port is automatically assigned to the proper VLAN.  
+
+@10min
 
 
-@8min
 
 
 ---
