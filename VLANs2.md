@@ -82,7 +82,7 @@ It's important that the native vlan on both sides of the trunk be the same. If t
 
 A typical scenario is having a PC connected to an IP phone that is in turn connected to a switch.  
 
-A Cisco IP phone has a built-in 3-way switch:
+An IP phone has a built-in 3-way switch:
 - one port is connected back to the network infrastructure 
 - a second port allows the PC to connect to the infrastructure through the phone
 - a third port allows for voice traffic from the handset to be prioritized over data when sent to the network infrastructure
@@ -112,11 +112,18 @@ The rest happens automatically because when the phones boot up, they query the s
 
 - They can be **statically assigned** by an administrator. Enable mode > config mode > config-if mode > put the interface into a VLAN
 - you can also create **Dynamic VLANs** using a **VLAN Membership Policy Server** (VMPS)
+- Lastly, we have **Voice VLANs**, whice are used specifically for IP phones. 
 
-Dynamic VLANs allow for a port's VLAN to be dynamically updated based on the MAC address of the device attached to that port.  
+### Dynamic VLANs
+
+**Dynamic VLANs** allow for a port's VLAN to be dynamically updated based on the MAC address of the device attached to that port.  
+In a boardroom for example, when a director plugs in his laptop, based on the MAC address of that laptop, the corresponding port on the switch is automatically assigned to the director's VLAN.  
+When a manager plugs his laptop into the same port, the VLAN is automatically updated to the manager's VLAN.  
 Based on the source MAC address of the frames received on the port, this port is automatically assigned to the proper VLAN.  
 
-@10min
+## VTP
+
+VLAN Trunking Protocol is a Cisco proprietary layer 2 protocol which allows for propagation of VLAN information.  
 
 
 
