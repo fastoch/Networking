@@ -145,7 +145,8 @@ A switch can only be configured in a single VTP domain at any given time.
 
 By default, Cisco switches are in the null domain or "no management" domain, until they receive an advertisement for a domain over a trunk link, or until you manually configure a management domain.  
 
-An important concept to understand VTP is the concept of "**revision number**".  
+An important concept to understand in VTP is the concept of "**revision number**".  
+Everytime a change is made to the VLAN database, the revision number will increment by one.  
 
 
 
