@@ -123,7 +123,24 @@ Based on the source MAC address of the frames received on the port, this port is
 
 ## VTP
 
-VLAN Trunking Protocol is a Cisco proprietary layer 2 protocol which allows for propagation of VLAN information.  
+VLAN Trunking Protocol is a Cisco proprietary layer 2 protocol which allows for propagation of VLAN information from one switch to another.  
+Rather than telneting to mutliple switches, you can create, delete or rename VLANs on one switch and have that information automatically propagated to other switches across trunk links.  
+
+VTP can save you a lot of time. But as a lot of Cisco engineers will tell you, VTP can cause you a lot of headaches.  
+Switches can have the entire VLAN configuration wiped out if a new switch is added to the network without following a proper procedure.  
+
+A lot of network engineers will not enable VTP because of the inherent risk associated with this protocol.  
+
+VTP messages are sent to the following MAC address: 01-00-0C-CC-CC-CC, which is a well-known multicast address for CDP and VTP flooding.  
+
+There are 3 types of messages in VTP:
+- summary advertisements
+- subset advertisements
+- avdertisement requests
+
+When setting up VTP, devices will by default belong to **the null domain**.  
+For VTP to work, you need to configure and put the devices into a specific VTP domain.  
+
 
 
 
