@@ -140,6 +140,12 @@ There are 3 types of messages in VTP:
 
 When setting up VTP, devices will by default belong to **the null domain**.  
 For VTP to work, you need to configure and put the devices into a specific VTP domain.  
+Only devices within the same VTP domain will be updated with VLAN information.  
+A switch can only be configured in a single VTP domain at any given time.  
+
+By default, Cisco switches are in the null domain or "no management" domain, until they receive an advertisement for a domain over a trunk link, or until you manually configure a management domain.
+
+@12min
 
 
 
