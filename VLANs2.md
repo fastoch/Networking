@@ -143,9 +143,9 @@ For VTP to work, you need to configure and put the devices into a specific VTP d
 Only devices within the same VTP domain will be updated with VLAN information.  
 A switch can only be configured in a single VTP domain at any given time.  
 
-By default, Cisco switches are in the null domain or "no management" domain, until they receive an advertisement for a domain over a trunk link, or until you manually configure a management domain.
+By default, Cisco switches are in the null domain or "no management" domain, until they receive an advertisement for a domain over a trunk link, or until you manually configure a management domain.  
 
-@12min
+An important concept to understand VTP is the concept of "**revision number**".  
 
 
 
