@@ -135,8 +135,8 @@ VTP messages are sent to the following MAC address: 01-00-0C-CC-CC-CC, which is 
 
 There are 3 types of messages in VTP:
 - summary advertisements
-- subset advertisements
 - avdertisement requests
+- subset advertisements
 
 When setting up VTP, devices will by default belong to **the null domain**.  
 For VTP to work, you need to configure and put the devices into a specific VTP domain.  
@@ -150,8 +150,20 @@ Everytime a change is made to the VLAN database, the revision number will increm
 
 When a change is made on one of the switches, the information is advertised to all other switches in the VTP domain, so that they can synchronize their databases to the latest revision number.  
 
-The switch on which the change is made will send a VTP summary advertisement to inform all other switches that a change has been made.  
-These switches will then request the latest information using an advertisement request.
+The switch on which the change is made will send a VTP **summary advertisement** to inform all other switches that a change has been made.  
+These switches will then request the latest information using an **advertisement request**, and the switch on which the change has been made will send them detailed information about the change using a **subset advertisement**.  
+Finally, the **revision number** on all of these switches will increment to the same revision number as the switch where the change was made.  
+
+The whole concept with VTP is that you can make changes on an individual device, and all other devices in the VTP domain are informed and will synchronize their databases to the latest revision number so that they end up having the same VLANs.  
+
+>[!warning]
+>VTP is just a VLAN database update mechanism. It does not put ports into VLANs. Administrators still need to put those ports into the relevant VLANs.
+
+- Summary advertisements are sent every 5 minutes or whenever there's a change. 
+- 
+
+
+@15min
 
 
 
