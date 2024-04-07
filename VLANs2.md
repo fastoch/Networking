@@ -159,7 +159,7 @@ The whole concept with VTP is that you can make changes on an individual device,
 >[!warning]
 >VTP is just a VLAN database update mechanism. It does not put ports into VLANs. Administrators still need to put those ports into the relevant VLANs.
 
-Summary advertisements are sent every 5 minutes or whenever there's a change.  
+**Summary advertisements** are sent every 5 minutes or whenever there's a change.  
 
 
 
