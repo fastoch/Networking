@@ -148,7 +148,10 @@ By default, Cisco switches are in the null domain or "no management" domain, unt
 An important concept to understand in VTP is the concept of "**revision number**".  
 Everytime a change is made to the VLAN database, the revision number will increment by one.  
 
+When a change is made on one of the switches, the information is advertised to all other switches in the VTP domain, so that they can synchronize their databases to the latest revision number.  
 
+The switch on which the change is made will send a VTP summary advertisement to inform all other switches that a change has been made.  
+These switches will then request the latest information using an advertisement request.
 
 
 
