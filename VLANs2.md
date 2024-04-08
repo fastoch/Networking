@@ -133,6 +133,8 @@ A lot of network engineers will not enable VTP because of the inherent risk asso
 
 VTP messages are sent to the following MAC address: 01-00-0C-CC-CC-CC, which is a well-known multicast address for CDP and VTP flooding.  
 
+### VTP messages
+
 There are 3 types of messages in VTP:
 - summary advertisements
 - avdertisement requests
