@@ -165,14 +165,14 @@ If there are several VLANs, more than one subset advertisement may be required t
 There are 3 situations where advertisement requests are used:
 - a switch has been reset
 - the VTP domain name has been changed
-- the switch has received a summary advertisement with a higher configuration revision number than its own
+- the switch has received a summary advertisement with a higher revision number than its own
 
 ### VTP modes
 
 There are 3 modes in VTP:
 - Server (the default mode)
-- Client
-- ???
+- Client mode
+- Transparent mode
 
 A VTP switch in **Server mode** can create, modify and delete VLANs. It also sends and forwards advertisements.  
 This is the device where you're going to make your changes.  
@@ -180,13 +180,13 @@ Multiple switches can be configured as VTP Servers, but you need to be really ca
 
 A VTP **client** cannot create, change or delete VLANs. It is able to send and forward advertisements.  
 
-
-
 ### VTP major issue
 
+Let's imagine that someone adds a switch to the production network, and that this switch was previously in a lab environment.  
+In a lab environment, VLANs may have been added, modified or deleted many times, and thus the revision number might be a lot higher than the production network. A lot of people make the mistake of assuming that as long as the switch is configured as a VTP client, it will not cause any problems on the network. But as soon as the new client is added to the VTP domain, if it's configured with a **null** domain, it can automatically join the current VTP domain. As soon as that happens, the devices will synchronize their database to the latest configuration (the highest revision number).  
 
-
-
+Having the production switches configuration overwritten by the new lab switch configuration will disable all ports that have been put into VLANs that no longer exist, which will bring our entire network down pretty quickly.  
+That's very worrying, to say the least, that the introduction of a single switch can bring down an entire enterprise network.
 
 
 ---
