@@ -167,12 +167,25 @@ There are 3 situations where advertisement requests are used:
 - the VTP domain name has been changed
 - the switch has received a summary advertisement with a higher configuration revision number than its own
 
+### VTP modes
 
 There are 3 modes in VTP:
-- 
+- Server (the default mode)
+- Client
+- ???
+
+A VTP switch in **Server mode** can create, modify and delete VLANs. It also sends and forwards advertisements.  
+This is the device where you're going to make your changes.  
+Multiple switches can be configured as VTP Servers, but you need to be really careful with this.  
+
+A VTP **client** cannot create, change or delete VLANs. It is able to send and forward advertisements.  
 
 
-@17min
+
+### VTP major issue
+
+
+
 
 
 
