@@ -152,21 +152,27 @@ Everytime a change is made to the VLAN database, the revision number will increm
 
 When a change is made on one of the switches, the information is advertised to all other switches in the VTP domain, so that they can synchronize their databases to the latest revision number.  
 
-The switch on which the change is made will send a VTP **summary advertisement** to inform all other switches that a change has been made.  
-These switches will then request the latest information using an **advertisement request**, and the switch on which the change has been made will send them detailed information about the change using a **subset advertisement**.  
-Finally, the **revision number** on all of these switches will increment to the same revision number as the switch where the change was made.  
-
 The whole concept with VTP is that you can make changes on an individual device, and all other devices in the VTP domain are informed and will synchronize their databases to the latest revision number so that they end up having the same VLANs.  
 
 >[!warning]
 >VTP is just a VLAN database update mechanism. It does not put ports into VLANs. Administrators still need to put those ports into the relevant VLANs.
 
 **Summary advertisements** are sent every 5 minutes or whenever there's a change.  
+Switches that receive that summary advertisement will then send back an **advertisement request**, asking for detailed information.  
+That detailed information is sent using what's called a **subset advertisement**.  
+If there are several VLANs, more than one subset advertisement may be required to update and synchronize the databases of all switches.
+
+There are 3 situations where advertisement requests are used:
+- a switch has been reset
+- the VTP domain name has been changed
+- the switch has received a summary advertisement with a higher configuration revision number than its own
 
 
+There are 3 modes in VTP:
+- 
 
 
-@15min
+@17min
 
 
 
