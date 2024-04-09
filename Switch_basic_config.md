@@ -38,7 +38,20 @@ When I enter `en` (shorthand for `enable`), I'm now prompted for the password I'
 
 ## Create a VLAN and naming it
 
+To see the current VLANs (while in enable mode): `show vlan`  
+On a brand new switch (or one that was reset), all physical interfaces belong to the default VLAN (VLAN 1).  
 
+To create VLANs on your Cisco switch and give them a name:
+```
+en
+conf t
+vlan 10
+name Voice
+exit
+vlan 20
+name Printers
+```
+We name the VLANs to remember why we created them.
 
 ---
 EOF
