@@ -36,7 +36,7 @@ When I enter `en` (shorthand for `enable`), I'm now prompted for the password I'
 
 ---
 
-## Create a VLAN and naming it
+## Create VLANs and naming them
 
 To see the current VLANs (while in enable mode): `show vlan`  
 On a brand new switch (or one that was reset), all physical interfaces belong to the default VLAN (VLAN 1).  
@@ -50,8 +50,21 @@ name Voice
 exit
 vlan 20
 name Printers
+exit
+vlan 30
+name HR
+exit
+vlan 40 name IT
+exit
+show vlan
 ```
-We name the VLANs to remember why we created them.
+We name the VLANs to remember why we created them.  
+At the end, we make sure that we've created our VLANs as we wanted to.
+
+---
+
+## Assigning interfaces to our VLANs
+
 
 ---
 EOF
