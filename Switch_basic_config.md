@@ -54,16 +54,30 @@ exit
 vlan 30
 name HR
 exit
-vlan 40 name IT
+vlan 40
+name IT
+exit
 exit
 show vlan
 ```
 We name the VLANs to remember why we created them.  
-At the end, we make sure that we've created our VLANs as we wanted to.
+At the end, we make sure that we've created our VLANs as we wanted to.  
+
+All interfaces still belong to VLAN 1 though. Next step is to assign interfaces to our different VLANs.
 
 ---
 
 ## Assigning interfaces to our VLANs
+
+```
+conf t
+interface fastEthernet 0/1
+switchport mode access
+
+```
+The switchport mode command allows us to configure the trunking operational mode on a Layer 2 interface on a Cisco IOS device.  
+By entering the command switchport mode access we configure the interface to operate in access mode.  
+This ensures that the interface will pass traffic for a single VLAN only.
 
 
 ---
