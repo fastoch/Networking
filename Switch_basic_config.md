@@ -18,8 +18,8 @@ hardware = Cisco Catalyst 3550
 
 By default, all Cisco switches are named "Switch".
 ```
-en
-conf t
+enable
+configure terminal
 hostname Lab-Switch
 ```
 As soon as you press Enter to run the hostname cmd, the prompt will show you the new name.  
@@ -100,7 +100,11 @@ The remaining interfaces (Fa0/41-48, Gi0/1 and Gi0/2) still belong to VLAN 1 (th
 
 ## Assigning IP addresses to VLANs
 
+```
+en
+conf t
 
+```
 
 @11min
 
