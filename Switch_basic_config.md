@@ -94,6 +94,14 @@ The `switchport mode` command allows us to configure the trunking operational mo
 By entering the command `switchport mode access` we configure the interface to operate in access mode.  
 This ensures that the interface will pass traffic for a single VLAN only.  
 
+The remaining interfaces (Fa0/41-48, Gi0/1 and Gi0/2) still belong to VLAN 1 (the default VLAN).  
+
+---
+
+## Assigning IP addresses to VLANs
+
+
+
 @11min
 
 
