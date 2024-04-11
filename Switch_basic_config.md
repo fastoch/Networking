@@ -1,4 +1,4 @@
-hardware = Cisco Catalyst 3550  
+Hardware = Cisco Catalyst 3550  
 
 ---
 
@@ -106,10 +106,19 @@ conf t
 interface vlan 10
 ip address 10.10.10.1 255.255.255.0
 exit
-
+interface vlan 20
+ip address 10.10.20.1 255.255.255.0
+exit
+interface vlan 30
+ip address 10.10.30.1 255.255.255.0
+exit
+interface vlan 40
+ip address 10.10.40.1 255.255.255.0
+exit
+exit
+show ip interface brief
 ```
 
-@11min
 
 
 ---
