@@ -87,13 +87,14 @@ int range fa0/31-40
 switchport mode access
 switchport access vlan 40
 exit
-do show vlan
+exit
+show vlan
 ```
 The `switchport mode` command allows us to configure the trunking operational mode on a Layer 2 interface on a Cisco IOS device.  
 By entering the command `switchport mode access` we configure the interface to operate in access mode.  
 This ensures that the interface will pass traffic for a single VLAN only.  
 
-
+@11min
 
 
 ---
