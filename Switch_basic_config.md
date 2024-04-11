@@ -71,13 +71,29 @@ All interfaces still belong to VLAN 1 though. Next step is to assign interfaces 
 
 ```
 conf t
-interface fastEthernet 0/1
+interface range fastEthernet 0/1-10
 switchport mode access
-
+switchport access vlan 10
+exit
+interface range fastEthernet 0/11-20
+switchport mode access
+switchport access vlan 20
+exit
+int range fa0/21-30
+switchport mode access
+switchport access vlan 30
+exit
+int range fa0/31-40
+switchport mode access
+switchport access vlan 40
+exit
+do show vlan
 ```
-The switchport mode command allows us to configure the trunking operational mode on a Layer 2 interface on a Cisco IOS device.  
-By entering the command switchport mode access we configure the interface to operate in access mode.  
-This ensures that the interface will pass traffic for a single VLAN only.
+The `switchport mode` command allows us to configure the trunking operational mode on a Layer 2 interface on a Cisco IOS device.  
+By entering the command `switchport mode access` we configure the interface to operate in access mode.  
+This ensures that the interface will pass traffic for a single VLAN only.  
+
+
 
 
 ---
