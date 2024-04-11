@@ -103,6 +103,9 @@ The remaining interfaces (Fa0/41-48, Gi0/1 and Gi0/2) still belong to VLAN 1 (th
 ```
 en
 conf t
+interface vlan 10
+ip address 10.10.10.1 255.255.255.0
+exit
 
 ```
 
