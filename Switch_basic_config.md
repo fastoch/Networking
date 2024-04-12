@@ -119,6 +119,22 @@ exit
 show ip interface brief
 ```
 
+---
+
+## Enable inter-VLAN Routing
+
+```
+en
+conf t
+ip routing
+```
+
+To check if inter-VLAN routing is configured properly:
+- I physically connect a laptop to a port that belongs to VLAN 10, and another laptop to a port that belongs to VLAN 20
+- Then I manually assign an IP address to the first laptop: 10.10.10.5 255.255.255.0 with a gateway of 10.10.10.1 (VLAN 10)
+- I also assign an IP address to the second laptop: 10.10.20.5 255.255.255.0 with a gateway of 10.10.20.1 (VLAN 20)
+- Now, I can try pinging laptop 2 from laptop 1 and vice-versa
+- if pings get responses, it means that inter-VLAN routing works well between VLAN 10 and VLAN 20
 
 
 ---
