@@ -1,5 +1,9 @@
 Hardware = Cisco Catalyst 3550  
 
+resources:  
+https://www.youtube.com/watch?v=7dXBN8a-X2U  
+https://www.youtube.com/watch?v=ThmwyyY-p5g  
+
 ---
 
 ## Summary
@@ -11,6 +15,7 @@ Hardware = Cisco Catalyst 3550
 - assign an interface to a VLAN
 - assign an IP address to a VLAN
 - enable inter-VLAN routing
+- configure DHCP and exclude IP range
 
 ---
 
@@ -135,6 +140,11 @@ To check if inter-VLAN routing is configured properly:
 - I also assign an IP address to the second laptop: 10.10.20.5 255.255.255.0 with a gateway of 10.10.20.1 (VLAN 20)
 - Now, I can try pinging laptop 2 from laptop 1 and vice-versa
 - if pings get responses, it means that inter-VLAN routing works well between VLAN 10 and VLAN 20
+
+---
+
+## Configure DHCP and exclude an IP range
+
 
 
 ---
