@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=ThmwyyY-p5g
 - assign an interface to a VLAN
 - assign an IP address to a VLAN
 - enable inter-VLAN routing
-- configure DHCP and exclude IP range
+- configure DHCP server and exclude a range of IP addresses 
 
 ---
 
@@ -141,9 +141,27 @@ To check if inter-VLAN routing is configured properly:
 - Now, I can try pinging laptop 2 from laptop 1 and vice-versa
 - if pings get responses, it means that inter-VLAN routing works well between VLAN 10 and VLAN 20
 
+To apply and save the new config:
+`wr mem`
+
 ---
 
-## Configure DHCP and exclude an IP range
+## Configure DHCP server 
+
+To show the running config:
+`show run`
+
+```
+en
+conf t
+ip dhcp pool vlan10
+network 10.10.10.0 /24
+
+```
+
+## Exclude a range of IP addresses from DHCP server
+
+
 
 
 
