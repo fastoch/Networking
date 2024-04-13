@@ -19,11 +19,21 @@ Hardware = Cisco ISR-4331
 
 ---
 
-## Hostname and enable password
+## Setting the hostname and the enable password
 
 ```
-
+en
+conf t
+hostname ISR4331
+enable secret strongPassword
 ```
+
+---
+
+## Configuring IP addresses on both interfaces
+
+Gi0/0/0 is connected to my home ISP router.  
+
 
 ---
 EOF
