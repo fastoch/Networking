@@ -32,18 +32,48 @@ enable secret strongPassword
 
 ## Configuring IP addresses on both interfaces
 
-Port Gi0/0/0 is connected to my home ISP router. To make this interface receive an IP address from my home ISP router:
+Port Gi0/0/0 is connected to my home ISP router. This interface will receive an IP address from my home ISP router:
 ```
 en
 conf t
-int G0/0/0
+int g0/0/0
 ip address dhcp
 exit
 ```
 
-Port Gi0/0/01 is connected to my home LAN switch. To make this interface 
+Port Gi0/0/1 is connected to my home LAN switch. We will manually set the IP address for this interface:
+```
+en
+conf t
+int g0/0/1
+ip address 192.168.100.1 255.255.255.0
+exit
+```
 
+---
 
+## Configuring DHCP server and default route
+
+```
+ip dhcp pool LAN
+network 192.168.100.0 255.255.255.0
+default-router 192.168.100.1
+dns-server 8.8.8.8
+exit
+ip route 0.0.0.0 0.0.0.0 192.168.1.1
+```
+In this example, "LAN" is the name of our DHCP pool. The default gateway is the IP address of the interface connected to our LAN.  
+The ip route command forwards traffic from any source (any address and any subnet mask) to the home ISP router.  
+
+---
+
+## Configuring NAT on both interfaces for inside and outside sources
+
+```
+en
+conf t
+```
+@6min
 
 ---
 EOF
