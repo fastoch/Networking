@@ -41,6 +41,7 @@ ip address dhcp
 exit
 ```
 
+Port Gi0/0/01 is connected to my home LAN switch. To make this interface 
 
 
 
