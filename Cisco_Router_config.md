@@ -32,7 +32,17 @@ enable secret strongPassword
 
 ## Configuring IP addresses on both interfaces
 
-Gi0/0/0 is connected to my home ISP router.  
+Port Gi0/0/0 is connected to my home ISP router.  
+To make this interface receive an IP address from my home ISP router:
+```
+en
+conf t
+int G0/0/0
+ip address dhcp
+exit
+```
+
+
 
 
 ---
