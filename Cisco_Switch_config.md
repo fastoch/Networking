@@ -141,8 +141,10 @@ To check if inter-VLAN routing is configured properly:
 - Now, I can try pinging laptop 2 from laptop 1 and vice-versa
 - if pings get responses, it means that inter-VLAN routing works well between VLAN 10 and VLAN 20
 
-To apply and save the new config:
-`wr mem`
+To apply and save the new configuration:
+`copy running-config startup-config`
+or
+`write memory`
 
 ---
 
@@ -170,12 +172,26 @@ ip dhcp pool vlan40
 network 10.10.40.0 /24
 default-router 10.10.40.1
 exit
+exit
+wr mem
 ```
 
-## Exclude a range of IP addresses from DHCP server
+## Exclude a range of IP addresses from a DHCP server
 
-
-
+When an end device is connected to the switch, the DHCP server automatically assigns it an IP address in the corresponding VLAN.  
+To reserve some IP addresses that we want to manually assign to specific devices, we need to exclude them from the DHCP server.
+```
+en
+conf t
+ip dhcp excluded-address 10.10.10.1 10.10.10.10
+ip dhcp excluded-address 10.10.20.1 10.10.20.10
+ip dchp excluded-address 10.10.30.1 10.10.30.10
+ip dchp excluded-address 10.10.40.1 10.10.40.10
+exit
+exit
+wr mem
+```
+We've reserved the first 10 IP addresses of our VLANs. These addresses will not be assigned by the DHCP server.
 
 
 ---
