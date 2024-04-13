@@ -156,7 +156,20 @@ en
 conf t
 ip dhcp pool vlan10
 network 10.10.10.0 /24
-
+default-router 10.10.10.1
+exit
+ip dhcp pool vlan20
+network 10.10.20.0 /24
+default-router 10.10.20.1
+exit
+ip dhcp pool vlan30
+network 10.10.30.0 /24
+default-router 10.10.30.1
+exit
+ip dhcp pool vlan40
+network 10.10.40.0 /24
+default-router 10.10.40.1
+exit
 ```
 
 ## Exclude a range of IP addresses from DHCP server
