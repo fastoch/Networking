@@ -77,18 +77,33 @@ ip nat outside
 exit
 ```
 Since interface gigabitEthernet 0/0/0 is connected to ISP router, we've configured the outside part of NAT.  
+
 Now let's configure the inside part of NAT:
 ```
 int g0/0/1
 ip nat inside
 exit
 ```
-
+  
 Now, we're going to create an ACL. From the config mode:
 ```
 ip access-list standard acl-name
-permit 
+permit 192.168.100.0 0.0.0.255
+exit
 ```
+This ACL allows traffic from my LAN to traverse my Cisco router.  
+0.0.0.255 is the **wildcard mask**. It is applied to the network address to determine the range of allowed IP addresses.  
+
+Finally, we will apply the overload command to the uplink interface (the one connected to our ISP router):
+```
+en
+conf t
+ip nat inside source list acl-name int g0/0/0 overload
+exit
+copy running-config startup-config
+```
+'**Overloading**' means that the single public IP assigned to your router can be used by multiple internal hosts concurrently.
+
 
 ---
 EOF
