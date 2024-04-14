@@ -1,6 +1,6 @@
 # Boarder Gateway Protocol
 
-BGP is an **Exterior** Gateway Protocol.  
+## Autonomous Systems 
 
 We use the term **Autonomous System** (AS) to describe a network under a single administrative control.  
 Your company might have its own Autonomous System.  
@@ -10,11 +10,16 @@ And for redundancy, you connect out to another service provider that also is in 
 When you're **routing between Autonomous Systems**, that's where you need an Exterior Gateway Protocol.  
 BGP is the one that's in use today.  
 
-Much like OSPF and EIGRP, we do form neighborships.  
-But what is different in some cases is we need to specify the IP address of our neigbor.  
+## BGP characteristics
 
-Something else that makes BGP unique is that it establishes a TCP session between neighbors, which is uncommon for  
-a routing protocol. Specifically, it uses TCP port 179.
+- **Exterior** Gateway Protocol
+- Forms neighborships
+- Neighbor's IP address is **explicitly** configured
+- Establishes a **TCP session** between neighbors on port 179, which is uncommon for a routing protocol
+- Advertises address prefix and length (called Network Layer Reachability Information or NLRI)
+- Advertises a Collection of Path Attributes used for path selection
+
+
 
 ---
 EOF
