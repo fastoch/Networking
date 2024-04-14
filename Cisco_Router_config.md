@@ -10,7 +10,7 @@ Hardware = Cisco ISR-4331
 - creating a DHCP server for my LAN
 - configuring the default route of my Cisco router
 - configuring IP NAT for inside and outside sources
-- creating an Access List
+- creating a standard Access Control List (ACL)
 - applying the overload command to the router uplink port
 - saving the settings
 
@@ -84,10 +84,10 @@ ip nat inside
 exit
 ```
 
-Now, we're going to create an access list. Fro the config mode:
+Now, we're going to create an ACL. From the config mode:
 ```
-ip access-list standard
-
+ip access-list standard acl-name
+permit 
 ```
 
 ---
