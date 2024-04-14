@@ -36,7 +36,7 @@ Port Gi0/0/0 is connected to my home ISP router. This interface will receive an 
 ```
 en
 conf t
-int g0/0/0
+int gigabitEthernet 0/0/0
 ip address dhcp
 exit
 ```
@@ -72,8 +72,23 @@ The ip route command forwards traffic from any source (any address and any subne
 ```
 en
 conf t
+int g0/0/0
+ip nat outside
+exit
 ```
-@6min
+Since interface gigabitEthernet 0/0/0 is connected to ISP router, we've configured the outside part of NAT.  
+Now let's configure the inside part of NAT:
+```
+int g0/0/1
+ip nat inside
+exit
+```
+
+Now, we're going to create an access list. Fro the config mode:
+```
+ip access-list standard
+
+```
 
 ---
 EOF
