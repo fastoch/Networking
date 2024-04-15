@@ -36,7 +36,46 @@ The most common MLS is the Layer 3 switch. The ASIC chip is programmed to handle
 The **router** is the most common device used to connect different networks together.  
 It utilizes software programming to learn about routes between networks. 
 
+---
+
 ### Security Devices
+
+#### Firewall
+
+A firewall can be placed on routers or hosts (software-based) or can be its own device (appliance).  
+It functions at multiple layers of the OSI model: layers 2, 3, 4 and 7.  
+
+It blocks packets from entering or leaving the network via:
+- stateless inspection
+- stateful inspection
+
+**Stateless inspection:**  
+The firewall will examine every packet against a set of rules.  
+When a packet matches a rule, the rule is enforced, and the specified action is taken.  
+
+**Stateful inspection**:  
+The firewall will only examine the state of the connection between networks.  
+Specifically, when a connection is made from an internal network to an external network, the firewall will not examine  
+any packets returning from the external connection.  
+As a general rule, external connections are not allowed to be initiated with the internal network.  
+
+Firewalls are the first line of defense in protecting the internal network from outside threats.  
+
+---
+
+#### Intrusion Detection System (IDS)
+
+An IDS is a passive system designed to identify when a network breach or attack against the network is occurring.  
+It's usually designed to inform a network administrator when a breach or attack has occurred through log files, SMS, or  
+email notifications.
+
+An IDS cannot prevent or stop a breach or attack on its own.  
+It receives a copy of all traffic and evaluates it against a set of standards.  
+
+
+
+
+
 
 @8min
 
