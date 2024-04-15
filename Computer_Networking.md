@@ -71,6 +71,7 @@ email notifications.
 
 An IDS cannot prevent or stop a breach or attack on its own.  
 It receives a copy of all traffic and evaluates it against a set of standards.  
+
 Those standards can be:
 - signature-based: evaluates network traffic for known malwares or attack signatures
 - anomaly-based: evaluates network traffic for suspicious changes
@@ -78,10 +79,15 @@ Those standards can be:
 
 An IDS can be deployed at the host level. We talk about an "Host-based IDS" or "**HIDS**".  
 
+---
+
+#### Intrusion Prevention System (IPS)
+
+An IPS is an active system designed to stop a breach or attack from succeeding in damaging the network.  
 
 
 
-@10min
+@11min
 
 ---
 EOF
