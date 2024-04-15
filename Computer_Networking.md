@@ -43,7 +43,7 @@ It utilizes software programming to learn about routes between networks.
 #### Firewall
 
 A firewall can be placed on routers or hosts (software-based) or can be its own device (appliance).  
-It functions at multiple layers of the OSI model: layers 2, 3, 4 and 7.  
+It functions at multiple layers of the OSI model: layers 2, 3, 4, and 7.  
 
 Firewalls are the first line of defense in protecting the internal network from outside threats.  
 
@@ -100,10 +100,26 @@ An IPS is programmed to make an active response to the situation:
 - redirect the attack
 - plus more
 
+---
+
+#### VPN Concentrator
+
+A virtual private network concentrator will allow for many more secure VPN connections to a network.  
+
+The concentrator will provide proper tunneling and encryption, depending on the type of VPN connection that is allowed.  
+Most concentrators can function at multiple layers of the OSI model (layers 2, 3, and 7).  
+
+Outside of Internet transactions (which use SSL VPN connections at Layer 7), most concentrators will function at the  
+network layer (Layer 3), providing IPsec encryption through a secure tunnel.  
+
+---
+
+### Optimization and performance devices
 
 
 
-@12min
+
+@13min
 
 ---
 EOF
