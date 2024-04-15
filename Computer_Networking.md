@@ -84,7 +84,10 @@ An IDS can be deployed at the host level. We talk about an "Host-based IDS" or "
 #### Intrusion Prevention System (IPS)
 
 An IPS is an active system designed to stop a breach or attack from succeeding in damaging the network.  
+- It's usually designed to perform an action or set of actions to stop the malicious activity.
+- Will inform a network administrator through the use of log files, SMS, or email notifications.
 
+All traffic on the network segment flows through the IPS
 
 
 @11min
