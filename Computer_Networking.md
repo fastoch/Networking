@@ -45,7 +45,9 @@ It utilizes software programming to learn about routes between networks.
 A firewall can be placed on routers or hosts (software-based) or can be its own device (appliance).  
 It functions at multiple layers of the OSI model: layers 2, 3, 4 and 7.  
 
-It blocks packets from entering or leaving the network via:
+Firewalls are the first line of defense in protecting the internal network from outside threats.  
+
+A firewall blocks packets from entering or leaving the network via:
 - stateless inspection
 - stateful inspection
 
@@ -86,7 +88,7 @@ An IPS is an active system designed to stop a breach or attack from succeeding i
 - It's usually designed to perform an action or set of actions to stop the malicious activity.
 - Will inform a network administrator through the use of log files, SMS, or email notifications.
 
-All traffic on the network segment flows through the IPS to either enter or leave the segment.  
+For an IPS to work, all traffic on the network segment needs to flow through the IPS as it enters or leaves the network segment.  
 Like the IDS, all traffic is evaluated against a set of standards.  
 
 The **best placement** on the network is between a router (with a firewall) and the destination network segment.  
@@ -101,7 +103,7 @@ An IPS is programmed to make an active response to the situation:
 
 
 
-@11min
+@12min
 
 ---
 EOF
