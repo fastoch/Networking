@@ -55,11 +55,10 @@ When a packet matches a rule, the rule is enforced, and the specified action is 
 
 **Stateful inspection**:  
 The firewall will only examine the state of the connection between networks.  
-Specifically, when a connection is made from an internal network to an external network, the firewall will not examine  
-any packets returning from the external connection.  
+Specifically, when a connection is made from an internal network to an external network, the firewall will not examine any packets  
+returning from the external connection.  
 As a general rule, external connections are not allowed to be initiated with the internal network.  
 
-Firewalls are the first line of defense in protecting the internal network from outside threats.  
 
 ---
 
@@ -87,7 +86,19 @@ An IPS is an active system designed to stop a breach or attack from succeeding i
 - It's usually designed to perform an action or set of actions to stop the malicious activity.
 - Will inform a network administrator through the use of log files, SMS, or email notifications.
 
-All traffic on the network segment flows through the IPS
+All traffic on the network segment flows through the IPS to either enter or leave the segment.  
+Like the IDS, all traffic is evaluated against a set of standards.  
+
+The **best placement** on the network is between a router (with a firewall) and the destination network segment.  
+
+An IPS is programmed to make an active response to the situation:
+- block the offending IP address
+- close down the vulnerable interface
+- terminate the network session
+- redirect the attack
+- plus more
+
+
 
 
 @11min
