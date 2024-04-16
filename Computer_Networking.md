@@ -244,15 +244,58 @@ for the type of media they are connecting to and the networking protocol that is
 ### RAS (Remote Access Services)
 
 Not a protocol, but a roadmap.  
-A description of the combination of software and hardware required for a remote access connection.
+It's a description of the combination of software and hardware required for a remote access connection.
+A client requests access from a RAS server, which either grants or rejects access.
+
+### Web services
+
+Creating a means of cross communication.  
+Provides the means for communication between software packages or disparate platforms.  
+It's usually achieved by translating the communication into an **XML** (Extensible Markup Language) file.  
+
+### Unified voice services 
+
+Creating better voice communication systems.  
+A description of the combination of software and hardware required to integrate voice communication channels into a network.  
+Example: Voice over IP (VoIP)
+
+---
+
+# DHCP
+
+## Static vs. Dynamic IP addressing
+
+How does a computer know what its IP configuration is?  
+Most likely, a computer received its IP configuration from a DHCP server.  
+
+Not only did the server give the PC an IP address, but it also told the PC: 
+- where the default gateway was,
+- and more than likely, how to find a DNS server.
+
+DHCP stands for **Dynamic Host Configuration Protocol**.  
+
+A computer will receive its IP configuration in one of two ways:
+- statically (manually set)
+- dynamically (through a service like DHCP)
+
+Static address assignment works fine for very small and stable networks.  
+But it quickly becomes unwieldy and error prone as the network grows and more nodes come on to the network. 
+
+### Static IP addressing
+
+### Dynamic IP addressing
+
+## How DHCP works
 
 
+
+## Components and Processes of DHCP
 
 
 
 ---
 
-@27min
+@30min
 
 ---
 EOF
