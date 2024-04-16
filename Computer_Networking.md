@@ -129,7 +129,7 @@ It's often used to retrieve resources from outside untrusted networks on behalf 
 
 # Networking Services and Applications
 
-## The basics of the Virtual Private Network
+## VPN Basics
 
 A virtual private network (VPN) is used by remote hosts to access a private network through an encrypted tunnel through a public network.  
 
@@ -141,17 +141,65 @@ Even though the network traffic may pass through many different routers or syste
 The use of a VPN can help to reduce networking costs for organizations and businesses.  
 The cost reduction is partially achieved because the VPN doesn't require the use of a dedicated leased line to create the connection.
 
-### VPN Types
+## VPN Types
 
 - The **site-to-site VPN** allows a remote site's network to connect to the main site's network and be seen as a local network segment.
   VPN concentrators on both ends of the VPN will manage the connection.
-- The **remote-access VPN (host-to-site VPN)** allows select remote users
+- The **remote-access VPN (host-to-site VPN)** allows select remote users to connect to the local network. A VPN concentrator on the
+  local network will manage the connections coming in from the remote users. The remote system requesting the connection uses special
+  software called VPN client software.
+- The **host-to-host VPN (SSL VPN)** allows a secure connection between two systems without the use of VPN client software. A VPN
+  concentrator on the local network manages the connections. The host seeking to connect uses a Web browser that supports the correct
+  encryption technology (either SSL or more likely TLS) to make the connection to the VPN concentrator.
+
+## VPN Protocols 
+
+### Internet Protocol security (IPsec)
+
+- works at layer 3 of the OSI model or above
+- the most common suite of protocols used to secure a VPN connection
+- can be used with the **Authentication Header (AH)** protocol. AH only offers authentication services, no encryption
+- can be used with **Encapsulating Security Payload (ESP)**. ESP both authenticates and encrypts packets (the most popular method)
+
+Both AH and ESP will operate in one of two modes:
+- **Transport Mode**: between two devices (host-to-host VPN)
+- **Tunnel Mode**: between two endpoints (site-to-site VPN)
+
+IPsec implements **Internet Security Association and Key Management (ISAKMP)** by default.  
+ISAKMP provides a method for transferring security key and authentication data between systems, outside of the security key  
+generating process.
+
+### Generic Routing Encapsulation (GRE)
+
+- a tunneling protocol that is capable of encapsulating a wide variety of network layer protocols
+- often used to create a sub-tunnel within an IPsec connection
+
+IPsec will only transmit unicast packets (one-to-one communication).  
+In many cases, there's a need to transmit multicast (one-to-some communication) or broadcast (one-to-many communication) packets  
+across an IPsec connection. By using GRE, this can be accomplished. 
+
+### Point-to-Point Tunneling Protocol (PPTP)
+
+An older VPN technology that supports dial-up VPN connections. On its own, it lacked native security features.  
+Microsoft's implementation included additional security by adding GRE.  
+
+### Transport Layer Security (TLS)
+
+- a cryptographic protocol used to create a secure encrypted connection between two end devices or applications.
+- it uses asymmetrical cryptography to authenticate endpoints, and then negotiate a symmetrical security key, which is used to
+  encrypt the session.
+- **TLS has largely replaced the Secure Socket Layer (SSL) protocol**
+- it works at layer 5 and above of the OSI model
+- its most common use is in creating a secure encrypted Internet session (SSL VPN). All modern Web browsers support TLS.
+
+### Secure Socket Layer (SSL)
+
 
 
 
 ---
 
-@17min
+@22min
 
 ---
 EOF
