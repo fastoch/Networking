@@ -119,12 +119,35 @@ that no single server gets overloaded.
 ### Proxy server
 
 A proxy server is an appliance that requests resources on behalf of client machines.  
-It's often used to retrieve resources 
+It's often used to retrieve resources from outside untrusted networks on behalf of the requesting client.  
+
+- It hides and protects the requesting client from untrusted networks.
+- It can also be utilized to filter allowed content.
+- It can increase network performance by caching commonly requested Web pages.
 
 ---
 
+# Networking Service and Applications
 
-@14min
+## The basics of the Virtual Private Network
+
+A virtual private network (VPN) is used by remote hosts to access a private network through an encrypted tunnel through a public network.  
+
+Once the VPN connection is made, the remote host is no longer considered remote.  
+It is actually seen by the private network as a local host.  
+
+Even though the network traffic may pass through many different routers or systems, it is seen by both ends as a direct connection.  
+
+The use of a VPN can help to reduce networking costs for organizations and businesses.  
+The cost reduction is partially achieved because the VPN doesn't require the use of a dedicated leased line to create the connection.
+
+
+
+
+
+---
+
+@16min
 
 ---
 EOF
