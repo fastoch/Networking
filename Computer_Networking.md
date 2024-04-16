@@ -221,6 +221,30 @@ traverse the network media being used.
 - Routers and other network devices may use separate modules that can be inserted into the device to provide the proper NIC  
 for the type of media they are connecting to and the networking protocol that is being used.
 
+### RADIUS (Remote Authentication Dial-In User Service)
+
+- A remote access service that is used to authenticate remote **users** and grant them access to authorized network resources.
+- It's a popular **AAA (Authentication, Authorization and Accounting) protocol** used to help ensure that only authenticated
+  **end users** are using the network resources they are authorized to use.
+- The accounting features are very robust.
+- only the requestor's (the end user's) password is encrypted. Everything else get sent in the clear.
+
+### TACACS+ (Terminal Access Controller Access-Control System Plus)
+
+- A remote access service that is used to authenticate remote **devices** and grant them access to authorized network resources.
+- It's also a popular AAA protocol used to help ensure that only authenticated remote **network devices** are using the network
+  resources they are authorized to use.
+- The accounting features are not as robust as those of RADIUS.
+- All transmissions between devices are encrypted.
+
+---
+
+## Other Services and Applications
+
+### RAS (Remote Access Services)
+
+Not a protocol, but a roadmap.  
+A description of the combination of software and hardware required for a remote access connection.
 
 
 
@@ -228,8 +252,7 @@ for the type of media they are connecting to and the networking protocol that is
 
 ---
 
-@25min
+@27min
 
 ---
 EOF
-
