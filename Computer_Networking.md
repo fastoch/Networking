@@ -1,5 +1,3 @@
-# Computer Networking Course
-
 source = https://www.youtube.com/watch?v=qiQR5rTSshw&t=20s  
 
 This college-level course will prepare you to configure, manage, and troubleshoot computer networks.  
@@ -7,20 +5,20 @@ It will also help you prepare for CompTIA's Network+ exam.
 
 ---
 
-## Introduction to Network Devices
+# Introduction to Network Devices
 
 The OSI reference model was developed to help disaparate devices communicate on networks.  
 **OSI** stands for Open Systems Interconnection.  
 Devices may be classified by the level of the OSI model at which they operate. 
 
-### Layer 1 devices
+## Layer 1 devices
 
 The analog **modem** modulates a digital signal into an analog signal and demodulates the return signal to allow  
 for network communication.  
 
 The **hub** receives a network signal on a port and replicates that signal out of all the remaining ports.  
 
-### Layer 2 devices 
+## Layer 2 devices 
 
 The **switch** utilizes an ASIC chip to learn which devices are connected to which ports via the device's MAC address.  
 When the switch receives network traffic, it will only forward that traffic to the specified MAC address.  
@@ -28,7 +26,7 @@ When the switch receives network traffic, it will only forward that traffic to t
 
 The **WAP** (Wireless Access Point) is used to bridge wireless network segments with wired network segments. 
 
-### Layer 3 devices
+## Layer 3 devices
 
 The **Multi-Layer Switch** (MLS) operates at more than just the layer 2 of the OSI model.  
 The most common MLS is the Layer 3 switch. The ASIC chip is programmed to handle more than just MAC addresses.  
@@ -38,9 +36,9 @@ It utilizes software programming to learn about routes between networks.
 
 ---
 
-### Security Devices
+## Security Devices
 
-#### Firewall
+### Firewall
 
 A firewall can be placed on routers or hosts (software-based) or can be its own device (appliance).  
 It functions at multiple layers of the OSI model: layers 2, 3, 4, and 7.  
@@ -61,10 +59,7 @@ Specifically, when a connection is made from an internal network to an external 
 returning from the external connection.  
 As a general rule, external connections are not allowed to be initiated with the internal network.  
 
-
----
-
-#### Intrusion Detection System (IDS)
+### Intrusion Detection System (IDS)
 
 An IDS is a passive system designed to identify when a network breach or attack against the network is occurring.  
 It's usually designed to inform a network administrator when a breach or attack has occurred through log files, SMS, or  
@@ -80,9 +75,7 @@ Those standards can be:
 
 An IDS can be deployed at the host level. We talk about an "Host-based IDS" or "**HIDS**".  
 
----
-
-#### Intrusion Prevention System (IPS)
+### Intrusion Prevention System (IPS)
 
 An IPS is an active system designed to stop a breach or attack from succeeding in damaging the network.  
 - It's usually designed to perform an action or set of actions to stop the malicious activity.
@@ -100,9 +93,7 @@ An IPS is programmed to make an active response to the situation:
 - redirect the attack
 - plus more
 
----
-
-#### VPN Concentrator
+### VPN Concentrator
 
 A virtual private network concentrator will allow for many more secure VPN connections to a network.  
 
@@ -114,12 +105,26 @@ network layer (Layer 3), providing IPsec encryption through a secure tunnel.
 
 ---
 
-### Optimization and performance devices
+## Optimization and performance devices
+
+### Load Balancer
+
+A load balancer may also be called a "content switch" or "content filter".  
+It's a network appliance that is used to load balance between multiple hosts that contain the same data, spreading out  
+the workload for greater efficiency.  
+
+It's commonly used to distribute the requests (workload) to a server farm among the various servers, helping to ensure  
+that no single server gets overloaded.  
+
+### Proxy server
+
+A proxy server is an appliance that requests resources on behalf of client machines.  
+It's often used to retrieve resources 
+
+---
 
 
-
-
-@13min
+@14min
 
 ---
 EOF
