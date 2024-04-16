@@ -147,7 +147,7 @@ The cost reduction is partially achieved because the VPN doesn't require the use
   VPN concentrators on both ends of the VPN will manage the connection.
 - The **remote-access VPN (host-to-site VPN)** allows select remote users to connect to the local network. A VPN concentrator on the
   local network will manage the connections coming in from the remote users. The remote system requesting the connection uses special
-  software called VPN client software.
+  software called a VPN client. Users need to have a preconfigured VPN client installed on their machine.
 - The **host-to-host VPN (SSL VPN)** allows a secure connection between two systems without the use of VPN client software. A VPN
   concentrator on the local network manages the connections. The host seeking to connect uses a Web browser that supports the correct
   encryption technology (either SSL or more likely TLS) to make the connection to the VPN concentrator.
@@ -194,12 +194,41 @@ Microsoft's implementation included additional security by adding GRE.
 
 ### Secure Socket Layer (SSL)
 
+SSL is an older cryptographic protocol that is very similar to TLS.  
+Its most common use is in Internet transactions. All modern Web browsers support SSL.  
+
+Due to issues with earlier versions of the protocol, it has largely been replaced by TLS.  
+SSL v.3.3 has been developed to address the weaknesses of the earlier versions.  
+
+---
+
+## Network Access Services
+
+### Network Interface Controller (NIC)
+
+- can also be called a network interface card
+- the NIC is how a device connects to a network
+- it works at two layers of the OSI model: layer 2 (data link) and layer 1 (physical).
+
+At layer 2, it provides the functional means of network communication by determining which networking protocols will be used.  
+For instance, Ethernet (LAN technology) or Point-to-Point Protocol (WAN technology).  
+It also provides the local network node address through its burned-in physical MAC (media access control) address.  
+
+At layer 1, it determines how the network data traffic will be converted a bit at a time into an electrical signal that can  
+traverse the network media being used.  
+
+- Most modern computers come with at least one built-in Ethernet NIC.  
+- Routers and other network devices may use separate modules that can be inserted into the device to provide the proper NIC  
+for the type of media they are connecting to and the networking protocol that is being used.
+
+
+
 
 
 
 ---
 
-@22min
+@25min
 
 ---
 EOF
