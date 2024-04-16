@@ -127,7 +127,7 @@ It's often used to retrieve resources from outside untrusted networks on behalf 
 
 ---
 
-# Networking Service and Applications
+# Networking Services and Applications
 
 ## The basics of the Virtual Private Network
 
@@ -141,13 +141,17 @@ Even though the network traffic may pass through many different routers or syste
 The use of a VPN can help to reduce networking costs for organizations and businesses.  
 The cost reduction is partially achieved because the VPN doesn't require the use of a dedicated leased line to create the connection.
 
+### VPN Types
 
+- The **site-to-site VPN** allows a remote site's network to connect to the main site's network and be seen as a local network segment.
+  VPN concentrators on both ends of the VPN will manage the connection.
+- The **remote-access VPN (host-to-site VPN)** allows select remote users
 
 
 
 ---
 
-@16min
+@17min
 
 ---
 EOF
