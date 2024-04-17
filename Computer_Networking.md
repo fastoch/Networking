@@ -327,13 +327,38 @@ On the DHCP server, the administrator configures the IP address range with one t
 
 ### Leases
 
+Configuration parameters are only good for a specified amount of time.  
+Leases are configured by the administrator.
+
 ### Options
+
+- default gateway location
+- DNS server addresses
+- Time server addresses
+- Many additional options
 
 ### Preferred IP configuration 
 
+A PC can have a preferred IP address.  
+The administrator can configure the DHCP server to either honor this preference or ignore it.
+
+## DHCP Relay
+
+Under the right circumstances, a DHCP server isn't required to reside on the local network segment.  
+
+Broadcast transmissions cannot pass through a router.  
+But if there's no DHCP server on the local network segment, the router can be configured to be a **DHCP relay**.  
+
+When a DHCP relay (which can also be called an **IP helper**) receives a discovery packet from a node, it will forward  
+that packet to the network segment on which the DHCP server resides.  
+
+This allows to reduce the number of configured DHCP servers in the network, reducing the need for maintenance.
+
+
+
 ---
 
-@35min
+@37min
 
 ---
 EOF
