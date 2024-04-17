@@ -346,19 +346,50 @@ The administrator can configure the DHCP server to either honor this preference 
 
 Under the right circumstances, a DHCP server isn't required to reside on the local network segment.  
 
-Broadcast transmissions cannot pass through a router.  
+As a general rule, broadcast transmissions cannot pass through a router.  
 But if there's no DHCP server on the local network segment, the router can be configured to be a **DHCP relay**.  
 
 When a DHCP relay (which can also be called an **IP helper**) receives a discovery packet from a node, it will forward  
 that packet to the network segment on which the DHCP server resides.  
 
-This allows to reduce the number of configured DHCP servers in the network, reducing the need for maintenance.
+This allows to reduce the number of configured DHCP servers in a big network (WAN), reducing the amount of maintenance.
+
+---
+
+# Introduction to the DNS service
+
+## DNS servers
+
+**Domain Name System** (DNS) is the process that maps human-friendly names to IP addresses.  
+Without it, we would have to memorize numerous IP addresses.  
+
+DNS is hierarchical (very structured) in nature.  
+If the local DNS server doesn't contain the needed record, it sends a request up the chain until a positive responses  
+is received (which gets passed back down to the original requestor).  
+DNS does require a **Full Qualified Domain Name** (FQDN) in order to function.  
+
+**Example**:  
+In www.google.com: 
+- .com is the top level domain
+- .google is the local domain
+- and www is the specific service
+
+### Different levels of DNS servers
+
+- Local DNS server: the server on the local network that contains the HOSTS file
+- 
+
+## DNS records
+
+
+
+## Dynamic DNS
 
 
 
 ---
 
-@37min
+@40min
 
 ---
 EOF
