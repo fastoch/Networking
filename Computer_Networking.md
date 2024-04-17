@@ -439,14 +439,22 @@ DDNS is implemented through DDNS updating.
 DDNS updating is a method of updating traditional name servers without the intervention of an administrator.  
 No manual editing or inputting of the configuration files is required.  
 
-A DDNS provider supplies software that will monitor the IP address of a referenced system.  
+A DDNS provider supplies software that will monitor the IP address of the referenced system.  
 Once the IP address changes, the software sends an update to the proper DNS server.  
 
 DDNS is useful when access is needed to a domain whose IP address is being supplied dynamically by an Internet Service Provider.  
+That way the IP address can change but people can still get to the service that they are looking for. 
 
 ---
 
-@45min
+# Introducting Network Address Translation
+
+## The purpose of NAT
+
+## How NAT works
+
+
+@46min
 
 ---
 EOF
