@@ -447,14 +447,19 @@ That way the IP address can change but people can still get to the service that 
 
 ---
 
-# Introducting Network Address Translation
+# Introducting Network Address Translation (NAT)
 
 ## The purpose of NAT
+
+NAT solves the problem of how to route non-routable IP addresses.  
+As a partial effort to conserve the IPv4 address space, the private IPv4 addressing spaces were developed.  
+
 
 ## How NAT works
 
 
-@46min
+
+@47min
 
 ---
 EOF
