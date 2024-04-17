@@ -325,6 +325,12 @@ On the DHCP server, the administrator configures the IP address range with one t
   These are used for devices that should always have the same IP address (servers, routers, firewalls).
 - This allows for these addresses to be changed from a central location instead of having to log in to each device separately.
 
+### Leases
+
+### Options
+
+### Preferred IP configuration 
+
 ---
 
 @35min
