@@ -376,20 +376,68 @@ In www.google.com:
 
 ### Different levels of DNS servers
 
-- Local DNS server: the server on the local network that contains the HOSTS file
-- 
+- **Local DNS server**: the server on the local network that contains the HOSTS file that maps all of the FQDNs to
+  their corresponding IP addresses in the local subdomain.
+- **Top Level Domain (TLD) server**: the server that the records for a top level domain. Examples include
+  .com, .org, .net, .edu, .gov, .mit, .int, etc. Each of these servers contain all of the information for their
+  respective domains (kind of). TLD servers do delegate down to second level servers to ease the load. However,
+  the TLD server is the server that is responsible for maintaining the records.
+- **Root server**: the server that contains the records for the TLD servers.
 
-## DNS records
+### Authoritative servers
 
+An authoritative DNS server is the final holder of the IP of the domain you are looking for.  
+An authoritative response comes from the DNS server that actually holds the original record.
 
+### Non-authoritative servers
 
-## Dynamic DNS
+A non-authoritative DNS server is one that responds to a request with DNS information that it received from another DNS server.  
+A non-authoritative response is not a response from the official name server for the domain.  
+Instead, it's a second or third-hand response (or even further removed).  
 
-
+In **most cases**, when we send a DNS request, we get a **non-authoritative response**.
 
 ---
 
-@40min
+## DNS records
+
+### A record
+
+Maps a hostname (or FQDN) to its IPv4 address.
+
+### AAAA record
+
+Maps a hostnames (or FQDN) to its IPv6 address.
+
+### CNAME record
+
+Maps a canonical name (alias) to a hostname.  
+That means you can have two URLs for a single website.  
+This works in part because of the pointer record.
+
+### PTR record
+
+Pointer record that points to a canonical name.  
+Its function is to indicate that there is an existing canonical name (alias).
+
+### MX record
+
+Maps to the email server that is specified for a specific domain.  
+It's the record that determines how an email travels from sender to recipient.
+
+---
+
+## Dynamic DNS
+
+Dynamic DNS (DDNS) permits lightweight and immediate updates to a local DNS database.  
+This is very useful when the FQDN (or hostname) remains the same, but the IP address is able to change on a regular basis.  
+It's implemented as an additional service to DNS.
+
+### DDNS updating
+
+---
+
+@45min
 
 ---
 EOF
