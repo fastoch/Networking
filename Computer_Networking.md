@@ -281,21 +281,53 @@ A computer will receive its IP configuration in one of two ways:
 Static address assignment works fine for very small and stable networks.  
 But it quickly becomes unwieldy and error prone as the network grows and more nodes come on to the network. 
 
-### Static IP addressing
+## Static IP addressing
 
-### Dynamic IP addressing
+- The administrator assigns an IP number and subnet mask to each host in the network.
+  Each network interface that is going to be available to connect to the network requires this information
+- The administrator also assigns a default gateway lcoation and DNS server location to each host.
+  These are required if access outside of the network is going to be allowed (default gateway) and human-friendly
+  naming conventions are allowed to find network resources (DNS server).
+- Each time a change is made, IP configuration on each host must be updated.
+
+## Dynamic IP addressing
+
+The administrator configures a DHCP server to handle the assigning process, which automates the process.  
+The DHCP server listens on a specific port for IP information requests.  
+Once it receives a request, the DHCP server responds with the required information.
 
 ## How DHCP works
 
-
+- Upon boot up, a PC that is configured to request an IP configuration sends a **DHCP discovery packet**
+- The discovery packet is sent to the broadcast address 255.255.255.255:67 (UDP port 67)
+- The DHCP server receives the discovery packet and responds with an **offer packet**
+- The offer packet is sent to the MAC address of the computer using UDP port 68
+- The computer receives the offer packet from the DHCP server and returns a **request packet**, requesting the proper
+  IP configuration to the DHCP server.
+- Once the DHCP server receives the request packet, it sends back an **acknowledgement packet** which contains the required
+  IP configuration information.
+- Upon receipt of the acknowledgement packet, the PC changes its IP configuration to reflect the information received.
 
 ## Components and Processes of DHCP
 
+### Ports used
 
+- The computer sends a discovery packet to 255.255.255.255:67
+- The DHCP server sends an offer packet to the PC's MAC address on port 68
+
+### Address scope
+
+On the DHCP server, the administrator configures the IP address range with one that is available to be handed out.
+
+### Address reservations
+
+- The administrator reserves specific IP addresses to be handed out to specific MAC addresses.
+  These are used for devices that should always have the same IP address (servers, routers, firewalls).
+- This allows for these addresses to be changed from a central location instead of having to log in to each device separately.
 
 ---
 
-@30min
+@35min
 
 ---
 EOF
