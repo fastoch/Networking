@@ -451,15 +451,51 @@ That way the IP address can change but people can still get to the service that 
 
 ## The purpose of NAT
 
-NAT solves the problem of how to route non-routable IP addresses.  
+**NAT solves the problem of how to route non-routable IP addresses.**  
 As a partial effort to conserve the IPv4 address space, the private IPv4 addressing spaces were developed.  
+These address spaces were removed from the public IPv4 address space and made non-routable across public IPv4 networks.  
 
+Being non-routable prevents the private IPv4 addresses from communicating with remote public networks.  
+NAT very simply solves this problem.  
+
+A router with NAT enabled will translate a private IP address into a routable public IP address.  
+When the response reaches the router, it passes the response back to the device that requested it. 
 
 ## How NAT works
 
+### The 2 categories of NAT
+
+- **Static NAT (SNAT)**: each private IP address is assigned to a specific routable public IP address.
+  This relationship is kept and maintained by the NAT-enabled router.
+  
+  When a device needs access outside of the local network, the router translates the local IP address to the assigned
+  public IP address. When the response comes back, the router will translate the public IP address back into the local one.
+
+  SNAT is not flexible and leads to scalability issues. An individual routable IP address must be kept for every device
+  that requires access outside of the local network. As the network grows, you need to increase the amount of public IP
+  addresses that are under your control. That quickly gets expansive and complicated.
+  
+- **Dynamic NAT (DNAT)**: the NAT-enabled router dynamically assigns a routable IP address to devices from a pool of
+  available public IP addresses.
+
+  When a device needs access outside of the local network, the router performs the NAT function, only the public address
+  comes from a re-usable pool of public IP addresses. Once outside access is stopped, the routable IP address goes back
+  into the pool to be reused.
+
+  As initially designed, DNAT was more flexible than SNAT, but still led to some scalability issues.
+  As more network traffic requires access to remote networks, the pool of available public IP addresses needs to increase.
+   
+The solution to these scalability issues is called Port Address Tranlsation (PAT).
+
+### Port Address Translation (PAT)
+
+PAT is a type of DNAT that was developed to increase the scalability of NAT.  
+
+When a local network device requires access to a public network, the NAT-enabled router 
 
 
-@47min
+
+@50min
 
 ---
 EOF
