@@ -586,12 +586,20 @@ due to its widespread availability.
 Broadband cable is **coaxial cable networking**.
 - broadband connection to a location delivered by the cable company
 - it can deliver voice, data and television, all through the same connection
-- **Headend**: 
-- **Distribution network**: 
+- **Headend**: all cable signals are received at this point.
+- signals are processed and formatted then transmitted to the distribution network.
+- **Distribution network**: smaller service areas served by the cable company.
+  The distribution network architecture can be composed of fiber optic cabling, coaxial cabling or hybrid fiber-coaxial cabling.
+- unlike DSL, the bandwidth of the distribution network is shared by all of those who connect to it, which can lead to increase
+  latency and congestion during busy times.
+- final distribution to the premise is usually through a coaxial cable
+- Data over cable service interface specification (**DOCSIS**): the specifications for how the signal will be received.
+  All cable modems and similar devices must measure up to the ISP's required DOCSIS standard. 
 
 ## Fiber
 
-
+- using light to transmit data and voice
+- allows for more bandwidth over greater distances
 
 
 
