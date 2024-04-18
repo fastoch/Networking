@@ -541,11 +541,53 @@ due to its widespread availability.
 
 ### ISDN (Integrated Services Digital Network)
 
-- 
+- Digital point-to-point WAN technology using the PSTN
+- Completely digital service
+- requires the use of a terminal adapter (TA) for the connection to the end node 
+- can be implemented as a Primary Rate Interface (PRI) uses twenty-three 64 Kbps B channels and one 64 Kbps D channel
+- The D channel is used for call setup and link management
+- a PRI achieves 1.544 Mbps speed (T1 leased line)
+- most commonly implemented as a Basic Rate Interface (**BRI**) using two B channels and one D channel
+- a BRI aciheves 128 Kbps speed
+- ISDN is **not as capable as a DSL** (digital subscriber line), but it can often be implemented where DSL cannot be installed
+
+### xDSL
+
+- a digital WAN technology using the PSTN
+- requires the use of a digital modem
+- dedicated digital line between the end point and a class-5 central office (CO)
+- it's only possible within 18,000 feet of the CO (within 5.4 kilometers of a Central Office)
+- carries voice and data (filters are put in place so the voice signal can come through without any interference)
+
+### SDSL (Symmetric DSL)
+
+- Synchronous in nature (upload and download speed is the same)
+- does not carry voice communications
+- if voice service is required, an additional line is needed
+- used by businesses that don't need the performance of a T1 leased line, but that do require the symmetrical upload and download speeds
+
+### ADSL (Asymmetric DSL)
+
+- Asynchronous in nature (upload speed is slower than download speed)
+- it can carry data and voice
+- common upload speed of 768 Kbps with download speed of up to 9 Mbps
+- most common implementation of DSL in SOHO environments (Small Office or Home Office)
+
+### VDSL (Very high-bit-rate DSL)
+
+- asynchronous in nature
+- used when high quality video and VoIP is necessary
+- commonly limited to a download speed of 52 Mbps and an upload speed of 12 Mbps
+- only possible when located within 4,000 feet of a CO (within 1.2 kilometers of a Central Office)
+- current standard allows for up to 100 Mbps over PSTN. To achieve that, the end point must be within 300 meters of a CO 
 
 ## Broadband cable
 
-
+Broadband cable is **coaxial cable networking**.
+- broadband connection to a location delivered by the cable company
+- it can deliver voice, data and television, all through the same connection
+- **Headend**: 
+- **Distribution network**: 
 
 ## Fiber
 
@@ -553,7 +595,6 @@ due to its widespread availability.
 
 
 
-@55min
 
 ---
 EOF
