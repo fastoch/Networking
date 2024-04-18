@@ -485,17 +485,75 @@ When the response reaches the router, it passes the response back to the device 
   As initially designed, DNAT was more flexible than SNAT, but still led to some scalability issues.
   As more network traffic requires access to remote networks, the pool of available public IP addresses needs to increase.
    
-The solution to these scalability issues is called Port Address Tranlsation (PAT).
+The solution to these scalability issues is called Port Address Tranlsation (PAT).  
+In Cisco terms, that would be "**NAT with PAT**".
 
 ### Port Address Translation (PAT)
 
 PAT is a type of DNAT that was developed to increase the scalability of NAT.  
 
-When a local network device requires access to a public network, the NAT-enabled router 
+When a local network device requires access to a public network, the NAT-enabled router assigns the public IP address to  
+the device with the addition of dynamically assigning a port number to the end of the public IP address.  
+
+The router tracks the IP addresses and port numbers to ensure that network traffic is routed to and from the proper devices.  
+
+PAT still requires a pool of public IP addresses, but the pool may only contain one public address, or it may contain several  
+for a large private network.  
+
+This is the preferred method of implementing NAT for two reasons:
+- less public IP addresses are required 
+- it's easier for admins to maintain
+
+### The NAT terminology
+
+- **inside local address**: a private IP address on the local network, assigned to a specific device.
+  | **Example**: 192.168.0.2
+- **inside global address**: a public IP address referencing an inside device, assigned to a inside device by the
+  NAT-enabled router to allow access from outside of the network.
+  | **Example**: 24.113.185.118:1001
+- **outside global address**: a public IP address referencing an outside device, assigned to a device that is outside
+  of our local network.
+  | **Example**: 74.125.28.147
+- **outside local address**: a private IP address assigned by our NAT-enabled router to an outside device, on the interior
+  of our local network. 
+  | **Example**: 192.168.0.1:2002
+
+---
+
+# WAN technologies
+
+**What makes a WAN a WAN, as opposed to a LAN?**  
+
+As a general rule, if you own and control the line that the data is using to get from one place to another, you are not  
+using a wide area network (**WAN**) technology. On the other hand, if you are using a form of transmission that you don't  
+own, then you are likely using WAN technology.  
+
+One of the most common physical infrastructures used in WAN technology is the public switched telephone network (**PSTN**),  
+due to its widespread availability.
+
+## Public switched telephone network
+
+### Dial-up 
+
+- Utilizes the PSTN to transmit network traffic as an analog signal.
+- Requires an analog modem to format the network traffic.
+- Maximum theoretical speed is 56 Kbps (not very fast).
+
+### ISDN (Integrated Services Digital Network)
+
+- 
+
+## Broadband cable
 
 
 
-@50min
+## Fiber
+
+
+
+
+
+@55min
 
 ---
 EOF
