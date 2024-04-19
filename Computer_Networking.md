@@ -639,12 +639,49 @@ Cellular networking involves using a cellular phone system for more than just ph
 
 WiMAX stands for **Worldwide Interoperability for Microwave Access**.  
 - WiMAX was originally developed as a last mile alternative for use when DSL or cable was not available.
-- It provides an alternative broadband 
-
+- It provides an alternative broadband connection to a fixed location
+- it uses microwave transmissions as an over-the-air method to transmit voice and data
+- it requires a line of sight between relay stations
+- it can be used to cover significant distances
+- many municipalities are exploring the use of WiMAX as a means of providing reasonably priced broadband to their citizens
+- it's often considered to be a type of 4G technology because it is compatible with LTE networks
+- but it's not compatible with 3G networks
 
 ## Satellite WAN conections
 
- 
+Satellite WAN connections are a type of **microwave satellite networking**.  
+- it uses microwave transmisions as an over-the-air method to transmit voice and data
+- can be an effective means of extending networks into places that are hard to reach
+- **Microwave radio relay** is the method of transmitting data through the atmosphere
+- requires a line of sight between relay stations, but can cover vast distances
+- the distances covered by the satellite network may lead to latency problems
+- a **communication satellite** (comsat) forms part of the microwave relay network
+- comsats may use a variety of orbits: Molniya, geostationary, low-polar, or polar orbits are all used for microwave
+  radio relay networks
+- **Low-polar and polar orbits** are used to boost the microwave signal before sending the signal back to Earth
+
+---
+
+## Metro Ethernet WAN connections
+
+A metro Ethernet connection is when the service provider connects to the customer's site through an RJ45 connector.  
+The customers view that WAN connection as an Ethernet connection, while, in reality, the type of connection will be  
+dependent on the level of service that has been purchased.  
+
+The service provider may use a variety of WAN technologies behind the scenes, but the customer will only view it as being  
+an Ethernet connection.  
+
+Metro Ethernet is commonly deployed as a WAN technology by municipalities at the metropolitan area network (MAN) level.
+
+## Leased line WAN connections
+
+A leased line is a dedicated circuit (connection) between two end points used for communication.  
+It's usually a digital point-to-point connection.  
+
+
+## Common standards
+
+
 
 
 ---
