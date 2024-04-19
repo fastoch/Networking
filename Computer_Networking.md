@@ -522,7 +522,7 @@ This is the preferred method of implementing NAT for two reasons:
 
 # WAN technologies
 
-**What makes a WAN a WAN, as opposed to a LAN?**  
+## What makes a WAN a WAN, as opposed to a LAN?
 
 As a general rule, if you own and control the line that the data is using to get from one place to another, you are not  
 using a wide area network (**WAN**) technology. On the other hand, if you are using a form of transmission that you don't  
@@ -601,9 +601,48 @@ Broadband cable is **coaxial cable networking**.
 - using light to transmit data and voice
 - allows for more bandwidth over greater distances
 - more expensive to install, but also less susceptible to line noise
-- The fiber synchronous data transmission standard in the U.S. is Synchronous Optical Network (SONET)
-- The international standard is Synchronous Digital Hierarchy (SDH)
-- SONET and SDH define the base rates of transmission, which are known as Optical Carrier (OC) 
+- The fiber synchronous data transmission standard in the U.S. is Synchronous Optical Network (**SONET**)
+- The international standard is Synchronous Digital Hierarchy (**SDH**)
+- SONET and SDH define the base rates of transmission over fiber, which are known as Optical Carrier (**OC**) levels
+- Dense Wavelength-Division Multiplexing (**DWDM**) is a method of multiplexing several OC levels (up to 32 channels)
+  into a single optical fiber, effectively increasing the bandwidth of a single optical fiber.
+- Coarse Wavelength-division multiplexing (**CWDM**) is similar to DWDM but only allows for up to 8 channels on a single fiber
+- When fiber optic is delivered to the premise, it's usually done over a Passive Optical Network (**PON**)
+- PON is a point-to-multipoint technology thats uses a single optical fiber to connect multiple locations to the Internet
+- PON uses unpowered optical splitters
+
+---
+
+## GSM/CDMA WAN connections
+
+All cellular carriers use one of two methods for connecting devices to their networks, and they are not compatible.  
+
+Currently in the United States, AT&T and T-Mobile use **Global System for Mobile** (GSM) to connect their devices to their networks.  
+Whereas Sprint and Verizon use **Code Division Multiple Access** (CDMA) as their method of connecting to networks.  
+
+The majority of the rest of the World utilizes GSM as the method of accessing cellular networks.  
+
+### Cellular Networking
+
+Cellular networking involves using a cellular phone system for more than just phone calls.  
+- 1G cellular was only capable of voice transmissions
+- **2G** cellular added simple data transmission capability (**text messaging**)
+- 2G EDGE offered some basic cellular networking connectivity and was a stopgap between 2G and 3G
+- **3G** cellular is the beginning of cellular WAN networking
+- HSPA+ (Evolved High Speed Packet Access) was a stopgap between 3G and 4G (maximum data rate of 84 Mbps)
+- **LTE** (Long Term Evolution) uses an all-IP based core with high data rates. It's compatible with 3G and WiMAX
+- **4G** consists of LTE and WiMAX (Worlwide Interoperability for Microwave Access)
+- **5G** is the fifth generation of wireless cellular technology, offering higher upload and download speeds, more consistent connections,
+  and improved capacity than previous networks.
+
+## WiMAX WAN connections
+
+WiMAX stands for **Worldwide Interoperability for Microwave Access**.  
+- WiMAX was originally developed as a last mile alternative for use when DSL or cable was not available.
+- It provides an alternative broadband 
+
+
+## Satellite WAN conections
 
  
 
