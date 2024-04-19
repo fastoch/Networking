@@ -751,15 +751,23 @@ Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol
 
 ### Frame relay
 
--
+- Frame relay is a WAN technology in which variable length packets are switched across a network
+- frame relay is less expensive than leased lines
+- can be made to look like a leased line through the use of a virtual circuit (VC)
+- frame relay will track a VC using a data link connection identifier (DLCI)
+- **access rate**: the max speed of the frame relay interface
+- **Committed Information Rate** (CIR): guaranteed bandwidth (may go faster but never slower)
 
 ### Asynchronous Transfer mode (ATM)
 
--
+- ATM is a WAN technology in which fixed length cells (each cell is 53 bytes long) are switched across a network
+- ATM can handle real time voice and video
+- very fast technology but poor bandwidth utilization (the small cell size reduces the efficiency of the technology)
+- common ATM speeds are 51.84 Mbps and 155.52 Mbps 
 
 ## Multiprotocol Label Switching (MPLS)
 
-
+- 
 
 
 ---
