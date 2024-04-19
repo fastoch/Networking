@@ -675,9 +675,27 @@ Metro Ethernet is commonly deployed as a WAN technology by municipalities at the
 
 ## Leased line WAN connections
 
-A leased line is a dedicated circuit (connection) between two end points used for communication.  
-It's usually a digital point-to-point connection.  
+- A leased line is a dedicated circuit (connection) between two end points used for communication.  
+- It's usually a digital point-to-point connection.
+- a leased line can utilize either a plain old telephone service (POTS) line on the public switched telephone network (PSTN),
+  or it can be a fiber optic circuit provided by a telecommunications company.
+- leased lines tend to be more expensive for the customer, as the circuit cannot be utilized by any other entity
+- most often, the speed is limited by what the customer is willing to pay
+- multiplexing technology can be used to increase the amout of channels that are provided on the connection
 
+### PPP
+
+Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol used with leased line networks.  
+- PPP can simultaneously transmit multiple layer 3 protocols (for instance, IP and IPX) through the use of control
+  protocols (which are specific to the layer 3 protocol being transmitted).
+- PPP includes a feature called **Multilink PPP**, which allows for multiple physical interfaces to be bonded together
+  and act as a single logical interface, effectively increasing the available bandwidth.
+
+### Types of leased line connections
+
+- **T-carrier**:
+- **E-carrier**:
+- **Optical carrier (OC) lines**:
 
 ## Common standards
 
