@@ -473,7 +473,7 @@ When the response reaches the router, it passes the response back to the device 
 
   SNAT is not flexible and leads to scalability issues. An individual routable IP address must be kept for every device
   that requires access outside of the local network. As the network grows, you need to increase the amount of public IP
-  addresses that are under your control. That quickly gets expansive and complicated.
+  addresses that are under your control. That can quickly become expensive and complicated.
   
 - **Dynamic NAT (DNAT)**: the NAT-enabled router dynamically assigns a routable IP address to devices from a pool of
   available public IP addresses.
@@ -600,8 +600,12 @@ Broadband cable is **coaxial cable networking**.
 
 - using light to transmit data and voice
 - allows for more bandwidth over greater distances
+- more expensive to install, but also less susceptible to line noise
+- The fiber synchronous data transmission standard in the U.S. is Synchronous Optical Network (SONET)
+- The international standard is Synchronous Digital Hierarchy (SDH)
+- SONET and SDH define the base rates of transmission, which are known as Optical Carrier (OC) 
 
-
+ 
 
 
 ---
