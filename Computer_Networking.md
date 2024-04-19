@@ -673,6 +673,8 @@ an Ethernet connection.
 
 Metro Ethernet is commonly deployed as a WAN technology by municipalities at the metropolitan area network (MAN) level.
 
+---
+
 ## Leased line WAN connections
 
 - A leased line is a dedicated circuit (connection) between two end points used for communication.  
@@ -693,13 +695,40 @@ Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol
 
 ### Types of leased line connections
 
-- **T-carrier**:
-- **E-carrier**:
-- **Optical carrier (OC) lines**:
+- **T-carrier** (US, Japan and South Korea): each T line circuit level is composed of 24 digital signal channels.
+  These are often called Digital Signal 0 (DS0) channels. Each channel is capable of carrying 64 Kbps.
+  The 24 DS0s make what is called a digital signal 1 (DS1) channel.
+  
+- **E-carrier** (Europe): each E line circuit level is composed of 30 digital signal channels.
+  These are also called DS0 channels. The 30 DS0 also make up a DS1.
+  
+- **Optical carrier (OC) lines**: the OC data rates per channel are established by both the SONET (US) and SDH (international)
+  networking standards. These rates are the same across the two standards.
+  Using dense wavelength-division multiplexing (DWDM) allows for up to 32 separate channels on a single fiber cable.
+  Using coarse wavelength-division multiplexing (CWDM) allows for up to 8 separate channels on a single fiber cable.
 
-## Common standards
+---
 
+## Common standards (speeds)
 
+**T-carrier lines**: 
+- T1 composed of 24 DS0 channels = 1.544 Mbps
+- T3 composed of 28 T1 lines = 44.736 Mbps
+
+**E-carrier lines**: 
+- E1 composed of 30 DS0 channels = 2.048 Mbps
+- E3 composed of 16 E1 lines = 34.368 Mbps
+  
+**Optical Carrier lines**: 
+- OC-1 = 51.84 Mbps
+- OC-3 = 155.52 Mbps
+- OC-12 = 622.08 Mbps
+- OC-48 = 2.488 Gbps
+- OC-192 = 9.953 Gbps 
+
+---
+
+## 
 
 
 ---
