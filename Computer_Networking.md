@@ -736,16 +736,26 @@ Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol
 - While set up, the circuit can only be used for communication between those endpoints.
 - An example of this is a phone call using a land line
 - Circuit-switched networks are most common in networks with leased line communication
-- Best use is when there needs to be a fair amount of continuous data traffic between two points
-- There is only one path
+- Best use is when there needs to be a fair amount of continuous data traffic between two endpoints
+- There is only one path for the data to take
 
 ### Packet switched networks
 
-- 
+- in packet switched networks, data is broken up into smaller chunks and moved through the network, only to be
+  reassembled at the other end
+- data traffic is routed using the destination address
+- data may take different paths through the network
+- packet switched networks are less expensive since you don't have to maintain a dedicated circuit 24/7
 
 ## Frame relay vs. Asynchronous Transfer Mode
 
-- 
+### Frame relay
+
+-
+
+### Asynchronous Transfer mode (ATM)
+
+-
 
 ## Multiprotocol Label Switching (MPLS)
 
