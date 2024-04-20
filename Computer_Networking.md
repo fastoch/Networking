@@ -868,16 +868,16 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 
 ### Cat 3
 
-- rated for up to 10 Mbps speed, 10BaseT.
+- rated for up to 10 Mbps speed, 10BaseT networking.
 - max distance of 100 meters
 
 ### Cat 5
 
-- rated for up to 100 Mbps speed, 100BaseT
+- rated for up to 100 Mbps speed, 100BaseT networking
 
 ### Cat 5e
 
-- rated for up to 1 Gbps, 1000BaseT
+- rated for up to 1 Gbps, 1000BaseT networking
 
 ### Cat 6
 
