@@ -767,7 +767,32 @@ Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol
 
 ## Multiprotocol Label Switching (MPLS)
 
-- 
+- MPLS is a routing technique that directs data from one node to the next based on labels rather than network addresses
+- Whereas network addresses identify endpoints, the labels identify established paths between endpoints.
+- MPLS is a scalable and protocol independent
+- MPLS can be used to replace both frame relay switching and ATM switching
+- it can also be used to packet switch both frame relay and ATM network traffic
+- this allows MPLS to be used in conjunction with both frame relay and ATM technologies
+- MPLS is used to improve the Quality of Service (QoS) and flow of network traffic
+- **Label Edge Router (LER)**: adds MPLS labels to incoming packets if they don't have them
+- **Label Switching Router (LSR)**: forwards packets based on their MPLS labels
+
+---
+
+# Network Cabling
+
+## Twisted pair network cabling
+
+
+
+## Twisted pair network connectors
+
+
+
+## Categories of twistes pair
+
+
+
 
 
 ---
