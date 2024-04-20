@@ -866,7 +866,28 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 
 ## Categories of twisted pair
 
+### Cat 3
 
+- rated for up to 10 Mbps speed, 10BaseT.
+- max distance of 100 meters
+
+### Cat 5
+
+- rated for up to 100 Mbps speed, 100BaseT
+
+### Cat 5e
+
+- rated for up to 1 Gbps, 1000BaseT
+
+### Cat 6
+
+- rated for up to 10 Gbps, 10 Gigabit Ethernet (GbE)
+- max distance of 55 meters when used for 10 GbE
+
+### Cat 6a
+
+- rated for up to 10 Gbps, 10 GbE
+- max distance of 100 meters when used for 10 GbE
 
 
 
