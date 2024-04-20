@@ -783,7 +783,41 @@ Point-to-Point Protocol (PPP) is a common data link layer (OSI Layer 2) protocol
 
 ## Twisted pair network cabling
 
+Most people are familiar with twistes pair cables, as they are the standard in the modern LAN.  
+Twisted pair cables are composed of 4 pairs of wires contained within an insulating sheath.  
+Each pair of wires is twisted together to reduce electromagnetic interference (EMI).  
+The twist rates differ between the pairs of wires to reduce crosstalk between the pairs (a type of EMI).  
+The colors of the pairs are: 
+- white orange / orange
+- white blue / blue
+- white green / green
+- white brown / brown
 
+Twisted pair is usually either a straight-through cable, but it can also be used to create a rollover (console) cable.  
+- a **straight-through cable** is used to connect **different** types of **devices** together (PC to switch, or switch to router)
+- a **crossover cable** is used to connect **similar devices** together (PC to PC, or switch to switch)
+
+A **rollover or console cable** is often required to connect to the console port on a switch or router.  
+It's quite common for one end of the rollover cable to use an RJ45 connector, while the other end utilizes an RS232 (DB9) connector.
+
+### Unshielded vs. shielded twisted pair (UTP vs. STP) 
+
+- STP has an additional shield that is either wrapped around each pair of wires or around all four pairs.
+- STP reduces the opportunity for EMi or crosstalk, but is more expensive and a little harder to work with
+- UTP is much more common than STP
+
+### Plenum vs. non-plenum twisted pair
+
+- most twisted pair is non-plenum grade
+- building codes often call for plenum grade cable to be run in plenum spaces*
+- plenum cable is jacketed in either a fire-retardant cover or in a low-smoke PVC jacket
+- plenum cable often has a polymer or nylon strand woven into it to help take the weight of hanging cables.
+  This reduces the chance for the cable to stretch, which can cause the pair inside to break.
+
+*plenum spaces are areas designed to assist in the air flow of a building for HVAC purposes  
+*HVAC = Heating, Ventilation, and Air Conditioning
+
+---
 
 ## Twisted pair network connectors
 
