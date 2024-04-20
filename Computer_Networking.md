@@ -889,6 +889,14 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 - rated for up to 10 Gbps, 10 GbE
 - max distance of 100 meters when used for 10 GbE
 
+---
+
+## Coaxial cabling
+
+---
+
+## Fiber optic cabling
+
 
 
 ---
