@@ -821,9 +821,50 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 
 ## Twisted pair network connectors
 
+### RJ11
 
+- uses a six-position four-contact (6P4C) modular connector
+- can carry data or voice; common usage is voice communication (telephony)
 
-## Categories of twistes pair
+### RJ45
+
+- uses an eight-position eight-contact (8P8C) modular connector
+- can carry data or voice; common usage is data networking (Ethernet)
+
+### RJ48C
+
+- uses an eight-position eight-contact (8P8C) modular connector
+- used as the terminating connector at the demarc for T1 lines
+- often confused with an RJ45, but the active pins are different
+
+### UTP coupler
+
+- used to connect UTP cables back to back and still maintain adherence to industry standards
+
+### 66 block
+
+- a punchdown block initially developed to terminate and distribute telephone lines in an enterprise environment
+- it was also used in slower speed networks, as it can handle data traffic rated for Cat 3 cabling.
+
+### 110 block
+
+- a punchdown block developed to terminate and distribute twisted pair network cabling
+- it's capable of handling the signaling requirements of the modern network
+
+### DB9 (RS-232)
+
+- a 9 pin D-subminiature (D-sub) connector developed for asynchronous serial communication between nodes
+- it was a common type of connection between a computer and an external analog modem
+- it often makes up one end of the rollover cable (console cable)
+
+### DB25 (EIA-232/RS-232 serial)
+
+- a 25 pin D-subminiature (D-sub) connector developed for asynchronous serial communication between nodes
+- it was a type of connection between a computer and an external analog modem
+
+---
+
+## Categories of twisted pair
 
 
 
