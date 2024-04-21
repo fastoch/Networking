@@ -893,6 +893,17 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 
 ## Coaxial cabling
 
+- Coaxial cabling is one of the oldest Ethernet cabling standards (1973).
+- It's been used for baseband (carries single digital signal)
+- it's been use for broadband (carries multiple digital signals)
+- it's composed of a central conductor that is covered by an insulating layer, which is covered by an outer metal mesh
+  or foil layer that is finished with an outer insulating layer
+- the inner metal mesh or foil layer helps to protect against EMI (electro-magnetic interference)
+
+### Coaxial cable types
+
+- 
+
 ---
 
 ## Fiber optic cabling
