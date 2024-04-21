@@ -902,11 +902,38 @@ It's quite common for one end of the rollover cable to use an RJ45 connector, wh
 
 ### Coaxial cable types
 
-- 
+- **RG58**: 10Base2, max distance of 185 m, 50 ohms impedance, no longer commonly found in modern networks
+- **RG59**: commonly used to provide a broadband connection between 2 devices over a short distance
+- **RG6**: cable TV or broadband, commonly used to make the connection to cable modems by cable companies
+
+### Coaxial cable connectors
+
+- **BNC** (Bayonet Neill-Concelman): now considered obsolete. Also known as a bayonet connector.
+  The connection from the cable to the device was achieved through a twist-lock type connection.
+  
+- **F connector**: a threaded bayonet connector, 
 
 ---
 
 ## Fiber optic cabling
+
+- it's relatively expensive and harder to work with
+- it resists all form of EMI and cannot be easily tapped
+- it can cover long distances at high speed
+- most applications require that fiber cables be run in pairs (send cable + receive cable)
+
+The type of connector used on fiber optic cabling can impact the performance of the transmissions:
+- The **UPC** (Ultra Physical Contact) connector has a back reflection rating of around -55 dB
+- The **APC** (Angled Physical Contact) connector has a back reflection rating of around -70 dB, making it the
+  better performing connector.
+
+### Fiber types
+
+**Multimode fiber (MMF)**  
+- 
+
+**Single-mode fiber (SMF)**
+- 
 
 
 
