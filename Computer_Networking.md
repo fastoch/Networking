@@ -962,6 +962,9 @@ The type of connector used on fiber optic cabling can impact the performance of 
 
 **Fiber optic coupler**: used to connect 2 fiber optic cables back to back.
 
+---
+
+## 
 
 ---
 EOF
