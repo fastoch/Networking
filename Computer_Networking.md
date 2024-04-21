@@ -930,11 +930,37 @@ The type of connector used on fiber optic cabling can impact the performance of 
 ### Fiber types
 
 **Multimode fiber (MMF)**  
-- 
+- it uses an infrared LED system to transmit the light
+- it uses multiple rays of light going down the cable
+- it's used for shorter fiber runs, under 2 km
+- less expensive to implement than SMF
+- the most common application in networking is MMF 62.5/125µ, which is good for up to 275 m
 
 **Single-mode fiber (SMF)**
+- it uses a laser-diode arrangement to transmit the light
+- it uses a single ray of light transmitted down the cable
+- it's used for longer runs that require high speed
+- it can traverse more than 40 km
+
+### Fiber optic cabling connectors
+
+**SC**:
+- Subscriber Connector, or Square Connector, or Standard Connector (Stick and Click)
+- a push-pull type of connector
+
+**ST**:
+- 
 - 
 
+**LC**:
+- 
+- 
+
+**MTRJ**:
+- 
+- 
+
+**Fiber optic coupler**: used to connect 2 fiber optic cables back to back.
 
 
 ---
