@@ -986,16 +986,29 @@ It's often said that you get what you pay for, and that is very true with tools.
 While a good technician can get away with buying the cheapest tools, speding a little more money for a  
 better tool can often make a task easier and, ultimately, make the technician more efficient.  
 
-### Crimpers
+### Crimpers (sertisseuses)
 
+- used to place cable ends on cables
+- they can be designed to work with a single type of cable or with multiple types
 
+### Wire strippers (pinces à dénuder)
 
-### Wire strippers
-
-
+- used to remove the insulating cover on wires and cables
+- many are designed to just cut through the insulation without damaging the cable contained in it
+- some are also designed to cut all the way through the cable, so that excess cabling can be trimmed
 
 ### The punchdown tool
 
+- used to secure cable wires into **punchdown blocks**
+- good ones will trim the ends at the same time
+- in many cases, punchdown blocks are used to terminate cable runs in a central location
+- often, these blocks are on the backside of **patch panels**
+
+### The cable tester
+
+### TDR (time-domain reflectometer)
+
+### OTDR (optical TDR)
 
 
 ---
