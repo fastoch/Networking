@@ -1029,11 +1029,30 @@ This tool is used to test cables for common problems:
 
 ## What is a topology?
 
+It's basically a map that can describe how a network is laid out or how it functions.  
+A network topology can be described as either **logical** or **physical**.  
+- A logical topology describes the theoretical signal path
+- A physical topology describes the physical layout of the network
+
 ## Peer-to-peer vs. client/server
+
+### Peer-to-peer model
+
+- nodes control & grant access to resources on the network
+- each node is responsible for the resources it is willing to share
+
+### Client/Server model
+
+- network resources access is controlled by a central server or a group of servers
+- servers determine what resources get shared, who is allowed to access them, and even when the resources can be used
+
+### Hybrid model
+
+A combination of peer-to-peer & client/server networking
 
 ## Network topology models 
 
-
+The original Ethernet standards
 
 ---
 EOF
