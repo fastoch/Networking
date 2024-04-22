@@ -1048,11 +1048,30 @@ A network topology can be described as either **logical** or **physical**.
 
 ### Hybrid model
 
-A combination of peer-to-peer & client/server networking
+A combination of peer-to-peer & client/server networking.
+
+---
 
 ## Network topology models 
 
-The original Ethernet standards
+The original Ethernet standards established a "**bus**" topology for the network, both logically & physically.  
+As time went on, the "bus" developed some mechanical problems. That led to the development of different physical  
+topologies, but the logical topology remained the same in order to maintain backward compatibility.  
+
+So when discussing Ethernet networks, **the logical topology is always a "bus"** topology, while the physical topology  
+can be different.  
+
+### Bus
+
+- the signal traverses from one end of the network to the other
+- a break in the line breaks the network
+- the ends of the line must be terminated in order to prevent signal bounce
+- the network cable is the central point
+
+### Ring
+
+- 
+
 
 ---
 EOF
