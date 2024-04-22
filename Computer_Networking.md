@@ -1006,9 +1006,33 @@ better tool can often make a task easier and, ultimately, make the technician mo
 
 ### The cable tester
 
+This tool is used to test cables for common problems:
+- misconfiguration of the ends (incorrect pinouts)
+- check the cable standard used (T568A or T568B)
+- breaks in the cable
+- some testers can also test for the cable length and quality, these are called **cable certifiers**
+
 ### TDR (time-domain reflectometer)
 
+- a cable tester for copper cabling that can also determine the length of a segment and the electrical
+  characteristics of the cable
+- they can also tell where a break is in a segment
+- more expensive than a standard cable tester
+
 ### OTDR (optical TDR)
+
+- performs the same functions as a TDR, but used for fiber optic cabling
+
+---
+
+# Network Topologies
+
+## What is a topology?
+
+## Peer-to-peer vs. client/server
+
+## Network topology models 
+
 
 
 ---
