@@ -949,22 +949,54 @@ The type of connector used on fiber optic cabling can impact the performance of 
 - a push-pull type of connector
 
 **ST**:
-- 
-- 
+- Straight Tip (Stick and Twist)
+- a twist lock type of connector
 
 **LC**:
-- 
-- 
+- Local Connector, or Lucent Connector, or Little Connector
+- uses a locking tab to secure the connection
 
 **MTRJ**:
-- 
-- 
+- Mechanical Transfer Registered Jack
+- a small form factor connector that contains 2 fibers and that utilizes a locking tab to secure the connection
 
 **Fiber optic coupler**: used to connect 2 fiber optic cables back to back.
 
 ---
 
-## 
+## Media converters 
+
+It's not uncommon to be in a situation where a network contains more than onoe type of cabling.  
+This can lead to situations where there's a desire to connect different types of media together in order to  
+make a cohesive (or single) network.  
+
+Thankfully, media converters are readily available. The issue mostly comes into play when joining  
+fiber optic transmissions to a copper wire infrastructure.  
+
+Some common media converters will connect:
+- SMF to Ethernet
+- MMF to Ethernet
+- SMF to MMF
+- fiber to coaxial cabling
+
+## Cabling tools
+
+Every technician should put some thought into the tools that are in his/her toolbox.  
+It's often said that you get what you pay for, and that is very true with tools.  
+While a good technician can get away with buying the cheapest tools, speding a little more money for a  
+better tool can often make a task easier and, ultimately, make the technician more efficient.  
+
+### Crimpers
+
+
+
+### Wire strippers
+
+
+
+### The punchdown tool
+
+
 
 ---
 EOF
