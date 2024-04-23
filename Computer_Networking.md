@@ -1186,9 +1186,25 @@ IP addresses are the location of a PC or server, identified as both network loca
 
 IP addressing provides a logical addressing scheme for our computers so that they can communicate on networks.  
 Being logical means that an IP address can be changed with minimal fuss at any time, unlike a MAC address, which is physically  
-embedded into devices.  
+embedded into the device.  
 
 ## IPv4 address properties
+
+As IPv4 is made up of a 32-bit binary number, there are 2³² possible address combinations.  
+With all of these possibilities, a process needed to be developed to keep everything neat and tidy.  
+The implementation of the **subnet mask** was the answer.  
+
+### Initial properties of IPv4
+
+- 32-bit binary number
+- divided into 4 sets of eight bits (called octets or bytes) that are separated by periods
+- represented in human friendly format by a dotted decimal format
+- requires the use of a mask to determine which portion defines the network and which defines the node
+- the subnet mask has the same format as the IP address (32 bits represented in dotted decimal format)
+
+### interaction of IP address and subnet mask
+
+### deconstructing the IP address 
 
 
 
