@@ -1065,12 +1065,22 @@ can be different.
 
 - the signal traverses from one end of the network to the other
 - a break in the line breaks the network
-- the ends of the line must be terminated in order to prevent signal bounce
+- the ends of the line needed to be terminated in order to prevent signal bounce
 - the network cable is the central point
 
 ### Ring
 
-- 
+- a bus line with the end points connected together
+- a node failure or cable break affects the whole network
+- often implemented with 2 rings that counter rotate
+- not very common in the LAN anymore, but still used in the WAN (fiber networks especially)
+
+### Star
+
+
+
+### Mesh
+
 
 
 ---
