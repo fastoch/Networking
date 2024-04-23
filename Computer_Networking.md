@@ -1160,15 +1160,28 @@ If you're going to describe the network's function, then the first thing to do i
 
 ### Supervisory control and data acquisition (SCADA)
 
-- 
+- a type of industrial control system (**ICS**) that is designed to control large scale deployments of equipment.
+- The controlled equipment is usually at more than one site
+- SCADA is often deployed in energy distribution systems by utility companies
+- uses a distributed control system (**DCS**) to communicate with programmable logic controllers (**PLCs**) and/or
+  remote terminals to control equipment and processes from a central location
+- Theses systems are often proprietary and often require additional training to understand and operate them 
 
 ### Medianet
 
-- 
+- networks designed and implemented specifically to handle voice and video
+- designed and implemented to remove QoS issues (like latency or jitter) that can occur in other infrastructures
+- a video teleconference (**VTC**) network is an example of a medianet
+- it may be implemented as its own infrastructure or as a sub-infrastructure of a larger network
 
 ---
 
 # Introduction to IPv4
+
+## Purpose of IP addressing
+
+## IPv4 address properties
+
 
 
 
