@@ -1158,7 +1158,19 @@ If you're going to describe the network's function, then the first thing to do i
 - they tend to provide low throughput of data and have a low power output
 - as the distance between devices increases, throughput decreases
 
- 
+### Supervisory control and data acquisition (SCADA)
+
+- 
+
+### Medianet
+
+- 
+
+---
+
+# Introduction to IPv4
+
+
 
 ---
 EOF
