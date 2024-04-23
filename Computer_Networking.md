@@ -1281,7 +1281,7 @@ We have more flexibility because the subnet mask becomes fluid. Therefore, subne
 
 - 192.168.128.0/23 = subnet mask of 255.255.254.0
 - network = 192.168.128.0
-- host range = 192.168.128.1 to 192.168.129.254 (512 hosts)
+- host range = 192.168.128.1 to 192.168.129.254 (510 hosts)
 - broadcast address = 192.168.129.255
 
 ## Subnetting IPv4 addresses
