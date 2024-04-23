@@ -1077,10 +1077,49 @@ can be different.
 
 ### Star
 
-
+- nodes radiate out from a central point
+- when implemented with a **hub**, a break in a segment brings down the whole bus 
+- when implemented with a **switch**, a break in a segment only brings down the segment
+- star + switch = **most common implementation of the modern LAN**
 
 ### Mesh
 
+- mutliple connections between nodes on the network
+- full mesh means that every node has a physical connection to every other node
+- partial mesh means that there are multiple paths between nodes
+- a **full mesh** topology is **expensive** to install because of the wiring constraints
+
+### Point-to-point
+
+- 2 nodes or systems connected directly together
+- 2 computers connected with a crossover cable create a point-to-point topology
+- no central device is required to manage the connection
+- a common topology when implementing a **WAN** connection 
+
+### Point-to-multipoint
+
+- a central device that controls the paths to all other devices
+- differs from a star in that the central device is intelligent
+- wireless network often implement point-to-multipoint topologies
+- when the WAP (wireless access point) sends data, all devices on the network receive it
+- when a device sends data, it is only passed along to the destination
+- also a common topology when implementing a **WAN** connection  
+
+### MPLS
+
+- Multiprotocol Label Switching is a topology used to replace both Frame Relay switching and ATM switching
+- it's a topology because it specifies both signal path and layout
+- it's used to improve the QoS and flow of network traffic
+- Label edge router (**LER**) adds MPLS labels to incoming packets if they don't have them
+- Label switching router (**LSR**) forwards packets based on their MPLS labels
+
+---
+
+# Network Infrastructure implementations
+
+## Design vs. function
+
+## Categories of networks
 
 
 ---
