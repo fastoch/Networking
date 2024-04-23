@@ -1180,6 +1180,14 @@ If you're going to describe the network's function, then the first thing to do i
 
 ## Purpose of IP addressing
 
+When Bob on network A wants to view a Web page hosted on a server on network B, how does his computer know where to send Bob?  
+Well somehow Bob has gotten the server's IP address, either in IPv4 or IPv6 format.  
+IP addresses are the location of a PC or server, identified as both network location and host location within that network.  
+
+IP addressing provides a logical addressing scheme for our computers so that they can communicate on networks.  
+Being logical means that an IP address can be changed with minimal fuss at any time, unlike a MAC address, which is physically  
+embedded into devices.  
+
 ## IPv4 address properties
 
 
