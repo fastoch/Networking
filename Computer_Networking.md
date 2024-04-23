@@ -1119,8 +1119,46 @@ can be different.
 
 ## Design vs. function
 
+When describing a network, you have a couple of different options.  
+Are you going to describe its design or its function?  
+
+If you're going to describe the network's design, then the first place to start is to describe its topology.  
+If you're going to describe the network's function, then the first thing to do is to describe its category or infrastructure implementation.  
+
 ## Categories of networks
 
+### LAN
+
+- most LANs are encompassed by a single network address range.
+- this address range may be broken into subgroups
+- each subgroup is called a virtual local area network (**VLAN**)
+- LANs can span from a small area (a single room) to a building or a small group of buildings
+- LANs tend to be high-speed (1 Gbps or 10 Gbps networking)
+- **802.3** (Ethernet) and **802.11** (WLAN, wireless LAN) are **the most common types** of network found in the LAN
+
+### MAN
+
+- larger than a LAN
+- most often, it contains multiple LANs
+- they are often owned by municipalities
+- when a MAN is owned by a private entity, it is sometimes called a campus area network (CAM)
+
+### WAN
+
+- a wide area network spans significant geographic distances
+- they can be described as a network of networks
+- the best example is the Internet (**inter**connected **net**works)
+- as a general rule, if all of the infrastructure implementation has a single owner, then it is not a WAN
+
+### PAN
+
+- extremely distance and size limited
+- most often, it's a connection between 2 devices
+- common examples include: bluetooth connection, infrared (IR) connection, near field communication (NFC)
+- they tend to provide low throughput of data and have a low power output
+- as the distance between devices increases, throughput decreases
+
+ 
 
 ---
 EOF
