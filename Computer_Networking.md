@@ -1194,17 +1194,97 @@ As IPv4 is made up of a 32-bit binary number, there are 2³² possible address c
 With all of these possibilities, a process needed to be developed to keep everything neat and tidy.  
 The implementation of the **subnet mask** was the answer.  
 
-### Initial properties of IPv4
-
 - 32-bit binary number
 - divided into 4 sets of eight bits (called octets or bytes) that are separated by periods
 - represented in human friendly format by a dotted decimal format
 - requires the use of a mask to determine which portion defines the network and which defines the node
 - the subnet mask has the same format as the IP address (32 bits represented in dotted decimal format)
 
-### interaction of IP address and subnet mask
+## interaction of IP address and subnet mask
 
-### deconstructing the IP address 
+- example: 192.168.1.9 255.255.255.0
+- the IP address of the host = 192.168.1.9
+- the subnet mask = 255.255.255.0 = /24 in CIDR notation (Classless Inter-Domain Routing)
+- in the subnet mask binary notation, all the bits before the first zero define the network portion
+- in our example, the network address is 192.168.1.0
+- the last octet is reserved to the host portion: from 192.168.1.1 to 192.168.1.254
+- in our example, 192.168.1.255 is the broadcast address
+
+---
+
+## Classes of IPv4 addresses
+
+**Internet Protocol version 4** is a binary addressing scheme that is used for networking.  
+It was finalized as a standard in **1981**.  
+
+There is an issue though. Because of its structure and the growth in popularity of the Internet, most  
+of the world has run out of assignable IPv4 addresses.  
+
+Thanks to some forethought though, it is still a valid scheme today.  
+
+### Class A network address
+
+- address range: 0.0.0.0 to 127.255.255.255
+- subnet mask = 255.0.0.0 = /8
+- number of addresses available for hosts = 16,777,214 (2²⁴ - 2)
+
+### Class B network address
+
+- address range: 128.0.0.0 to 191.255.255.255
+- subnet mask = 255.255.0.0 = /16
+- number of addresses available for hosts = 65,534 (2¹⁶ - 2)
+
+### Class C network address
+
+- address range: 192.0.0.0 to 223.255.255.255
+- subnet mask = 255.255.255.0 = /24
+- number of addresses available for hosts = 254 (2⁸ - 2)
+
+To calculate the number of IP addresses available for hosts, we subtract 2 addresses: 
+- one address for the network
+- another address for the broadcast
+
+### Class D network address
+
+- address range: 224.0.0.0 to 239.255.255.255
+- subnet mask = not defined
+- used for multicast communication
+
+### Automatic Private IP Addressing (APIPA)
+
+In some cases, the DHCP process may fail. In these cases, a node will self configure an APIPA address (Windows only).
+- APIPA range: between 169.254.0.1 and 169.254.255.254 (/16)
+
+## Public vs. Private IP addresses
+
+### Public IP addresses
+
+- routable
+- each must be unique
+
+### Private IP addresses
+
+- non-routable
+- 10.0.0.0 to 10.255.255.255 (1 class A license)
+- 172.16.0.0 to 172.31.255.255 (16 class B licenses)
+- 192.168.0.0 to 192.168.255.255 (256 class C licenses)
+
+## Classless IPv4 addressing
+
+First routing protocols required the class structure, but classes of addresses limited the flexibility of IPv4.  
+Classless addressing does not affect the private address space ranges.  
+
+Combining classless addressing and private IP addresses, we were able to slow the exhaustion of IPv4 addresses.  
+We have more flexibility because the subnet mask becomes fluid. Therefore, subnetting is now possible and desirable.
+
+### CIDR Notation Example
+
+- 192.168.128.0/23 = subnet mask of 255.255.254.0
+- network = 192.168.128.0
+- host range = 192.168.128.1 to 192.168.129.254 (512 hosts)
+- broadcast address = 192.168.129.255
+
+## Subnetting IPv4 addresses
 
 
 
