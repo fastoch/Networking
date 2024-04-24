@@ -1353,11 +1353,31 @@ The IPv6 addresses fall under three scopes: global, link-local, and unique local
 ### IPv6 global address structure (public)
 
 - 3 basic parts that make up the address are the routing prefix, the subnet ID and the interface ID.
-- the host address is always the last 64 bits (the interface ID)
+- the host address is still the last 64 bits (the interface ID)
 - the network portion is actually composed of the routing prefix and the subnet
 - the number that follows the slash is the routing prefix
 - the subnet is composed of the bits between the prefix and the EUI-64 host address
 - global IPv6 addresses always begin in the range of 2000 to 3999
+
+---
+
+In most cases, the need for DHCP has been eliminated.  
+When implemented, IPv6 will auto-configure both the local and global addresses.  
+These addresses are required to be unique on the networks.  
+
+When a device first comes online, it will use Neighbor Discover Protocol (**NDP**) to discover what the  
+required network addresses are, both the local and the global.  
+This allows the device to configure its own IPv6 addresses without an administrator's intervention.
+
+---
+
+### IPv6 notation
+
+
+
+### IPv6 notation example
+
+
 
 ---
 
