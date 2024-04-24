@@ -1321,17 +1321,35 @@ They scrapped IPv5 and began working on IPv6.
 
 The IANA is confident that IPv6 will function as the replacement for IPv4 for many decades to come.
 
-### IPv6 works at Layer 3 of the OSI model
-
-
-
 ### IPv6 is a 128-bit binary addressing scheme
+
+- The 128 bits are grouped together in sets. These sets are separated by a colon.
+- each set is 2 bytes long (16 bits)
+- for human readability, the binary IPv6 number is converted to hexadecimal
+- each hexadecimal number is equal to 4 bits (1 nibble)
+- An IPv6 address is 8 sets of 4 hexadecimal numbers
+
+### IPv6 local address structure
+
+- the first 64 bits represent the local network
+- the last 64 bits represent the host
+- the local address structure follows the Extended Unique Identifier format (EUI-64)
+- the local address is called the **link local address** and it always begins with **fe80**
+
+>[!note]
+>The 64-bit Extended Unique Identifier (EUI-64) is a special address format that maps device hardware network addresses into IPv6 addresses.
+>EUI-64 works by splitting a 48-bit hardware address (MAC address) into two 24-bit parts, inserting a special 16-bit code between them, and
+>changing one bit, resulting in a 64-bit interface identifier.
+>https://www.catchpoint.com/benefits-of-ipv6/eui-64 
+
+### IPv6 global address structure
 
 
 
 ---
 
 ## IPv6 network transmissions
+
 
 
 
