@@ -1319,7 +1319,7 @@ The IANA then set about creating the replacement and started working on IPv5.
 Soon after that, the IANA determined that it was not going to be sufficient.  
 They scrapped IPv5 and began working on IPv6.  
 
-The IANA is confident that IPv6 will function as the replacement for IPv4 for many decades to come.
+The IANA is confident that IPv6 will function as the replacement for IPv4 for many decades to come.  
 
 ### IPv6 is a 128-bit binary addressing scheme
 
@@ -1329,12 +1329,20 @@ The IANA is confident that IPv6 will function as the replacement for IPv4 for ma
 - each hexadecimal number is equal to 4 bits (1 nibble)
 - An IPv6 address is 8 sets of 4 hexadecimal numbers
 
-### IPv6 local address structure
+### IPv6 address scopes
+
+The IPv6 addresses fall under three scopes: global, link-local, and unique local.
+- Global: An address that has an unlimited scope.
+- Link-local: An address with a link-only scope that can be used to reach neighboring nodes attached to the same link.
+  This address is automatically assigned to a network interface.
+- Unique local: The address scope is limited to a local site or local set of sites. These addresses cannot be routed on the Internet.
+
+### IPv6 local address structure (private)
 
 - the first 64 bits represent the local network
 - the last 64 bits represent the host
 - the local address structure follows the Extended Unique Identifier format (EUI-64)
-- the local address is called the **link local address** and it always begins with **fe80**
+- the local address is called the **link-local address** and it always begins with **fe80**
 
 >[!note]
 >The 64-bit Extended Unique Identifier (EUI-64) is a special address format that maps device hardware network addresses into IPv6 addresses.
@@ -1342,9 +1350,14 @@ The IANA is confident that IPv6 will function as the replacement for IPv4 for ma
 >changing one bit, resulting in a 64-bit interface identifier.
 >https://www.catchpoint.com/benefits-of-ipv6/eui-64 
 
-### IPv6 global address structure
+### IPv6 global address structure (public)
 
-
+- 3 basic parts that make up the address are the routing prefix, the subnet ID and the interface ID.
+- the host address is always the last 64 bits (the interface ID)
+- the network portion is actually composed of the routing prefix and the subnet
+- the number that follows the slash is the routing prefix
+- the subnet is composed of the bits between the prefix and the EUI-64 host address
+- global IPv6 addresses always begin in the range of 2000 to 3999
 
 ---
 
