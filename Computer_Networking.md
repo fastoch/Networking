@@ -1280,13 +1280,16 @@ We have more flexibility because the subnet mask becomes fluid. Therefore, subne
 ### CIDR Notation Example
 
 - 192.168.128.0/23 = subnet mask of 255.255.254.0
+- The /23 represents all of the ones in the subnet mask
 - network = 192.168.128.0
 - host range = 192.168.128.1 to 192.168.129.254 (510 hosts)
 - broadcast address = 192.168.129.255
 
 ## Subnetting IPv4 addresses
 
+### Subnetting cuts the address space into smaller pieces
 
+### Small office network example
 
 
 ---
