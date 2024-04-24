@@ -1309,6 +1309,28 @@ You could use 223.15.1.0/25 and 223.15.1.128/25 by subnetting the original addre
 
 ## IPv6 address structure
 
+IPv6 is the answer to the question: "What do we do about running out of IPv4 addresses?"  
+
+Unlike IPv4, IPv6 will provide enough IP addresses for the foreseeable future.  
+Shortly after IPv4's creation and implementation, the Internet Assigned Numbers Authority (IANA)  
+realized that the available IPv4 address space would not be enough.  
+
+The IANA then set about creating the replacement and started working on IPv5.  
+Soon after that, the IANA determined that it was not going to be sufficient.  
+They scrapped IPv5 and began working on IPv6.  
+
+The IANA is confident that IPv6 will function as the replacement for IPv4 for many decades to come.
+
+### IPv6 works at Layer 3 of the OSI model
+
+
+
+### IPv6 is a 128-bit binary addressing scheme
+
+
+
+---
+
 ## IPv6 network transmissions
 
 
