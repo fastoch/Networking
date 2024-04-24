@@ -1285,11 +1285,32 @@ We have more flexibility because the subnet mask becomes fluid. Therefore, subne
 - host range = 192.168.128.1 to 192.168.129.254 (510 hosts)
 - broadcast address = 192.168.129.255
 
+---
+
 ## Subnetting IPv4 addresses
 
 ### Subnetting cuts the address space into smaller pieces
 
+- provides flexibility in network design
+- provides efficiency in address space utilization
+
 ### Small office network example
+
+223.15.1.0/24 network = 254 addresses available for hosts (can't use 223.15.1.0 and 223.15.1.255)  
+All hosts can get to all other hosts. For security reasons, you want two separate networks.  
+
+You could use 223.15.1.0/25 and 223.15.1.128/25 by subnetting the original address space as follows:
+- network 1 host address range: 223.15.1.1 to 223.15.1.126 (broadcast address is 223.15.1.127)
+- network 2 host address range: 223.15.1.129 to 223.15.1.254 (broadcast address is 223.15.1.255)
+
+---
+
+# Introduction to IPv6
+
+## IPv6 address structure
+
+## IPv6 network transmissions
+
 
 
 ---
