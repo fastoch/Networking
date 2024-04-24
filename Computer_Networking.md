@@ -1373,17 +1373,30 @@ This allows the device to configure its own IPv6 addresses without an administra
 
 ### IPv6 notation
 
-
+The 128-bit nature of IPv6 makes it cumbersome to write out and can take up unnecessary space.  
+Because of this, some rules were developed to ease the burden and to save space.  
+- Leading 0s in a set can be dropped
+- any single set of consecutive 0s may be replaced by a double colon
 
 ### IPv6 notation example
 
+- original address = 2001:0db8:0000:0000:0000:ff00:0042:8329
+- drop the leading 0s = 2001:db8:0:0:0:ff00:42:8329
+- remove sets of consecutive 0s = 2001:db8::ff00:42:8329
 
+>[!warning]
+>Remember that only one set of consecutive 0s can be replaced with the double colon.
+>If you could do it more than once, how would routers and other devices know how many zeros to pad in there?
 
 ---
 
 ## IPv6 network transmissions
 
+### Unicast
 
+### Multicast
+
+### Anycast
 
 
 ---
