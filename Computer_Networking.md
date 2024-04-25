@@ -1475,7 +1475,28 @@ With CSMA/CD, a device listens to the carrier signal on the network media.
 - if another device sends data at the same time, a collision is possible, which can corrupt the data
 
 The devices also listen for collisions.  
-If a collision occurs, devices will stop transmitting and wait a random period of time before attempting to transmit again.
+If a collision occurs, devices will stop transmitting and wait a random period of time before attempting to transmit again.  
+To do this, they use what is called a **back-off algorithm**.
+
+### Collision domains
+
+- A collision domain is an area of the network where network packets can collide.
+- a collision can occur when two devices send packets at the same time
+- Collision domains are broken up by switches, bridges and routers
+- Collision domains are not broken up by hubs
+
+### Broadcast domains
+
+- Defined as all the nodes that can be reached by a broadcast transmission
+- all nodes that can be reached reside in the same network
+- broadcast domains cannot pass routers
+
+### Special note
+
+Technically, IPv6 does not use broadcast transmissions.  
+IPv6 utilizes multicast instead of broadcast transmissions.
+
+---
 
 ## Types of network transmissions
 
