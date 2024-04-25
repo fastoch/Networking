@@ -1487,7 +1487,7 @@ To do this, they use what is called a **back-off algorithm**.
 
 ### Broadcast domains
 
-- Defined as all the nodes that can be reached by a broadcast transmission
+- A broadcast domain = all the nodes that can be reached by a broadcast transmission
 - all nodes that can be reached reside in the same network
 - broadcast domains cannot pass routers
 
@@ -1500,7 +1500,17 @@ IPv6 utilizes multicast instead of broadcast transmissions.
 
 ## Types of network transmissions
 
+### IPv4 network transmissions
 
+- **Unicast**:
+- **Multicast**:
+- **Broadcast**:
+
+### IPv6 network transmissions
+
+- **Unicast**:
+- **Multicast**:
+- **Anycast**:
 
 ---
 EOF
