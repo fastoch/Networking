@@ -1438,19 +1438,35 @@ All networking interfaces come with a special address already configured: the MA
 The MAC address is often referred to as the **physical address** or the **burnt-in address**of the interface.  
 While the MAC address may be changed (or **spoofed**), most often it is set by the manufacturer and never changes.  
 
-Switches and other Layer 2 devices rely upon the MAC address in order to get network packets to the correct destinations.
+Switches and other Layer 2 devices rely upon the MAC address in order to get network frames to the correct destinations.
 
 ### MAC address format
 
+MAC addresses come in two basic formats that are either 48 or 64 bits in length, and are represented by hexadecimal numbers.  
 
+Both formats can be broken down into two parts:
+- the Organizationally Unique Identifier (OUI)
+- the Extended Unique Identifier (EUI)
+
+The Institute of Electrical and Electronic Engineers (IEEE) assignes all electronic manufacturers their own 24-bit OUI, which  
+makes up the first portion of the map.  
+
+Each manufacturer assigns either a 24-bit or 40-bit EUI to each device that is produced.  
+
+Theoretically, no two interfaces will have the same MAC address.
 
 ### EUI-64
 
+IPv6 requires that the node address be in an EUI-64 format.  
+If the EUI of the interface is only 24 bits, it is split into two parts, and 16 bits of padding (**fffe**) are added  
+to create the EUI-64 format address.
 
+---
 
 ## Collision domains vs. broadcast domains
 
-
+Ethernet networks use a technology called Carrier Sense Multiple Access with Collision Detection (**CSMA/CD**).  
+All Ethernet devices have equal access 
 
 ## Types of network transmissions
 
