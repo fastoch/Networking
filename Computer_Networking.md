@@ -1415,12 +1415,31 @@ Because of this, some rules were developed to ease the burden and to save space.
 
 IPv6 is capable of auto-configuring its own local and global addresses. In certain situations, that is not always desirable.  
 - DHCPv6 can be configured to hand out specific IPv6 addresses (or duplicate IPv6 addresses) when necessary
-- useful for when load balancing a network, or for when network redundancy has been created   
+- useful for when load balancing a network, or for when network redundancy has been created, or for when you have a user that
+  has multiple devices and you want to deliver the transmission to the clsoest device (one that he's currently using)
 
 ### IPv6 and IPv4
 
+IPv6 and IPv4 are not compatible, but we can do what's called a **dual stack configuration**.  
+In a dual stack config, devices on the network receive both an IPv6 configuration and an IPv4 configuration.  
+
+Or we can use **Tunneling**.  
+6to4 tunneling is used to encapsulate IPv6 data packets in an IPv4 datagram, allowing IPv6 packets to travel across  
+or through all IPv4 networks.  
+6to4 tunneling is can also be called **Teredo tunneling**.
+
+---
+
+# Special IP networking concepts
+
+## The media access control (MAC) address
 
 
+
+## Collision domains vs. broadcast domains
+
+
+## Types of network transmissions
 
 ---
 EOF
