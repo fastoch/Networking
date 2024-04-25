@@ -1357,7 +1357,7 @@ The IPv6 addresses fall under three scopes: global, link-local, and unique local
 - the network portion is actually composed of the routing prefix and the subnet
 - the number that follows the slash is the routing prefix
 - the subnet is composed of the bits between the prefix and the EUI-64 host address
-- global IPv6 addresses always begin in the range of 2000 to 3999
+- global IPv6 addresses always begin in the range of **2000 to 3999**
 
 ---
 
@@ -1394,9 +1394,32 @@ Because of this, some rules were developed to ease the burden and to save space.
 
 ### Unicast
 
+- one-to-one communication: a specific device sends network traffic to another specific device
+- unicast can occur on the local network (fe80) or it can occur on the global network (2000 to 3999)
+
 ### Multicast
 
-### Anycast
+- one-to-a-few communication: a specific device sends network traffic to a specific group of devices that
+  have registered to receive that traffic
+- routers register to receive multicast transmissions that involve the routing protocols they are programmed to use
+- multicast addresses always begin with an **ff**
+
+### Anycast (does not exist in IPv4)
+
+- one-to-the-closest communication: a specific device sends traffic to a specific IPv6 address that has been assigned
+  to multiple devices
+- the router only sends the data to the closest one
+- involves implementing DHCPv6
+
+### DHCPv6
+
+IPv6 is capable of auto-configuring its own local and global addresses. In certain situations, that is not always desirable.  
+- DHCPv6 can be configured to hand out specific IPv6 addresses (or duplicate IPv6 addresses) when necessary
+- useful for when load balancing a network, or for when network redundancy has been created   
+
+### IPv6 and IPv4
+
+
 
 
 ---
