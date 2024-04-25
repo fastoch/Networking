@@ -1466,9 +1466,20 @@ to create the EUI-64 format address.
 ## Collision domains vs. broadcast domains
 
 Ethernet networks use a technology called Carrier Sense Multiple Access with Collision Detection (**CSMA/CD**).  
-All Ethernet devices have equal access 
+
+All Ethernet devices have equal access to the network media and are capbable of transmitting data at any time.  
+This can lead to data collisions.  
+
+With CSMA/CD, a device listens to the carrier signal on the network media.
+- if no other device is transmitting, the device is free to send data
+- if another device sends data at the same time, a collision is possible, which can corrupt the data
+
+The devices also listen for collisions.  
+If a collision occurs, devices will stop transmitting and wait a random period of time before attempting to transmit again.
 
 ## Types of network transmissions
+
+
 
 ---
 EOF
