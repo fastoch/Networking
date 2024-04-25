@@ -1434,9 +1434,22 @@ or through all IPv4 networks.
 
 ## The media access control (MAC) address
 
+All networking interfaces come with a special address already configured: the MAC address.  
+The MAC address is often referred to as the **physical address** or the **burnt-in address**of the interface.  
+While the MAC address may be changed (or **spoofed**), most often it is set by the manufacturer and never changes.  
+
+Switches and other Layer 2 devices rely upon the MAC address in order to get network packets to the correct destinations.
+
+### MAC address format
+
+
+
+### EUI-64
+
 
 
 ## Collision domains vs. broadcast domains
+
 
 
 ## Types of network transmissions
