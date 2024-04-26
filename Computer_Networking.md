@@ -1519,7 +1519,14 @@ IPv6 utilizes multicast instead of broadcast transmissions.
 
 ## The purpose of routing
 
+In a nutshell, the purpose of routing is to interconnect different networks to allow them to communicate and exchange data.  
+Most often, routing protocols are how networks determine where to send data traffic (the routes that will be taken).  
+They build maps (routing tables) that they use for directing network traffic.  
 
+Routing is what makes
+
+
+---
 
 ## Basic routing concepts
 
