@@ -1530,13 +1530,28 @@ Routing is what makes this interconnected world function as well as it does. Net
 ### Static routing
 
 - uses administrator-defined routes
-- each router must contain the route
+- in a static routing configuration, each router must contain the route
 - a static route from A to B requires that B has a static route to A
 - easy to set up in a small network, not so easy to maintain
 - routes only change when the admin changes them
 
-
 ### Dynamic routing
+
+- routers use protocols in order to determine the best route between two networks
+- The admin determines which protocols will be in use
+- The routers must all use the same protocols. An exception is when route redistribution has been implemented.
+- Dynamic routing protocols can be stacked within a router
+- Dynamic routing is very fluid and is what makes possible today's interconnected world
+
+>[!information]
+>Route redistribution is when an admin configures a router to take one dynamic protocol and transform it into a different
+>routing protocol to be used from that point on.
+
+### The default route
+
+
+### The routing table
+
 
 ---
 EOF
