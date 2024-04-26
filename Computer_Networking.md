@@ -1523,14 +1523,20 @@ In a nutshell, the purpose of routing is to interconnect different networks to a
 Most often, routing protocols are how networks determine where to send data traffic (the routes that will be taken).  
 They build maps (routing tables) that they use for directing network traffic.  
 
-Routing is what makes
-
-
----
+Routing is what makes this interconnected world function as well as it does. Networking would be pure chaos without it.
 
 ## Basic routing concepts
 
+### Static routing
 
+- uses administrator-defined routes
+- each router must contain the route
+- a static route from A to B requires that B has a static route to A
+- easy to set up in a small network, not so easy to maintain
+- routes only change when the admin changes them
+
+
+### Dynamic routing
 
 ---
 EOF
