@@ -1502,15 +1502,28 @@ IPv6 utilizes multicast instead of broadcast transmissions.
 
 ### IPv4 network transmissions
 
-- **Unicast**:
-- **Multicast**:
-- **Broadcast**:
+- **Unicast**: a specific source address transmission going to a specific destination address. 
+- **Multicast**: a specific source address transmission going to a set of registered destination addresses. 
+- **Broadcast**: a specific source address transmission going to all addresses on the local network.
 
 ### IPv6 network transmissions
 
-- **Unicast**:
-- **Multicast**:
-- **Anycast**:
+- **Unicast**: the same as IPv4
+- **Multicast**: the same as IPv4
+- **Anycast**: a specific source address transmission going to a specific IPv6 address that has been assigned to multiple devices.
+  The router uses an algorithm to determine which MAC address is the closest and only that device receives the anycast transmission.
+
+---
+
+# Introduction to routing concepts
+
+## The purpose of routing
+
+
+
+## Basic routing concepts
+
+
 
 ---
 EOF
