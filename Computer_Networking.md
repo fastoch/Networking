@@ -1549,8 +1549,25 @@ Routing is what makes this interconnected world function as well as it does. Net
 
 ### The default route
 
+This is the direction that a router will send network traffic when there is no known route in the routing table.  
+- It is assigned by an admin
+- It's usually a designated interface on the router, or it's the designated next hop interface
 
 ### The routing table
+
+It's a list of the known routes to all known networks from the router's perspective.
+- It's established by an admin when static routing is used
+- It's dynamically built by routing protocols when dynamic routing is employed
+
+Each routing protocol maintains a routing table.  
+Different routing protocols may have different routes to the same network.
+
+### The loopback interface 
+
+### Routing loops
+
+
+---
 
 
 ---
