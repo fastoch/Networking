@@ -1564,8 +1564,20 @@ Different routing protocols may have different routes to the same network.
 
 ### The loopback interface 
 
+It's an administratively configured logical number assigned to a router to ease administrative functions or routing processes.  
+- Often, the loopback interface is assigned in an IPv4 address format
+- many routing protocols have been designed to take the loopback interface into account when performing administrative functions.
+
+The interface may be completely logical, or a physical interface may be configured to be the loopback interface.
+
 ### Routing loops
 
+A possible problem that can be created if interconnected routers have a breakdown in their routing algorithms.
+- When a routing loop occurs, the network keeps looping through the routers until some system or mechanism breaks the cycle.
+- Routing loops can create network congestion or even bring down a network
+
+Routing protocols use multiple methods to prevent loops from occuring.  
+The time to live (TTL) is also utilized to stop routing loops after they have occurred.
 
 ---
 
