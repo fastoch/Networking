@@ -1591,13 +1591,32 @@ a different manner through the use of different algorithms.
 
 ### Hop count
 
-
+The number of routers between two endpoints, determined from the sending router's perspective.  
 
 ### Maximum transmission unit (MTU)
 
+The maximum allowed size of a packet, measured in bytes.  
+The standard MTU for Ethernet is 1500 bytes.  
+
+Packets that exceed the MTU must be fragmented, leading to more packets, leading to slower connection.
+
 ### Bandwidth
 
+A measure of the speed of the network connection. Can be measured in Kbps, Mbps, or Gbps.
+
 ### Latency
+
+A measure of time that a packet takes to traverse a link.  
+When implemented by routing protocols, the total amount of latency (or delay) to go end to end between two points is used.
+
+### Administrative Distance (AD)
+
+The believability of a routing protocol's advertised routes.
+Some routing protocols are considered to be more believable (trustworthy) than others.  
+
+Routers use the AD to help determine which routing protocol to use when more than one protocol is installed on the router.
+
+---
 
 ## Route aggregation
 
