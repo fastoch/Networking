@@ -1581,6 +1581,28 @@ The time to live (TTL) is also utilized to stop routing loops after they have oc
 
 ---
 
+## Routing metrics
+
+There may be more than one route available to a remote network. Routing protocols use metrics to determine the best route.  
+Each routing protocol will use its own set of metrics in determining which routes to which networks are placed in its routing table.  
+
+The same basic metric may be used by different routing protocols. When this occurs, the metric is usually implemented in  
+a different manner through the use of different algorithms.  
+
+### Hop count
+
+
+
+### Maximum transmission unit (MTU)
+
+### Bandwidth
+
+### Latency
+
+## Route aggregation
+
+## High availability
+
 
 ---
 EOF
