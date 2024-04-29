@@ -1620,13 +1620,13 @@ When implemented by routing protocols, the total amount of latency (or delay) to
 **Common standard ADs**:
 - directly connected route = 0 (no protocol required)
 - statically configured route = 1 (no protocol required)
-- EBGP = 20 (exterior border gateway protocol)
-- internal EIGRP = 90 (enhanced interior gateway routing protocol)
-- OSPF = 110 (Open shortest path first)
-- IS-IS = 115 (intermediate system to intermediate system)
-- RIP = 120 (routing information protocol)
-- external EIGRP = 170
-- IBGP = 200 (interior border gateway protocol)
+- **EBGP** = 20 (exterior border gateway protocol)
+- **internal EIGRP** = 90 (enhanced interior gateway routing protocol)
+- **OSPF** = 110 (Open shortest path first)
+- **IS-IS** = 115 (intermediate system to intermediate system)
+- **RIP** = 120 (routing information protocol)
+- **external EIGRP** = 170
+- **IBGP** = 200 (interior border gateway protocol)
 - unknown = 255 (not believable)
 
 The AD can be set by an administrator, so that a specific protocol is preferred to another. 
@@ -1688,11 +1688,43 @@ It's an IETF (Internet Engineering Task Force) standard that is similar in opera
 
 ### Interior Gateway Protocol (IGP)
 
+- IGPs are a category of protocols used within autonomous networks.
+- Autonomous networks are networks that are under the control of a single organization.
+- The most popular IGPs are **OSPF** and **RIPv2**
+- **IS-IS** is popular with extremely large autonomous networks like an ISP's network (Internet Service Provider)
+
 ### Exterior Gateway Protocol (EGP)
+
+- A category of protocols used between non-autonomous networks
+- The type of routing protocol used between networks that are controlled by different entities
+- The most popular EGP is **BGP** (Border Gateway Protocol)
+
+### Autonomous Networks
+
+It's not uncommon for organizations to have several networks between which they are routing traffic.  
+These are called autonomous networks.  
+
+Some IGPs use an administrator-defined autonomous system (**AS**) number as one means of identifying which  
+networks can directly communicate with each other.  
+
+The AS is not a metric, but a means of identifying a network that might possibly accept another network's traffic.  
+Remember, the AS is only significant withing autonomous networks and has no relevance outside of them.
 
 ---
 
 ## More routing concepts
+
+### Classification of routing protocols
+
+- IGP and EGP routing protocols can be broken out into three other categories of protocols, which is designated
+  by their main method of determining routes between networks.
+- **Distance-vector** routing protocols: routes are determined by how many routers exist between the source and
+  the destination. The efficiency of the links in the selected route is not taken into consideration.
+  Periodically, the whole routing table is broadcasted.
+- **Link state** routing protocols: metrics are used to determine the best possible route between destinations.
+  The protocol then only monitors the state of directly connected links and only makes changes when changes to
+  links occur. Only changes in link status are broadcasted.
+- **Hybrid** routing protocols: use aspects of both
 
 ---
 
