@@ -1611,16 +1611,56 @@ When implemented by routing protocols, the total amount of latency (or delay) to
 
 ### Administrative Distance (AD)
 
-The believability of a routing protocol's advertised routes.
-Some routing protocols are considered to be more believable (trustworthy) than others.  
+- Probably the most important metric that's used on routers.
+- AD is the believability of a routing protocol's advertised routes.
+- Some routing protocols are considered to be more believable (trustworthy) than others.
+- Routers use the AD to determine which routing protocol to use when more than one is installed on the router.
+- The lowest AD of an advertised route will determine the protocol used
 
-Routers use the AD to help determine which routing protocol to use when more than one protocol is installed on the router.
+**Common standard ADs**:
+- directly connected route = 0 (no protocol required)
+- statically configured route = 1 (no protocol required)
+- EBGP = 20 (exterior border gateway protocol)
+- internal EIGRP = 90 (enhanced interior gateway routing protocol)
+- OSPF = 110 (Open shortest path first)
+- IS-IS = 115 (intermediate system to intermediate system)
+- RIP = 120 (routing information protocol)
+- external EIGRP = 170
+- IBGP = 200 (interior border gateway protocol)
+- unknown = 255 (not believable)
+
+The AD can be set by an administrator, so that a specific protocol is preferred to another. 
 
 ---
 
 ## Route aggregation
 
+Without some mechanisme put in place, routing tables soon become very large and highly inefficient.  
+Through careful planning, network administrators use a process called **route aggregation** to condense the  
+size of routing tables. They do so through the use of Classless Inter-Domain Routing (**CIDR**) to summarize  
+routes to different networks. Route aggregation is common in networking.  
+
+### Example of route aggregation
+
+Suppose we have a router that has the following networks connected to its serial 0/1 interface (S/0/1):
+- 10.1.1.0/24
+- 10.1.17.0/24
+- 10.1.32.0/24
+- 10.1.128.0/24
+
+These routes could be summarized (aggregated) by a common CIDR entry in a routing table:
+- 10.1.0.0/16
+
+### Warning on route aggregation
+
+Route aggregation takes careful planning during the network design phase.  
+The above example would not work if interface s/1/1 on the same router was connected to network 10.1.2.0/24, because  
+that new network makes those networks on the 0/1 interface **non-contiguous** networks.
+
+---
+
 ## High availability
+
 
 
 ---
