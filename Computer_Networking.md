@@ -1676,9 +1676,29 @@ An example of such a technique is the use of redundant links to outside networks
 - devices on the network are configured to use the virtual IP address as the default gateway for packets leaving the network
 - if a router goes down, the link outside of the network is still available
 
-### Virtual Router Redundancy Protocol
+### Virtual Router Redundancy Protocol (VRRP)
 
-It's an IETF 
+It's an IETF (Internet Engineering Task Force) standard that is similar in operation to HSRP.  
+
+---
+
+# Introduction to routing protocols
+
+## Interior vs. exterior gateway routing protocols
+
+### Interior Gateway Protocol (IGP)
+
+### Exterior Gateway Protocol (EGP)
+
+---
+
+## More routing concepts
+
+---
+
+## Routing protocols
+
+
 
 ---
 EOF
