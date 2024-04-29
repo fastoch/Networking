@@ -1661,7 +1661,24 @@ that new network makes those networks on the 0/1 interface **non-contiguous** ne
 
 ## High availability
 
+Part of a network administrator's job is to ensure that networks remain up and active at all time.  
+In an effort to ensure that networks don't go down, admins often remove single points of failure (SPoFs).  
+A single point of failure in a network is the point where a single failure will cause the network to cease functioning.  
 
+Network admins often use high availability techniques in order to remove thos single points of failure.  
+An example of such a technique is the use of redundant links to outside networks.
+
+### Hot Standby Router Protocol (HSRP)
+
+- a proprietary Cisco method of creating a fault tolerant link using two or more routers.
+- The involved routers are connected together as well as having connections outside of the local network.
+- a **virtual IP address** is created and shared between the routers
+- devices on the network are configured to use the virtual IP address as the default gateway for packets leaving the network
+- if a router goes down, the link outside of the network is still available
+
+### Virtual Router Redundancy Protocol
+
+It's an IETF 
 
 ---
 EOF
