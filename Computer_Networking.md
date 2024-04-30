@@ -1769,17 +1769,33 @@ routes within that system.
 
 - An IGP link state routing protocol
 - similar to OSPF in operation
-- it also uses Dijkstra's algorithm, as well as different metrics to determine the best path
+- it uses Dijkstra's algorithm, but also uses different metrics to determine the best path
 - highly scalable and offers fast convergence
 - often used within networks under the control of an ISP
 
 ### Border Gateway Protocol (BGP)
 
-- An EGP (non-autonomous) hybrid routing protocol
-- considered the routing protocol of the Internet
-- it can be considered a path-vector protocol
+- An EGP (non-autonomous) **hybrid** routing protocol
+- considered the routing protocol of the **Internet**
+- it can be considered a **path-vector protocol**
 - one of the metrics used is the number of autonomous systems that must be crossed (not individual routers)
 - highly scalable, but it has very slow convergence times when changes occur
+
+### Enhanced Interior Gateway Routing protocol (EIGRP)
+
+EIGRP is an advanced hybrid IGP routing protocol developed by Cisco.  
+In 2013, Cisco made EIGRP an open source routing protocol in an effort to increase its use in autonomous networks.  
+
+It uses aspects of both distance-vector protocols and link state protocols to build its routing table.  
+EIGRP has very fast convergent times, but it's not as popular as OSPF because OSPF has been open-source longer than EIGRP.
+
+EIGRP uses a **Neighbor Table** (directly connected routers) and a **Topology Table** to build its routing table.  
+It only announces changes to the routing table (on multicast address 224.0.0.10) in order to reduce bandwidth consumption.
+
+---
+
+
+
 
 ---
 EOF
