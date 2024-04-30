@@ -1794,6 +1794,15 @@ It only announces changes to the routing table (on multicast address 224.0.0.10)
 
 ---
 
+# Basic elements of unified communications
+
+## Unified communications
+
+
+
+## Unified communications concepts
+
+## Voice over IP
 
 
 
