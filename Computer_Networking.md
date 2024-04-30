@@ -1748,6 +1748,11 @@ routes within that system.
 
 ### Routing Information protocol v2 (RIPv2)
 
+- An IGP (autonomous) distance-vector protocol.
+- A hop count of 16 is considered unreachable
+- RIPv2 uses various methods, including hop count to reduce the chances of a routing loop
+- uses multicast to advertise routing tables (224.0.0.9)
+
 ### Open Shortest Path First (OSPF)
 
 ---
