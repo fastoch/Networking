@@ -1724,13 +1724,31 @@ Remember, the AS is only significant withing autonomous networks and has no rele
 - **Link state** routing protocols: metrics are used to determine the best possible route between destinations.
   The protocol then only monitors the state of directly connected links and only makes changes when changes to
   links occur. Only changes in link status are broadcasted.
-- **Hybrid** routing protocols: use aspects of both
+- **Hybrid** routing protocols: use aspects of both the distance vector and link state routing protocols.
+
+### Next hop
+
+The next router in the path between two points.  
+It's often designated by an interface address of the device that is receiving the data, or by the router's name,  
+or by the router's location.
+
+### Routing table
+
+The database table that is used by a router to determine the best possible route between two points.  
+Different routing protocols use different algorithms to place routes in the table.
+
+### Convergence (steady state)
+
+The amount of time that it takes all of the routers in an autonomous system (AS) to learn all of the possible  
+routes within that system.
 
 ---
 
 ## Routing protocols
 
+### Routing Information protocol v2 (RIPv2)
 
+### Open Shortest Path First (OSPF)
 
 ---
 EOF
