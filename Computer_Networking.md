@@ -1699,7 +1699,9 @@ It's an IETF (Internet Engineering Task Force) standard that is similar in opera
 - The type of routing protocol used between networks that are controlled by different entities
 - The most popular EGP is **BGP** (Border Gateway Protocol)
 
-### Autonomous Networks
+---
+
+## Autonomous Networks
 
 It's not uncommon for organizations to have several networks between which they are routing traffic.  
 These are called autonomous networks.  
@@ -1740,7 +1742,7 @@ Different routing protocols use different algorithms to place routes in the tabl
 ### Convergence (steady state)
 
 The amount of time that it takes all of the routers in an autonomous system (AS) to learn all of the possible  
-routes within that system.
+routes within that system. 
 
 ---
 
@@ -1749,11 +1751,35 @@ routes within that system.
 ### Routing Information protocol v2 (RIPv2)
 
 - An IGP (autonomous) distance-vector protocol.
-- A hop count of 16 is considered unreachable
+- For a route to be placed in the routing table, it can be no more than 15 hops away
+- A hop count of 16 is considered unreachable 
 - RIPv2 uses various methods, including hop count to reduce the chances of a routing loop
-- uses multicast to advertise routing tables (224.0.0.9)
+- uses multicast address 224.0.0.9 to advertise routing tables 
 
 ### Open Shortest Path First (OSPF)
+
+- An IGP link state routing protocol
+- The most popular IGP
+- uses the Dijkstra's algorithm to determine the shortest path to a network
+- after its initial startup, it only advertises changes to its routing table, making convergence much faster
+- uses different types of link state advertisements (LSAs) to announce different changes or operations
+- uses multicast addresses 224.0.0.5 or 224.0.0.6, depending on the type of LSA
+
+### Intermediate System to Intermediate System (IS-IS)
+
+- An IGP link state routing protocol
+- similar to OSPF in operation
+- it also uses Dijkstra's algorithm, as well as different metrics to determine the best path
+- highly scalable and offers fast convergence
+- often used within networks under the control of an ISP
+
+### Border Gateway Protocol (BGP)
+
+- An EGP (non-autonomous) hybrid routing protocol
+- considered the routing protocol of the Internet
+- it can be considered a path-vector protocol
+- one of the metrics used is the number of autonomous systems that must be crossed (not individual routers)
+- highly scalable, but it has very slow convergence times when changes occur
 
 ---
 EOF
