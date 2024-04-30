@@ -1798,9 +1798,16 @@ It only announces changes to the routing table (on multicast address 224.0.0.10)
 
 ## Unified communications
 
+Unified communications (UC) is not encompassed by a single product or device. It's a growing category in enterprise networks.  
 
+UC is the set of products and services that attempts to provide a consistent single user interface and experience across  
+different media types and different devices.  
+
+UC allows a user to send a message from one type 
 
 ## Unified communications concepts
+
+
 
 ## Voice over IP
 
