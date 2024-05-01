@@ -1896,16 +1896,36 @@ Others differentiate between the two terms in this way:
 
 ### Virtual networks
 
-An important consideration when designing a virtual network is how it's going to pass traffic to remote networks.  
+An important consideration when designing a virtual network is how it's going to pass traffic to remote networks, or  
+networks outside of the host system.  
 
 Virtualization, by its nature, leads to either an open and highly scalable network, or a closed self-contained system.  
-It's possible to create a completely self-contained network
+
+It's possible to create a completely self-contained network with all of the virtual components and never have the network  
+traffic leave the host machine.  
+
+But, if there's a desire or need for network traffic to pass beyond the host system, then that function needs to be  
+specifically granted. A connection must be created between the host system's physical NIC and the virtual networking  
+equipment to allow network traffic to pass through.
 
 ---
 
 ## Software defined networking (SDN)
 
+SDN is the process of allowing the administration and configuration of a network to be done dynamically.  
+With SDN, the administrator uses a front-end program to make adjustments to the network.  
+The program sends the instructions to the networking equipment, which is then reconfigured to perform as desired.  
 
+SDN can allow network administrators to dynamically adjust network performance without the need to log into each individual  
+device that needs to be adjusted.  
+
+SDN also works well for virtual networks and cloud computing.
+
+---
+
+# Storage Area Networks (SAN)
+
+## 
 
 ---
 EOF
