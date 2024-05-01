@@ -1875,13 +1875,31 @@ Others differentiate between the two terms in this way:
 
 ### Virtual desktops
 
-
+- A VM that functions as a desktop.
+- Any modern OS can be run inside of the VM desktop
+- Multiple virtual desktops may be hosted on, or from, a single host system
 
 ### Virtual servers
 
+- A VM that functions as a server
+- any modern server OS can be used
+- multiple virtual servers may be hosted on, or from, a single host system
+
 ### Virtual switches, firewalls and routers
 
+- A VM that fulfills the functions of a switch, firewall or router
+- virtual firewalls and routers are particularly effective when combined with virtual NICs and virtual switches
+  to create virtual networks
 
+>[!note]
+>NIC = Network Interface Controller
+
+### Virtual networks
+
+An important consideration when designing a virtual network is how it's going to pass traffic to remote networks.  
+
+Virtualization, by its nature, leads to either an open and highly scalable network, or a closed self-contained system.  
+It's possible to create a completely self-contained network
 
 ---
 
