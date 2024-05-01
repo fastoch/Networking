@@ -1803,7 +1803,20 @@ Unified communications (UC) is not encompassed by a single product or device. It
 UC is the set of products and services that attempts to provide a consistent single user interface and experience across  
 different media types and different devices.  
 
-UC allows a user to send a message from one type 
+UC allows a user to send a message from one type of media and have that message received on a different type of media.  
+For example, leaving a voicemail and having the recipient receive it as an email.
+
+### Unified communications devices 
+
+- **UC server**: specialized server (which is often virtual in nature) that is designed to implement UC solutions in the workplace. 
+- **UC gateway**: a network device that is designed to translate between different signaling methods. A VoIP gateway will translate
+  an analog PSTN voice signal into a signal that can be understood on the VoIP network.
+- **Other UC devices**: any devices that can be used in the implementation of a UC solution. They may include (but are not limited to)
+  VoIP phones, email systems, video conferencing systems, and instant messaging (IM) networks. 
+
+**Remember**: PSTN = Public Switched Telephone Network
+
+---
 
 ## Unified communications concepts
 
