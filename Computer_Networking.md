@@ -1794,7 +1794,7 @@ It only announces changes to the routing table (on multicast address 224.0.0.10)
 
 ---
 
-# Basic elements of unified communications
+# Basic elements of Unified Communications
 
 ## Unified communications
 
@@ -1814,15 +1814,78 @@ For example, leaving a voicemail and having the recipient receive it as an email
 - **Other UC devices**: any devices that can be used in the implementation of a UC solution. They may include (but are not limited to)
   VoIP phones, email systems, video conferencing systems, and instant messaging (IM) networks. 
 
-**Remember**: PSTN = Public Switched Telephone Network
+>[!note]
+>PSTN = Public Switched Telephone Network
 
 ---
 
 ## Unified communications concepts
 
+### Presence
 
+- An indicator that is used to communicate the willingness or ability of a user to accept communication
+- Common presence statuses include: available, online, offline, busy, and do not disturb.
+- Presence services are an important service provided in UC solutions, as they will track individual users
+  across multiple devices (and networks) in real time through the use of multicast transmissions.
+- Once a communication session has been established, multicast is dropped and unicast network transmissions are used.
+
+### Quality of Service (QoS)
+
+QoS techniques are implemented to improve the UC by managing network traffic.  
+The most common implementation of QoS is **Class of Service (CoS)**.  
+
+CoS is a QoS technique used to manage network traffic by grouping similar types of traffic and assigning a network  
+priority to that traffic. For instance, UC traffic can be given a higher priority than email.  
+A 6-bit differentiated services code point (DSCP) is used in the IP header to establish the CoS.
+
+---
 
 ## Voice over IP
+
+VoIP is on of the most common implementations in a UC solution.  
+Through the use of a presence service, calls can be routed to the correct location.  
+
+2 important protocols uses in VoIP are Session Initiation Protocol (**SIP**) and Real-Time Transport Protocol (**RTP**).  
+
+**SIP** has two purposes:  
+- First, it's used to **establish a communication session** between 2 endpoints.
+- Once the session is over, SIP **tears down the connection**.
+
+During the communication session, RTP is used as the transport protocol, helping to provide QoS to the end points.
+
+---
+
+# Virtualization Technologies
+
+## Hypervisors and Virtual Machine Managers
+
+### What is the difference between a hypervisor and a VM manager?
+
+The difference could be nothing, or it could be everything.  
+
+Some people use the term "hypervisor" very broadly to refer to any of the software that is used to manage VMs.  
+
+Others differentiate between the two terms in this way:
+- a **hypervisor** does not need a host operating system (OS)
+- a **VM manager** requires a host OS such as Windows, macOS, or LiGNUx 
+
+---
+
+## Components of virtualization
+
+### Virtual desktops
+
+
+
+### Virtual servers
+
+### Virtual switches, firewalls and routers
+
+
+
+---
+
+## Software defined networking (SDN)
 
 
 
