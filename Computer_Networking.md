@@ -1953,7 +1953,12 @@ A storage area network (SAN) can be a solution to the need for both storage capa
 >[!warning]
 >The SAN (storage area network) and NAS (network attached storage) often get confused with one another.
 
-The SAN is an actual network of devices that have the sole purpose of storing data efficiently.
+The SAN is an actual network of devices that have the sole purpose of storing data efficiently.  
+The NAS is a specifically designed network appliance that has been configured to store data more efficiently than standard  
+storage methods.  
+
+The difference is that a NAS is a data storage appliance that is placed on a network, while a SAN is a network of data storage  
+devices. It is not uncommon for a SAN to containt multiple NAS devices.
 
 ---
 EOF
