@@ -1972,10 +1972,14 @@ With all of that data storage capabilities, several technologies have been devel
 >[!note]
 >SCSI = small computer system interface
 
-### Internet SCSI (ISCI)
+### Internet SCSI (ISCSI)
 
 - An IP-based networking standard used to connect data storage facilities and SANs.
 - allows SCSI commands and processes to take place over long distances
+
+### Jumbo frames
+
+
 
 ---
 EOF
