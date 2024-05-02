@@ -1930,9 +1930,24 @@ SDN also works well for virtual networks and cloud computing.
 Several factors have led to the increased demand for data storage.  
 One of them has been the dramatic decrease in the actual cost of data storage.  
 
-Business are now generating and analyzing huge amounts of data
+Businesses are now generating and analyzing huge amounts of data in an effort to create competitive advantages, leading to  
+more demand for storage capacity. 
+
+Another factor is that the demand for the data to be available from anywhere and accessible from any device has also increased.  
+
+A storage area network (SAN) can be a solution to the need for both storage capacity and high availability.
+
+### Advantages of the SAN
+
+- **Scalability**: 
+- **Data availability**:
+- **Optimization**:
+
+---
 
 ## SAN technology
+
+
 
 ---
 EOF
