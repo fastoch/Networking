@@ -1925,7 +1925,14 @@ SDN also works well for virtual networks and cloud computing.
 
 # Storage Area Networks (SAN)
 
-## 
+## Justifications for storage area networks
+
+Several factors have led to the increased demand for data storage.  
+One of them has been the dramatic decrease in the actual cost of data storage.  
+
+Business are now generating and analyzing huge amounts of data
+
+## SAN technology
 
 ---
 EOF
