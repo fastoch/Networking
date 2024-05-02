@@ -1957,8 +1957,25 @@ The SAN is an actual network of devices that have the sole purpose of storing da
 The NAS is a specifically designed network appliance that has been configured to store data more efficiently than standard  
 storage methods.  
 
-The difference is that a NAS is a data storage appliance that is placed on a network, while a SAN is a network of data storage  
-devices. It is not uncommon for a SAN to containt multiple NAS devices.
+The difference is that **a NAS is a data storage appliance that is placed on a network, while a SAN is a network of data storage  
+devices. It is not uncommon for a SAN to contain multiple NAS devices**.  
+
+With all of that data storage capabilities, several technologies have been developped to ease the transmission of that data.
+
+### Fibre channel (FC)
+
+- A high-speed network technology originally developed to operate over fiber optic cables only.
+- The standards have been modified to allow the use of copper cabling in conjunction with the fiber.
+- commonly used to connect SANs
+- uses Fibre Channel Protocol (FCP) as its transport protocol to transmit SCSI commands to storage devices like NAS appliances.
+
+>[!note]
+>SCSI = small computer system interface
+
+### Internet SCSI (ISCI)
+
+- An IP-based networking standard used to connect data storage facilities and SANs.
+- allows SCSI commands and processes to take place over long distances
 
 ---
 EOF
