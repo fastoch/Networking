@@ -1923,7 +1923,7 @@ SDN also works well for virtual networks and cloud computing.
 
 ---
 
-# Storage Area Networks (SAN)
+# Storage Area Networks (SANs)
 
 ## Justifications for storage area networks
 
@@ -1937,17 +1937,23 @@ Another factor is that the demand for the data to be available from anywhere and
 
 A storage area network (SAN) can be a solution to the need for both storage capacity and high availability.
 
-### Advantages of the SAN
+### Advantages of a SAN
 
-- **Scalability**: 
-- **Data availability**:
-- **Optimization**:
+- **Scalability**: the amount of data that is being generated today is huge, which calls for an appropriate solution.
+  A SAN is more scalable than other options. As storage needs increase, the capacity of a SAN can be easily increased to meet them.
+- **Data availability**: demand has increased for data to be available at anytime from anywhere. A SAN can play a vital role in
+  creating that accessibility. SANs are often deployed as part of a cloud computing solution, thus increasing the availability.
+- **Optimization**: as the requirements to store data are removed from application servers, those servers can then be optimized
+  to run those applications more efficiently. At the same time, data storage is also optimized.
 
 ---
 
 ## SAN technology
 
+>[!warning]
+>The SAN (storage area network) and NAS (network attached storage) often get confused with one another.
 
+The SAN is an actual network of devices that have the sole purpose of storing data efficiently.
 
 ---
 EOF
