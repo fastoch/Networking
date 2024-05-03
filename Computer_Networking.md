@@ -1988,7 +1988,13 @@ With all of that data storage capabilities, several technologies have been devel
 
 ## Cloud classifications 
 
+Cloud computing is where the resources on the network are not actually physical in nature. They are provided to the user virtually.  
+This can lead to a very fluid and dynamic environment as required resources are normally only provisioned as needed and are  
+decommissioned once their use is done.  
 
+Most often, these virtual resources are not owned by the company that uses them, but are provided by a **service provider**.  
+While cloud coomputing is highly configurable and changeable, it does have some basic structures that are used in the classification  
+of the type of cloud that is in use.
 
 ---
 
