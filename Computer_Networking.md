@@ -1948,7 +1948,7 @@ A storage area network (SAN) can be a solution to the need for both storage capa
 
 ---
 
-## SAN technology
+## SAN technologies
 
 >[!warning]
 >The SAN (storage area network) and NAS (network attached storage) often get confused with one another.
@@ -1975,9 +1975,24 @@ With all of that data storage capabilities, several technologies have been devel
 ### Internet SCSI (ISCSI)
 
 - An IP-based networking standard used to connect data storage facilities and SANs.
-- allows SCSI commands and processes to take place over long distances
+- allows SCSI commands and processes to take place over longer distances than the original SCSI immplementation
 
 ### Jumbo frames
+
+- delivers greater throughput of data by allowing up to 9000 bytes of data in a single frame (six times the regular size)
+- can greatly increase the efficiency of a SAN
+
+---
+
+# Basic Cloud Concepts
+
+## Cloud classifications 
+
+
+
+---
+
+## Types of cloud computing
 
 
 
