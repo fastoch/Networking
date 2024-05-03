@@ -1991,6 +1991,16 @@ With all of that data storage capabilities, several technologies have been devel
 Cloud computing is the on-demand availability of computing resources (such as storage and infrastructure), as services over the internet.  
 It eliminates the need for individuals and businesses to self-manage physical resources themselves, and only pay for what they use. 
 
+### Public cloud
+
+### Private cloud
+
+### Hybrid cloud
+
+### Community cloud
+
+
+
 ---
 
 ## Types of cloud computing
